@@ -160,6 +160,8 @@ We also distinguish between:
 
 See [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines on how to contribute.
 
+For a full list of terms and acronyms used throughout this playbook, see the [Glossary](./references/glossary.md).
+
 ## License
 
 This work is licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0)](./LICENSE).

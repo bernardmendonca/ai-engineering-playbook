@@ -2,6 +2,8 @@
 
 > Curated links, papers, talks, and further reading on AI in engineering organizations.
 
+For a full list of terms and acronyms used throughout this playbook, see the [Glossary](./glossary.md).
+
 ## Research and Reports
 
 ### Developer Productivity with AI
