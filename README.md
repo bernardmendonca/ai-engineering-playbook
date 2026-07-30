@@ -17,43 +17,70 @@ AI tooling is evolving faster than most organizations can evaluate it. Leaders f
 
 ## How to Use This Playbook
 
-Each section is self-contained. Start with what's most relevant to your current challenge:
+The playbook is organized into three tracks. Start with the one that matches your current need:
 
-| If you need to... | Start here |
-|---|---|
-| Understand the AI landscape and build mental models | [01 — Foundations](./01-foundations/) |
-| Evaluate and choose AI developer tools | [02 — AI Tools](./02-ai-tools/) |
-| Understand AI coding agents and when to use them | [03 — AI Coding Agents](./03-ai-coding-agents/) |
-| Make AI consistently useful across your org | [04 — Context Engineering](./04-context-engineering/) |
-| Integrate AI into your engineering workflows | [05 — Engineering Workflows](./05-engineering-workflows/) |
-| Secure AI usage across your org | [06 — Security](./06-security/) |
-| Measure and improve developer productivity with AI | [07 — Productivity](./07-productivity/) |
-| Build governance policies and responsible AI practices | [08 — Governance](./08-governance/) |
-| Define metrics and report ROI to leadership | [09 — Metrics](./09-metrics/) |
-| Roll out AI adoption across teams | [10 — Team Adoption](./10-team-adoption/) |
-| Learn from real-world implementations | [11 — Case Studies](./11-case-studies/) |
+### 🧭 Decide — Strategy and Direction
 
+> For Directors, VPs, and CTOs setting AI strategy.
+
+| Section | What you'll learn |
+|---------|-------------------|
+| [Foundations](./foundations/) | Mental models, landscape overview, organizational readiness |
+| [AI Strategy](./ai-strategy/) | Investment, org models, vendor strategy, executive alignment |
+
+### 🔧 Implement — Tools and Integration
+
+> For EMs, Principal Engineers, and Staff+ building AI into engineering.
+
+| Section | What you'll learn |
+|---------|-------------------|
+| [AI Tools](./ai-tools/) | Tool landscape, evaluation framework, build vs. buy |
+| [AI Coding Agents](./ai-coding-agents/) | Agent comparison, when to use, governance, getting started free |
+| [Context Engineering](./context-engineering/) | Project instructions, steering, skills, hooks, MCP, knowledge architecture |
+| [Engineering Workflows](./engineering-workflows/) | AI across the SDLC — review, testing, CI/CD, documentation |
+
+### 🔁 Sustain — Governance, Measurement, and Scale
+
+> For EMs, Directors, and Platform Teams keeping AI adoption healthy.
+
+| Section | What you'll learn |
+|---------|-------------------|
+| [Security](./security/) | Threat models, data classification, enterprise controls |
+| [Productivity](./productivity/) | Defining and measuring developer productivity with AI |
+| [Governance](./governance/) | Policies, compliance, accountability, responsible AI |
+| [Metrics](./metrics/) | What to measure, dashboards, reporting to leadership |
+| [Team Adoption](./team-adoption/) | Change management, resistance, upskilling, champions |
+| [Case Studies](./case-studies/) | Real-world patterns — startup, mid-size, enterprise |
 ## Repository Structure
 
 ```
 ai-engineering-playbook/
 ├── README.md
-├── 01-foundations/           # Mental models, landscape, org readiness
-├── 02-ai-tools/             # Tool landscape, comparison frameworks
-├── 03-ai-coding-agents/     # Agents deep-dive (Copilot, Q, Claude Code, etc.)
-├── 04-context-engineering/   # Making AI consistently useful — steering, skills, MCP, knowledge
-├── 05-engineering-workflows/ # AI in SDLC, CI/CD, code review
-├── 06-security/             # Threat models, data privacy, supply chain
-├── 07-productivity/         # Developer productivity with AI
-├── 08-governance/           # Policies, compliance, accountability
-├── 09-metrics/              # Measuring success, reporting upward
-├── 10-team-adoption/        # Change management, upskilling, rollout
-├── 11-case-studies/         # Real-world examples
-├── prompts/                 # Reusable prompt library
-├── templates/               # Decision docs, RFCs, eval templates
-├── diagrams/                # Visual assets (Mermaid source files)
-├── examples/                # Code and config examples
-└── references/              # Links, papers, further reading
+│
+│   🧭 DECIDE
+├── foundations/            # Mental models, landscape, org readiness
+├── ai-strategy/           # Investment, org models, vendor strategy, exec alignment
+│
+│   🔧 IMPLEMENT
+├── ai-tools/              # Tool landscape, comparison frameworks
+├── ai-coding-agents/      # Agents deep-dive (Copilot, Q, Claude Code, etc.)
+├── context-engineering/   # Steering, skills, hooks, MCP, knowledge architecture
+├── engineering-workflows/ # AI in SDLC, CI/CD, code review, testing, docs
+│
+│   🔁 SUSTAIN
+├── security/              # Threat models, data privacy, supply chain
+├── productivity/          # Developer productivity with AI
+├── governance/            # Policies, compliance, accountability
+├── metrics/               # Measuring success, reporting upward
+├── team-adoption/         # Change management, upskilling, rollout
+├── case-studies/          # Real-world examples
+│
+│   RESOURCES
+├── prompts/               # Reusable prompt library
+├── templates/             # Decision docs, RFCs, eval templates
+├── diagrams/              # Visual assets (Mermaid source files)
+├── examples/              # Code and config examples
+└── references/            # Links, papers, further reading
 ```
 
 ## Principles
@@ -89,15 +116,16 @@ flowchart LR
 
 | Section | Level 1 | Level 2 | Level 3 | Level 4 |
 |---------|---------|---------|---------|---------|
-| **02 Tools** | Free tiers explored | Paid tool for pilot team | Approved shortlist, enterprise eval | Enterprise agreement, regular re-evaluation |
-| **03 Agents** | Chat/autocomplete only | Agents on one team (supervised) | Agents across teams (governed) | Agents embedded in SDLC workflows |
-| **04 Context** | — | Project instructions written | Team steering + hooks + skills | Org-wide context strategy + MCP servers |
-| **05 Workflows** | AI in IDE only (autocomplete) | AI in review + testing | AI in CI/CD + documentation | AI across full SDLC, continuously optimized |
-| **06 Security** | No policy (shadow IT) | Data classified, DPA signed | Enterprise controls, audit logging | DLP, proxy/gateway, anomaly detection |
-| **07 Productivity** | Anecdotal ("feels faster") | Baseline + pilot metrics | Team dashboards, DORA metrics | Automated ROI reporting, cohort analysis |
-| **08 Governance** | No policy | Written guidelines | Formal policy, enforced | Continuous compliance, automated enforcement |
-| **09 Metrics** | None | 3 core metrics tracked manually | Dashboards per audience | Automated, tied to business outcomes |
-| **10 Adoption** | Individuals exploring | One team pilot | Multi-team expansion with champions | Org-wide, embedded in culture and hiring |
+| **Strategy** | Awareness, no coordinated approach | Strategy documented, budget allocated, owner assigned | Multi-team with governance, vendor agreements | AI embedded in engineering strategy, reviewed quarterly |
+| **Tools** | Free tiers explored | Paid tool for pilot team | Approved shortlist, enterprise eval | Enterprise agreement, regular re-evaluation |
+| **Agents** | Chat/autocomplete only | Agents on one team (supervised) | Agents across teams (governed) | Agents embedded in SDLC workflows |
+| **Context** | — | Project instructions written | Team steering + hooks + skills | Org-wide context strategy + MCP servers |
+| **Workflows** | AI in IDE only (autocomplete) | AI in review + testing | AI in CI/CD + documentation | AI across full SDLC, continuously optimized |
+| **Security** | No policy (shadow IT) | Data classified, DPA signed | Enterprise controls, audit logging | DLP, proxy/gateway, anomaly detection |
+| **Productivity** | Anecdotal ("feels faster") | Baseline + pilot metrics | Team dashboards, DORA metrics | Automated ROI reporting, cohort analysis |
+| **Governance** | No policy | Written guidelines | Formal policy, enforced | Continuous compliance, automated enforcement |
+| **Metrics** | None | 3 core metrics tracked manually | Dashboards per audience | Automated, tied to business outcomes |
+| **Adoption** | Individuals exploring | One team pilot | Multi-team expansion with champions | Org-wide, embedded in culture and hiring |
 
 > **How to use this:** Find your current level across most sections. Your weakest dimension is your bottleneck. Don't try to advance all dimensions simultaneously — focus on the bottleneck first. Most organizations in 2025 are at Level 1–2.
 

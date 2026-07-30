@@ -1,12 +1,12 @@
 # Example: Project Instructions Files
 
-> Ready-to-copy example instruction files for different tech stacks. For guidance on how to write and maintain these, see [04 — Context Engineering: Project Instructions](../../04-context-engineering/project-instructions.md).
+> Ready-to-copy example instruction files for different tech stacks. For guidance on how to write and maintain these, see [Context Engineering: Project Instructions](../../context-engineering/project-instructions.md).
 
 ## What These Are
 
 These are copy-paste starting points for different stacks. Pick the one closest to your project and customize.
 
-For the full explanation of *why* these work, tool-specific loading behavior, maintenance guidance, and best practices, refer to the [Context Engineering section](../../04-context-engineering/project-instructions.md).
+For the full explanation of *why* these work, tool-specific loading behavior, maintenance guidance, and best practices, refer to the [Context Engineering section](../../context-engineering/project-instructions.md).
 
 ---
 
@@ -187,4 +187,4 @@ Python 3.12+, FastAPI, SQLAlchemy 2.0 (async), Alembic, pytest
 4. Add your project-specific "don'ts" (what AI keeps getting wrong)
 5. Commit to your repository root
 
-For deeper guidance on writing effective instructions, maintenance, and tool-specific behavior: [04 — Context Engineering: Project Instructions](../../04-context-engineering/project-instructions.md).
+For deeper guidance on writing effective instructions, maintenance, and tool-specific behavior: [Context Engineering: Project Instructions](../../context-engineering/project-instructions.md).
