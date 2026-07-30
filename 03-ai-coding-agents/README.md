@@ -46,6 +46,14 @@ flowchart TD
 
 ## AI Engineering Maturity: Coding Agents
 
+> **Engineering Manager Note**
+>
+> Agents amplify your team's strengths *and* weaknesses.
+>
+> A team with good review culture + agents = shipping machine.
+>
+> A team with no review culture + agents = shipping bugs faster.
+
 | Level | What it looks like | What to do |
 |:-----:|-------------------|-----------|
 | **0** | No AI tools at all | Start with autocomplete, not agents — see [01 — Foundations](../01-foundations/) |

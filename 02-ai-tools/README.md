@@ -55,6 +55,14 @@ flowchart LR
 
 ## AI Engineering Maturity: Tools
 
+> **Engineering Manager Note**
+>
+> The tool matters less than you think.
+>
+> What matters is: can your team use it safely, does it integrate with your stack, and will the vendor be around in 2 years?
+>
+> Pick one. Start. Iterate.
+
 | Level | What it looks like | What to do |
 |:-----:|-------------------|-----------|
 | **0** | No AI tools | Start at [01 — Foundations](../01-foundations/) |

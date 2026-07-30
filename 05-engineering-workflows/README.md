@@ -67,6 +67,12 @@ flowchart LR
 
 ## AI Engineering Maturity: Workflow Integration
 
+> **Engineering Manager Note**
+>
+> If your developers are faster but your PRs still take 3 days to review, you haven't improved delivery.
+>
+> Find the bottleneck. Apply AI there. Not just where it's shiny.
+
 | Level | What it looks like | What to do |
 |:-----:|-------------------|-----------|
 | **0** | No AI in workflows | Start with [01 — Foundations](../01-foundations/) |

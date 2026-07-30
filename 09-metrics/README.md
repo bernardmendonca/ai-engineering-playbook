@@ -50,6 +50,12 @@ flowchart TD
 
 ## AI Engineering Maturity: Metrics
 
+> **Engineering Manager Note**
+>
+> You will be asked "is AI working?" — by your VP, by finance, by the board.
+>
+> "The team likes it" is not an answer. Have three numbers ready. That's enough.
+
 | Level | What it looks like | What to do |
 |:-----:|-------------------|-----------|
 | **0** | No metrics | Can't prove value, can't course-correct |

@@ -22,6 +22,12 @@ Governance is what separates ad-hoc experimentation from sustainable, scalable A
 
 ## Governance Maturity Levels
 
+> **Engineering Manager Note**
+>
+> Standardize policies. Personalize tools.
+>
+> Your policy should be the same for every team. Which tool they use within that policy? Let them choose.
+
 ```mermaid
 flowchart LR
     A[Level 0<br/>No Policy] --> B[Level 1<br/>Guidelines]

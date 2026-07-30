@@ -50,6 +50,12 @@ flowchart TD
 
 ## AI Engineering Maturity: Security
 
+> **Engineering Manager Note**
+>
+> "No AI" is not a security posture. It's an invitation to shadow IT.
+>
+> Your job is to give teams a safe path — not to block the road and hope they don't find a side street.
+
 | Level | What it looks like | What to do |
 |:-----:|-------------------|-----------|
 | **0** | No policy — shadow IT with unknown tools | Acknowledge usage, begin data classification |

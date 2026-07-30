@@ -68,6 +68,12 @@ Most organizations only do Level 4 (individual prompts). The value of context en
 
 ## AI Engineering Maturity: Context Engineering
 
+> **Engineering Manager Note**
+>
+> The developer who leaves and takes all the "good prompts" with them is a single point of failure.
+>
+> Fix: one afternoon, one CLAUDE.md file, committed to the repo. Now the team has context, not just one person.
+
 | Level | What it looks like | What to do |
 |:-----:|-------------------|-----------|
 | **0** | No project instructions, every developer prompts from scratch | Write your first CLAUDE.md / .cursorrules today |

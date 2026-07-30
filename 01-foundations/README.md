@@ -61,3 +61,9 @@ flowchart TD
 ## Status
 
 🟢 Active — content being written and refined.
+
+> **Engineering Manager Note**
+>
+> Your job isn't to have all the answers about AI.
+>
+> Block two hours. Try a tool yourself. You can't lead adoption of something you haven't touched.

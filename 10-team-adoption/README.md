@@ -61,6 +61,12 @@ flowchart LR
 
 ## AI Engineering Maturity: Team Adoption
 
+> **Engineering Manager Note**
+>
+> You can't mandate enthusiasm.
+>
+> But you can do this: give the team access, run one 30-minute workshop, and then get out of the way. Adoption happens when the tool proves itself — not when you prove it to them.
+
 | Level | What it looks like | What to do |
 |:-----:|-------------------|-----------|
 | **0** | No AI tools, no awareness | Start at [01 — Foundations](../01-foundations/) |

@@ -101,6 +101,14 @@ flowchart LR
 
 > **How to use this:** Find your current level across most sections. Your weakest dimension is your bottleneck. Don't try to advance all dimensions simultaneously — focus on the bottleneck first. Most organizations in 2025 are at Level 1–2.
 
+> **Engineering Manager Note**
+>
+> You don't need to solve all of this at once.
+>
+> Pick the section that matches your most urgent problem. Ship one improvement. Then come back for the next one.
+>
+> The playbook is a buffet, not a curriculum.
+
 ## Cost Context
 
 Throughout this playbook, we use the following labels to help you understand the investment required:

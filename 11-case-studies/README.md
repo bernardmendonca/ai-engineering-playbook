@@ -57,6 +57,12 @@ Each case study follows this structure:
 
 ## Contributing
 
+> **Engineering Manager Note**
+>
+> The case study that helps you most is the one that matches your constraints — not the one with the biggest numbers.
+>
+> Read the "Applicable If" section first. Skip the ones that don't fit.
+
 We welcome case studies from practitioners. Case studies can be anonymized. See [CONTRIBUTING.md](../CONTRIBUTING.md).
 
 ## Status

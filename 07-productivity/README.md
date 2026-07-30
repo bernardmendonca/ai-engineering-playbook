@@ -53,6 +53,12 @@ flowchart TD
 
 ## AI Engineering Maturity: Productivity Measurement
 
+> **Engineering Manager Note**
+>
+> Don't measure AI success by lines of code.
+>
+> Track one thing: how long from "PR opened" to "merged and deployed." If that number drops and bugs don't rise — AI is working.
+
 | Level | What it looks like | What to do |
 |:-----:|-------------------|-----------|
 | **0** | No measurement at all | Nothing to compare against — start collecting baseline |
