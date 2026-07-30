@@ -129,11 +129,11 @@ flowchart LR
     D -.- D1[Agent plans, codes, runs, iterates<br/>Human reviews final output]
 ```
 
-**Our recommendation:**
-
-- **Start with lower autonomy.** Let developers build trust and understanding before increasing agent independence.
+**Our recommendation:** Start with lower autonomy.** Let developers build trust and understanding before increasing agent independence.
 - **Match autonomy to risk.** Internal tools can tolerate higher autonomy. Security-critical paths need human checkpoints.
 - **Never go fully autonomous on production-affecting changes** without CI/CD gates downstream.
+
+> **Our take on default autonomy:** Start every team at **"auto-apply code, ask before commands"** (Level 3 in the spectrum above). This is the sweet spot — developers see real speed improvement but maintain control over anything that executes. Fully autonomous mode (Level 4) should be earned, not defaulted. A team that's been using agents for 4+ weeks with good results can graduate. A team on day one should never start at full autonomy.
 
 ## Common Misconceptions
 

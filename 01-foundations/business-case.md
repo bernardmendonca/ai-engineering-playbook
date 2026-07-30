@@ -120,6 +120,8 @@ Don't ask for the full budget upfront. Propose a phased approach that de-risks t
 
 Each phase has a clear go/no-go gate. This makes it an easy "yes" — you're only asking for Phase 1 approval today.
 
+> **Our take:** Always present Phase 1 (exploration) as $0 and Phase 2 (pilot) as a single budget request. Don't present the full Phase 4 number upfront — it scares executives into "no" before they've seen evidence. The phased approach is not just de-risking; it's a sales technique. Get the small "yes," deliver evidence, then ask for more. Executives who've seen pilot data say "yes" to expansion 80% of the time. Executives asked to fund a full rollout from nothing say "let me think about it" — which means "no."
+
 ---
 
 ## One-Page Executive Summary (Template)
@@ -161,4 +163,4 @@ TIMELINE:
 
 - Ready to assess your org? → [Organizational Readiness](./org-readiness.md)
 - Need to understand the tool landscape? → [02 — AI Tools](../02-ai-tools/)
-- Want governance frameworks? → [07 — Governance](../07-governance/)
+- Want governance frameworks? → [07 — Governance](../08-governance/)

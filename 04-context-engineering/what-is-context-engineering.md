@@ -106,6 +106,8 @@ Not information — but rules about how the AI should behave. Automation trigger
 - Consistent output within a project
 - **Effort: 2–4 hours per project. Massive ROI.**
 
+> **Our take on where to start:** Start at Level 1 this week. Literally today. Write a CLAUDE.md (or equivalent) for your most active project. It takes 2 hours and immediately improves every AI interaction for every developer on that project. This is the single highest-ROI activity in AI adoption. Don't plan an org-wide context strategy before you've done this for one project. Do the simple thing first, experience the improvement, then scale.
+
 ### Level 2: Team Context
 - Shared steering across multiple projects
 - Domain knowledge codified (architecture, business rules)
@@ -119,6 +121,13 @@ Not information — but rules about how the AI should behave. Automation trigger
 - Knowledge architecture connecting AI to internal docs, APIs, runbooks
 - Context governance: who maintains what, how it's reviewed
 - **Effort: Ongoing investment. Compounding returns.**
+
+### Level 4: Adaptive Context
+- Context self-maintains — AI updates its own instructions when conventions change
+- Feedback loops: context quality measured and improved continuously
+- New projects and teams inherit context automatically
+- Context engineering is a recognized discipline with owned practices
+- **Effort: Ongoing. Competitive advantage.**
 
 ---
 

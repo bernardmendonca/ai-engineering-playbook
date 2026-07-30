@@ -292,7 +292,7 @@ Governance: Formal
 
 ## Policy Template: Agent Acceptable Use
 
-For agent-specific acceptable use, define these boundaries. For a full org-wide AI policy template (covering all AI tools, not just agents), see [07 — AI Usage Policy](../07-governance/ai-usage-policy.md).
+For agent-specific acceptable use, define these boundaries. For a full org-wide AI policy template (covering all AI tools, not just agents), see [07 — AI Usage Policy](../08-governance/ai-usage-policy.md).
 
 **Agent-specific boundaries** (supplement your broader AI policy with these):
 
@@ -335,4 +335,4 @@ For agent-specific acceptable use, define these boundaries. For a full org-wide 
 
 - Want to try agents with zero governance overhead? → [Getting Started Free](./getting-started-free.md)
 - Ready to roll out with these controls in place? → [Production Rollout](./production-rollout.md)
-- Need org-wide governance beyond agents? → [07 — Governance](../07-governance/)
+- Need org-wide governance beyond agents? → [07 — Governance](../08-governance/)

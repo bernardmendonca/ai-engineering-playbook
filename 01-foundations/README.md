@@ -4,7 +4,13 @@
 
 ## Why Start Here
 
-Before making tool or process decisions, leaders need a shared vocabulary and mental framework. This section builds that foundation — enough to have informed conversations without getting lost in the hype.
+Without shared mental models, AI adoption devolves into:
+- **Decisions driven by hype** — adopting tools because of blog posts, not fit
+- **Executives and engineers talking past each other** — one thinks "AI replaces developers," the other thinks "it's just autocomplete"
+- **False starts that waste quarters** — jumping to tools before understanding readiness, then blaming the tool when it fails
+- **Repeated mistakes** — every team rediscovering the same lessons independently
+
+This section gives leaders a common vocabulary and framework so that conversations about AI are productive, decisions are grounded, and the organization doesn't spend 6 months learning what could be understood in 6 hours.
 
 ## In This Section
 
@@ -29,6 +35,16 @@ A recurring theme in this playbook: **what works for one developer experimenting
 
 > This playbook uses 🆓 💰 🏢 labels throughout to signal cost context. See the [top-level README](../README.md#cost-context) for the full legend.
 
+## AI Engineering Maturity: Foundations & Readiness
+
+| Level | What it looks like | What to do |
+|:-----:|-------------------|-----------|
+| **0** | No awareness of AI tooling landscape | Read this section front-to-back |
+| **1** | Individuals aware, no shared understanding | Run a leadership session on [AI Landscape](./ai-landscape.md) and [Mental Models](./mental-models.md) |
+| **2** | Shared vocabulary, readiness assessed | Complete [Organizational Readiness](./org-readiness.md) assessment, build [Business Case](./business-case.md) |
+| **3** | Executives aligned, budget secured, strategy documented | Move to tool evaluation and pilot planning |
+| **4** | AI strategy integrated into engineering strategy, reviewed quarterly | Continuous: landscape monitoring, strategy refinement |
+
 ## Quick Orientation
 
 ```mermaid
@@ -36,10 +52,10 @@ flowchart TD
     A[Where is your org today?] --> B{Individual devs using AI tools?}
     B -->|No| C[Start here — build understanding first]
     B -->|Yes| D{Sanctioned by leadership?}
-    D -->|No| E[Read 07-governance + 05-security<br/>Then come back here for framing]
+    D -->|No| E[Read 08-governance + 06-security<br/>Then come back here for framing]
     D -->|Yes| F{Measuring impact?}
-    F -->|No| G[Read 08-metrics<br/>Then 06-productivity]
-    F -->|Yes| H[Move to 04-engineering-workflows<br/>for deeper integration]
+    F -->|No| G[Read 09-metrics<br/>Then 07-productivity]
+    F -->|Yes| H[Move to 05-engineering-workflows<br/>for deeper integration]
 ```
 
 ## Status

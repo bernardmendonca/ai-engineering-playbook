@@ -154,6 +154,8 @@ quadrantChart
 - **Invest carefully (lower maturity, high impact):** Coding agents have the highest ceiling but require governance and selective application.
 - **Evaluate (lower maturity, lower impact):** Testing and documentation tools are worth piloting but aren't transformative yet.
 
+> **Our take:** If your org has zero AI tools today, start with **code completion** (autocomplete). It's the lowest-risk, lowest-effort, highest-certainty investment. Don't start with agents — start with autocomplete, add chat, then graduate to agents once you have context engineering and governance in place. The progression matters.
+
 ---
 
 ## What's NOT Covered Here

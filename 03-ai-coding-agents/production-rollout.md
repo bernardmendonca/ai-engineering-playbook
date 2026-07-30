@@ -390,5 +390,5 @@ gantt
 
 - Need to establish governance first? → [Governing Agent Usage](./governing-agents.md)
 - Want to understand tool options in detail? → [Agent Landscape](./agent-landscape.md)
-- Looking for org-wide adoption strategies beyond tooling? → [09 — Team Adoption](../09-team-adoption/)
-- Need to define metrics for your rollout? → [08 — Metrics](../08-metrics/)
+- Looking for org-wide adoption strategies beyond tooling? → [09 — Team Adoption](../10-team-adoption/)
+- Need to define metrics for your rollout? → [08 — Metrics](../09-metrics/)

@@ -117,6 +117,8 @@ CLAUDE.md.template            # Starting point for CLAUDE.md
 
 **Tradeoff:** Maximum autonomy, slowest convergence. Best for small/medium orgs (<50 devs) or orgs where mandate resistance is high.
 
+> **Our take:** Start with **Pattern 2 (Template + Customize)** regardless of org size. It gives you consistency without control-freakery. Central team provides the template and the non-negotiable org-level rules; teams own everything else. Pattern 1 (inherited) adds too much coupling too early. Pattern 3 (community) is too slow to converge in orgs that need consistency now. You can always evolve from Pattern 2 toward Pattern 1 later if governance demands tighten.
+
 ---
 
 ## Governance of Context

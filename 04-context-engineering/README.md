@@ -66,6 +66,16 @@ Most organizations only do Level 4 (individual prompts). The value of context en
 
 **ROI insight:** A well-written project instructions file takes 2 hours and improves every AI interaction for every developer on that project, forever. This is one of the highest-leverage activities in AI adoption.
 
+## AI Engineering Maturity: Context Engineering
+
+| Level | What it looks like | What to do |
+|:-----:|-------------------|-----------|
+| **0** | No project instructions, every developer prompts from scratch | Write your first CLAUDE.md / .cursorrules today |
+| **1** | Project instructions file exists for main projects | Expand to cover all active repos |
+| **2** | Team-level steering, shared skills, hooks for quality gates | Codify domain knowledge, build reusable skills |
+| **3** | Org-wide context strategy, MCP servers for live data | Governance of context, cross-team consistency |
+| **4** | Self-maintaining context, feedback loops, new projects auto-inherit | Continuous optimization, context quality metrics |
+
 ## Status
 
 🟢 Active — content being written and refined.

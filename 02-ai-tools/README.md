@@ -4,7 +4,14 @@
 
 ## Why This Section Matters
 
-The AI developer tooling market is crowded, fast-moving, and heavily marketed. Every tool claims to "10x developer productivity." Leaders need frameworks for evaluation, not just feature lists — because the best tool depends entirely on your constraints.
+The AI developer tooling market is crowded, fast-moving, and heavily marketed. Every tool claims to "10x developer productivity." Without a structured evaluation approach:
+
+- **You pick on hype, not fit** — the tool with the best marketing wins, not the one that matches your ecosystem and constraints
+- **Wasted budget and switching cost** — 6 months in, you discover it doesn't integrate with your IDE or meet compliance requirements. Switching costs developer time and trust.
+- **Team resentment from forced tools** — a tool chosen without developer input sits unused; 40% of seats go to waste
+- **Vendor lock-in by default** — without evaluating build vs. buy tradeoffs upfront, you discover too late that you're locked into a pricing model or architecture that doesn't scale
+
+Leaders need frameworks for evaluation, not just feature lists — because the best tool depends entirely on your constraints.
 
 ## In This Section
 
@@ -39,9 +46,19 @@ flowchart LR
 ## Quick Navigation
 
 - Looking specifically for coding agents? → [03 — AI Coding Agents](../03-ai-coding-agents/)
-- Need security evaluation criteria? → [05 — Security](../05-security/)
-- Want to measure tool effectiveness? → [08 — Metrics](../08-metrics/)
+- Need security evaluation criteria? → [05 — Security](../06-security/)
+- Want to measure tool effectiveness? → [08 — Metrics](../09-metrics/)
 
 ## Status
 
 🟢 Active — content being written and refined.
+
+## AI Engineering Maturity: Tools
+
+| Level | What it looks like | What to do |
+|:-----:|-------------------|-----------|
+| **0** | No AI tools | Start at [01 — Foundations](../01-foundations/) |
+| **1** | Individuals on free tiers, no org awareness | Evaluate tools, build evidence for pilot budget |
+| **2** | One team on paid tier, evaluating formally | Run structured evaluation, prepare governance |
+| **3** | Approved shortlist, enterprise-evaluated, multiple teams | Negotiate volume pricing, standardize configuration |
+| **4** | Enterprise agreement, regular re-evaluation cadence, portfolio managed | Optimize, track emerging tools quarterly |
