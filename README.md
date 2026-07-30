@@ -51,6 +51,14 @@ The playbook is organized into three tracks. Start with the one that matches you
 | [Metrics](./metrics/) | What to measure, dashboards, reporting to leadership |
 | [Team Adoption](./team-adoption/) | Change management, resistance, upskilling, champions |
 | [Case Studies](./case-studies/) | Real-world patterns — startup, mid-size, enterprise |
+
+### ⚠️ Avoid — Common Mistakes
+
+> For anyone starting or scaling AI adoption — read this first.
+
+| Section | What you'll learn |
+|---------|-------------------|
+| [AI Anti-Patterns](./ai-anti-patterns/) | The 18 mistakes orgs keep making — and how to avoid each one |
 ## Repository Structure
 
 ```
@@ -74,6 +82,9 @@ ai-engineering-playbook/
 ├── metrics/               # Measuring success, reporting upward
 ├── team-adoption/         # Change management, upskilling, rollout
 ├── case-studies/          # Real-world examples
+│
+│   ⚠️ AVOID
+├── ai-anti-patterns/      # The 18 mistakes orgs keep making
 │
 │   RESOURCES
 ├── prompts/               # Reusable prompt library
