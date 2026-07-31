@@ -32,7 +32,7 @@ Without deliberate context engineering:
 | [Knowledge Architecture](./knowledge-architecture.md) | MCP servers, RAG, codebase indexing, making team knowledge accessible to AI |
 | [Org-Wide Strategy](./org-wide-strategy.md) | Scaling context across teams — consistency without rigidity |
 
-## Key Principle
+## 💡 Key Insight
 
 > **The best AI experience shouldn't depend on who's using it.**
 >

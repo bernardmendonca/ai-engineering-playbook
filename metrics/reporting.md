@@ -178,7 +178,7 @@ IF no improvement by [date]: Re-evaluate tool choice and approach."
 
 ---
 
-## Reporting Mistakes
+## ⚠️ Reporting Mistakes
 
 | Mistake | Impact | Instead |
 |---------|--------|---------|

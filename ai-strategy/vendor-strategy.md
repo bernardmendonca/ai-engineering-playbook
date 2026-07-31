@@ -20,7 +20,7 @@ flowchart LR
     C -.- C1[Best tool per use case<br/>Complex governance<br/>No volume leverage<br/>Fragmented support]
 ```
 
-> **Our take:** **Primary + Secondary** is the right model for most orgs. Pick one platform tool (Copilot, Q, or Cursor) as your primary — handles 80% of daily use. Keep one secondary option available (typically CLI-based like Claude Code or Aider) for power users and specific use cases the primary doesn't cover well. This gives you flexibility without governance chaos.
+> ✅ ✅ **Our take: **Primary + Secondary** is the right model for most orgs. Pick one platform tool (Copilot, Q, or Cursor) as your primary — handles 80% of daily use. Keep one secondary option available (typically CLI-based like Claude Code or Aider) for power users and specific use cases the primary doesn't cover well. This gives you flexibility without governance chaos.
 
 ---
 
@@ -88,7 +88,7 @@ Don't evaluate once and forget. The landscape moves quarterly.
 | **Annually** | Full re-evaluation: does our current choice still win? Should we switch? | Engineering leadership |
 | **On trigger** | Major vendor change (pricing, terms, acquisition, quality drop) | Immediate review |
 
-> **Our take:** Re-evaluate annually but switch rarely. Switching costs are real and compound with team size. Only switch if: (1) quality has genuinely degraded, (2) pricing became unreasonable, (3) security posture changed, or (4) a dramatically better option emerged that justifies transition cost. "Slightly better" is not worth switching for.
+> ✅ ✅ **Our take: Re-evaluate annually but switch rarely. Switching costs are real and compound with team size. Only switch if: (1) quality has genuinely degraded, (2) pricing became unreasonable, (3) security posture changed, or (4) a dramatically better option emerged that justifies transition cost. "Slightly better" is not worth switching for.
 
 ---
 

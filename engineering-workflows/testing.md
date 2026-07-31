@@ -35,7 +35,7 @@ AI test generation works best when you have:
 
 **Quality check:** Delete the implementation and see if tests fail for the right reasons. If not, the tests are tautological.
 
-> **Our take:** Coverage is a means, not an end. 10 high-quality behavioral tests that verify business rules are worth more than 50 AI-generated tests that verify the implementation details. When using AI for test generation, always review with this question: "If I rewrote the implementation differently but correctly, would these tests still pass?" If the answer is no, the tests are tautological and should be rewritten or deleted.
+> ✅ ✅ **Our take: Coverage is a means, not an end. 10 high-quality behavioral tests that verify business rules are worth more than 50 AI-generated tests that verify the implementation details. When using AI for test generation, always review with this question: "If I rewrote the implementation differently but correctly, would these tests still pass?" If the answer is no, the tests are tautological and should be rewritten or deleted.
 
 **Cost:** 🆓 Built into any coding agent. One of the best tasks for free-tier exploration.
 
@@ -80,7 +80,7 @@ AI test generation works best when you have:
 
 ---
 
-## Quality Checklist for AI-Generated Tests
+## 📋 Quality Checklist for AI-Generated Tests
 
 Before accepting AI-generated tests, verify:
 
@@ -94,7 +94,7 @@ Before accepting AI-generated tests, verify:
 
 ---
 
-## Anti-Patterns in AI Testing
+## ⚠️ Anti-Patterns in AI Testing
 
 | Anti-pattern | Example | Why it's harmful |
 |-------------|---------|-----------------|

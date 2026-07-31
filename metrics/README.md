@@ -22,7 +22,7 @@ This section provides the metrics framework, dashboard design, and reporting str
 | [Dashboard Design](./dashboard-design.md) | Building dashboards for different audiences |
 | [Reporting to Leadership](./reporting.md) | Translating metrics into executive language |
 
-## Key Principle
+## 💡 Key Insight
 
 > **Measure outcomes, not activity. Report in the language your audience speaks.**
 >

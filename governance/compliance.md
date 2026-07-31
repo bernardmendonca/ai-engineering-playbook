@@ -116,7 +116,7 @@ Below are the **compliance-specific** considerations that go beyond data classif
 
 ---
 
-## Compliance Readiness Checklist
+## 📋 Compliance Readiness Checklist
 
 - [ ] AI tool vendors assessed for compliance certifications (SOC 2, ISO 27001)
 - [ ] Data Processing Agreements signed with AI tool vendors

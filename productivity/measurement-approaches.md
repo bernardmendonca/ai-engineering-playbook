@@ -127,7 +127,7 @@ Despite these challenges, you need measurement. Without it, you're guessing.
 
 ---
 
-## Common Measurement Mistakes
+## ⚠️ Common Measurement Mistakes
 
 | Mistake | Why it fails | Instead |
 |---------|-------------|---------|

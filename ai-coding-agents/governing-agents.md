@@ -131,7 +131,7 @@ This is a real question with no universal answer yet. Establish a team norm:
 | Shared attribution (human + AI noted) | Honest, but ownership can be ambiguous |
 | Agent output tagged, different review bar | Transparent, allows for different review rigor |
 
-**Our recommendation:** The developer who initiates and approves agent output owns it. Tag commits for transparency, but accountability stays with the human. This is the only model that works with existing code review and on-call responsibilities.
+✅ **Our take: The developer who initiates and approves agent output owns it. Tag commits for transparency, but accountability stays with the human. This is the only model that works with existing code review and on-call responsibilities.
 
 ---
 
@@ -169,7 +169,7 @@ For API/token-based tools, establish guardrails:
 | Alert threshold | 80% of budget | Early warning before cap is hit |
 | Hard cap (optional) | Team budget × 1.5 | Prevents runaway costs from stuck loops |
 
-### Cost Monitoring Checklist
+### 📋 Cost Monitoring Checklist
 
 - [ ] Dashboard showing spend per developer, per team, per project
 - [ ] Weekly/monthly cost reports to engineering leadership
@@ -319,7 +319,7 @@ For agent-specific acceptable use, define these boundaries. For a full org-wide 
 
 ---
 
-## Common Governance Mistakes
+## ⚠️ Common Governance Mistakes
 
 | Mistake | Why it fails | Better approach |
 |---------|-------------|----------------|

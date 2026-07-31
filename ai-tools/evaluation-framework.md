@@ -80,7 +80,7 @@ For each shortlisted tool:
 
 Apply Tier 2 weighted scoring. Present recommendation with rationale.
 
-> **Our take on weighting:** For most organizations, the top two dimensions are **code quality** and **enterprise controls** — not developer experience. A tool that produces mediocre code but has great UX is a waste of money. A tool that produces excellent code but lacks admin controls is ungovernable at scale. Developer experience matters but is the tiebreaker, not the deciding factor. Developers adapt to tools that produce good output; they don't forgive tools that produce garbage regardless of how pretty the UI is.
+> ✅ **Our take on weighting:** For most organizations, the top two dimensions are **code quality** and **enterprise controls** — not developer experience. A tool that produces mediocre code but has great UX is a waste of money. A tool that produces excellent code but lacks admin controls is ungovernable at scale. Developer experience matters but is the tiebreaker, not the deciding factor. Developers adapt to tools that produce good output; they don't forgive tools that produce garbage regardless of how pretty the UI is.
 
 ---
 
@@ -129,7 +129,7 @@ Tests: Diagnostic ability, fix correctness, minimal change scope
 
 ---
 
-## Common Evaluation Mistakes
+## ⚠️ Common Evaluation Mistakes
 
 | Mistake | Why it leads to bad decisions | Instead |
 |---------|-------------------------------|---------|

@@ -22,7 +22,7 @@ This section covers the human side of AI adoption — change management, trainin
 | [Upskilling](./upskilling.md) | Training developers to be effective with AI tools |
 | [Champions Model](./champions-model.md) | Building internal advocacy without top-down mandate |
 
-## Key Principle
+## 💡 Key Insight
 
 > **Adoption is a change management problem, not a technology problem.**
 >
@@ -46,7 +46,7 @@ flowchart LR
 
 **Strategy:** Don't try to convert everyone at once. Enable innovators → amplify early adopters → make it easy for the majority → respect the rest.
 
-> **Our take: Most organizations move too slowly, not too fast.** The risk of moving fast (with guardrails) is a fixable mistake. The risk of waiting 12 months "to get it right" is that your best developers leave for companies that give them AI tools, your competitors ship faster, and your organization develops institutional resistance to change that's harder to overcome than any technical challenge. If you have the basics (CI, code review, willing team), start your Phase 1 this month, not next quarter.
+> ✅ **Our take: Most organizations move too slowly, not too fast.** The risk of moving fast (with guardrails) is a fixable mistake. The risk of waiting 12 months "to get it right" is that your best developers leave for companies that give them AI tools, your competitors ship faster, and your organization develops institutional resistance to change that's harder to overcome than any technical challenge. If you have the basics (CI, code review, willing team), start your Phase 1 this month, not next quarter.
 
 ## Cost Context
 

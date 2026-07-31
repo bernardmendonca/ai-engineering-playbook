@@ -23,7 +23,7 @@ This section is for **Directors, VPs, and CTOs** who need to answer: "What's our
 | [Vendor Strategy](./vendor-strategy.md) | Multi-vendor vs. single-vendor, lock-in mitigation, exit planning |
 | [Executive Alignment](./executive-alignment.md) | Ongoing stakeholder management — not just initial buy-in |
 
-## Key Principle
+## 💡 Key Insight
 
 > **AI tooling is infrastructure, not an experiment.**
 >

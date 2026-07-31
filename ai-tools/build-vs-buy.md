@@ -133,7 +133,7 @@ This gives you:
 | Integrate (custom PR reviewer) | ~$3,000–8,000 (API) + $15,000 (eng time) | Custom review bot matching your exact standards |
 | Build (self-hosted assistant) | $100,000–300,000+ (infra + talent) | Full control, likely lower quality than vendor tools |
 
-> **Our opinionated take:** For AI coding assistants in 2025, **buy unless you have a regulatory reason not to**. The market is competitive, tools are good, and building your own is almost never worth it. Save your "build" capacity for integrations unique to your workflow.
+> ✅ **Our take: For AI coding assistants in 2025, **buy unless you have a regulatory reason not to**. The market is competitive, tools are good, and building your own is almost never worth it. Save your "build" capacity for integrations unique to your workflow.
 
 ---
 

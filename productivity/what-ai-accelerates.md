@@ -146,7 +146,7 @@ Be honest about current limitations:
 4. **Quality must be tracked alongside speed:** If bugs go up, net productivity may be negative.
 5. **The compounding effect is real:** 30 min/day × 220 days × 50 developers = meaningful value. But only if quality holds.
 
-> **Our take on where to invest first:** Start with **test generation**. It's high acceleration (50–80% faster), immediately verifiable (tests either pass or they don't), low risk (bad tests are caught, not deployed), and produces a durable asset (higher coverage protects future development). If you're looking for one use case to prove AI productivity to your org, this is it.
+> ✅ **Our take on where to invest first:** Start with **test generation**. It's high acceleration (50–80% faster), immediately verifiable (tests either pass or they don't), low risk (bad tests are caught, not deployed), and produces a durable asset (higher coverage protects future development). If you're looking for one use case to prove AI productivity to your org, this is it.
 
 ---
 

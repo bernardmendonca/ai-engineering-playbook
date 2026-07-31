@@ -56,7 +56,7 @@ AI tools don't just require knowing which buttons to press. They require a new s
 
 **Outcome:** Developers can use AI tools effectively for daily work.
 
-> **Our take on training investment:** Level 2 (2-hour hands-on workshop) is the minimum viable training for any team adopting AI tools. Skipping directly to "here's your login, figure it out" cuts adoption in half. The 2-hour workshop is non-negotiable. Level 3 (advanced) is optional and should target your 20% of power users — they'll become your champions. Don't send everyone to Level 3; it's not worth the time for developers who will be light users.
+> ✅ **Our take on training investment:** Level 2 (2-hour hands-on workshop) is the minimum viable training for any team adopting AI tools. Skipping directly to "here's your login, figure it out" cuts adoption in half. The 2-hour workshop is non-negotiable. Level 3 (advanced) is optional and should target your 20% of power users — they'll become your champions. Don't send everyone to Level 3; it's not worth the time for developers who will be light users.
 
 ---
 

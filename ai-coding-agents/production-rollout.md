@@ -82,7 +82,7 @@ Track these, but don't optimize for them prematurely:
 | **Cost per developer** | Total spend / active users | Budget planning for expansion |
 | **Rejection rate** | How often is agent output discarded vs. used? | Effectiveness signal |
 
-### Pilot Anti-Patterns
+### ⚠️ Pilot Anti-Patterns
 
 | Anti-pattern | Why it fails | Instead |
 |-------------|-------------|---------|
@@ -121,7 +121,7 @@ flowchart TD
     E -.- E1[Expand by task type<br/>Phase 1: Tests everywhere<br/>Phase 2: Features<br/>Phase 3: Full SDLC]
 ```
 
-**Our recommendation:** Opt-in with support capacity as the bottleneck. This ensures every new team gets adequate onboarding without overwhelming your platform/enablement capacity.
+✅ **Our take: Opt-in with support capacity as the bottleneck. This ensures every new team gets adequate onboarding without overwhelming your platform/enablement capacity.
 
 ### What Changes at Scale
 
@@ -155,7 +155,7 @@ At some point you'll face: **one tool for everyone, or let teams choose?**
 | **Approved shortlist (2–3)** | Flexibility, teams match tool to needs | More governance overhead, split community knowledge |
 | **No restriction** | Maximum developer autonomy | Governance nightmare, no bulk pricing, fragmented support |
 
-**Our recommendation:** Approved shortlist of 2–3 tools. Typically one IDE-integrated (Copilot or Cursor) and one CLI/API-based (Claude Code or Aider). This covers most developer preferences without governance explosion.
+✅ **Our take: Approved shortlist of 2–3 tools. Typically one IDE-integrated (Copilot or Cursor) and one CLI/API-based (Claude Code or Aider). This covers most developer preferences without governance explosion.
 
 ---
 
@@ -172,7 +172,7 @@ Org-wide doesn't mean mandated for every developer. It means:
 - **Training and support** are available to all engineers
 - **Metrics and reporting** are standardized
 
-### Enterprise Procurement Checklist
+### 📋 Enterprise Procurement Checklist
 
 When moving from team-level subscriptions to enterprise agreements:
 
@@ -223,7 +223,7 @@ When moving from team-level subscriptions to enterprise agreements:
 - Here's what's expected of you (review agent output, follow policy)
 - Your feedback is welcome — this is evolving
 
-### What NOT to Do at Org-Wide Scale
+### ⚠️ What NOT to Do at Org-Wide Scale
 
 | Don't | Why | Instead |
 |-------|-----|---------|
@@ -342,7 +342,7 @@ gantt
 
 ---
 
-## Common Rollout Mistakes
+## ⚠️ Common Rollout Mistakes
 
 | Stage | Mistake | Consequence | Prevention |
 |-------|---------|-------------|-----------|
@@ -356,7 +356,7 @@ gantt
 
 ---
 
-## Checklist: Are You Ready for the Next Stage?
+## 📋 Checklist: Are You Ready for the Next Stage?
 
 ### Ready for Pilot?
 - [ ] At least one leader has hands-on experience

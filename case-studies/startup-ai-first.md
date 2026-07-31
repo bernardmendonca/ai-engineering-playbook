@@ -71,7 +71,7 @@
 3. **Prompt library sooner** — Individual developers reinvented prompts. Shared library should have started in month 1.
 4. **More structure for juniors** — Two junior hires relied too heavily on AI without understanding fundamentals. Added pairing requirement.
 
-### Mistakes Made
+### ⚠️ Mistakes Made
 
 - **No `.copilotignore` for secrets:** One developer accidentally included an environment file in context. No exposure (enterprise tier), but prompted policy creation.
 - **Cost spike incident:** Senior developer ran a large migration agent task that cost $87 in one session. Prompted per-session cost alerts.

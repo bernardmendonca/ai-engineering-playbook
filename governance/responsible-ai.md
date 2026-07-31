@@ -130,7 +130,7 @@ AI tools have a carbon footprint. At scale, it's worth acknowledging:
 
 ---
 
-## Quick Checklist: Responsible AI for Engineering
+## 📋 Quick Checklist: Responsible AI for Engineering
 
 - [ ] We disclose AI involvement in code (convention defined)
 - [ ] Accountability is clear: human owns the code

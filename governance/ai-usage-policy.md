@@ -105,7 +105,7 @@ Typical turnaround: [X weeks].
 - Code review approval means you've reviewed for correctness, not just style
 - AI suggestions do not reduce the reviewer's responsibility
 
-> **Our take on key policy decisions:**
+> ✅ **Our take on key policy decisions:**
 > - **Personal AI accounts for company code?** No. Ban them. Not because AI is dangerous, but because you have zero visibility, zero audit trail, and zero contractual protection. Provide sanctioned tools instead.
 > - **Mandatory AI attribution in PRs?** Yes, but lightweight. A label or git trailer is enough. Don't make it burdensome — you want transparency, not bureaucracy.
 > - **Should agents be allowed to push to any branch?** No. Agents should only work on feature branches. Protected branches (main, release) require human merge through normal PR process. This is non-negotiable regardless of org size.
@@ -153,7 +153,7 @@ Typical turnaround: [X weeks].
 
 ---
 
-## Common Policy Mistakes
+## ⚠️ Common Policy Mistakes
 
 | Mistake | Consequence | Better approach |
 |---------|------------|----------------|

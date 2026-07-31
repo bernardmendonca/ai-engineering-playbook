@@ -182,7 +182,7 @@ quadrantChart
 5. CI/CD and infrastructure (medium risk, medium value)
 6. Monitoring and incident response (medium risk, context-dependent value)
 
-> **Our take:** Do NOT skip to step 4 (agents) before you have steps 1–3 working. Agents get all the attention because they're exciting, but PR summaries and test generation deliver faster ROI with near-zero risk. Teams that jump straight to agents without AI-augmented review and testing have no safety net when agent output is wrong. Build the safety net first, then let agents loose.
+> ✅ ✅ **Our take: Do NOT skip to step 4 (agents) before you have steps 1–3 working. Agents get all the attention because they're exciting, but PR summaries and test generation deliver faster ROI with near-zero risk. Teams that jump straight to agents without AI-augmented review and testing have no safety net when agent output is wrong. Build the safety net first, then let agents loose.
 
 ---
 

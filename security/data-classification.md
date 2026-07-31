@@ -45,7 +45,7 @@ Set a default and override for exceptions:
 - Override to 🟢: Open source repos, public docs
 - Override to 🔴: Security-sensitive, regulated, or competitive-advantage code
 
-> **Our take:** When in doubt, classify as 🟡 Internal, not 🔴 Restricted. Over-classification kills adoption — if 50% of your code is "restricted," developers can't use AI tools for half their work, and you've effectively banned AI for those teams. Restricted should be a small, well-justified list (typically 10–20% of repos). If you find yourself classifying more than 25% as Restricted, you're being too conservative and should revisit your criteria.
+> ✅ ✅ **Our take: When in doubt, classify as 🟡 Internal, not 🔴 Restricted. Over-classification kills adoption — if 50% of your code is "restricted," developers can't use AI tools for half their work, and you've effectively banned AI for those teams. Restricted should be a small, well-justified list (typically 10–20% of repos). If you find yourself classifying more than 25% as Restricted, you're being too conservative and should revisit your criteria.
 
 ### Step 2: Identify Restricted Code
 

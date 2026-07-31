@@ -37,7 +37,7 @@ flowchart TD
     B -->|Understand the concept| F[Start with What Is an Agent]
 ```
 
-## Key Principles for This Section
+## 💡 Key Insights for This Section
 
 1. **Agents are tools, not replacements** — They amplify skilled developers; they don't eliminate the need for engineering judgment.
 2. **Autonomy is a spectrum** — From "suggest and wait" to "plan and execute." Match the autonomy level to the risk level.

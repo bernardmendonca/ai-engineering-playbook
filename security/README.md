@@ -15,7 +15,7 @@ Security is the most common blocker for AI adoption in enterprise environments â
 | [AI-Generated Code Risks](./generated-code-risks.md) | Vulnerabilities, license issues, and supply chain risks in AI output |
 | [Enterprise Controls](./enterprise-controls.md) | Network, identity, DLP, and monitoring controls for AI tools |
 
-## Key Principle
+## ðŸ’¡ Key Insight
 
 > **Security should enable AI adoption, not just block it.**
 >

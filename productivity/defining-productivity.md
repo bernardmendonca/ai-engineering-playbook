@@ -105,7 +105,7 @@ AI affects developers at different career stages differently:
 
 **Implication:** Don't expect uniform productivity gains across all levels. Measure by cohort if possible.
 
-> **Our take on the primary definition:** For reporting to leadership, use **cycle time** (PR open → merge) as your single headline metric for AI productivity. Not lines of code, not PRs merged, not "hours saved." Cycle time is objective, measurable from git data, comparable across teams, and directly maps to "features reach customers faster" — which is what executives actually care about. Supplement with quality (bug rate) and satisfaction (survey) to ensure you're not trading speed for chaos.
+> ✅ **Our take on the primary definition:** For reporting to leadership, use **cycle time** (PR open → merge) as your single headline metric for AI productivity. Not lines of code, not PRs merged, not "hours saved." Cycle time is objective, measurable from git data, comparable across teams, and directly maps to "features reach customers faster" — which is what executives actually care about. Supplement with quality (bug rate) and satisfaction (survey) to ensure you're not trading speed for chaos.
 
 ---
 

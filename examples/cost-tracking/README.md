@@ -116,7 +116,7 @@ Outliers:
 
 ---
 
-## Cost Optimization Checklist
+## 📋 Cost Optimization Checklist
 
 - [ ] Use cheapest model that works for each task (Haiku for summaries, Sonnet for complex reasoning)
 - [ ] Set per-session/per-day limits to prevent runaway costs

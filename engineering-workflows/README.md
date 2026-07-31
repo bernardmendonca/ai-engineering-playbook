@@ -25,7 +25,7 @@ This section covers practical integration patterns across the full SDLC — wher
 | [CI/CD Integration](./cicd-integration.md) | Embedding AI in your pipelines |
 | [Documentation](./documentation.md) | Keeping docs alive with AI assistance |
 
-## Key Principle
+## 💡 Key Insight
 
 > **AI should accelerate existing good practices, not replace process discipline.**
 >

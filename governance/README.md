@@ -14,7 +14,7 @@ Governance is what separates ad-hoc experimentation from sustainable, scalable A
 | [Responsible AI in Engineering](./responsible-ai.md) | Bias, transparency, accountability for AI-assisted development |
 | [Compliance Considerations](./compliance.md) | Regulatory landscape and how to stay ahead |
 
-## Key Principle
+## 💡 Key Insight
 
 > **Good governance is invisible to developers when it's working.**
 >

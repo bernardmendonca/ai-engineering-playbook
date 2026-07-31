@@ -127,7 +127,7 @@ For larger orgs (200+), a community of practice model may work better:
 | **Community of Practice** | Open group, regular meetups, shared resources | 200+ developers |
 | **Hybrid** | Champions drive, community participates | Any size |
 
-> **Our take:** Use the **Champions model** until it breaks (which happens around 200+ developers). Champions provide directed, accountable support. Communities of practice are complementary but not a substitute — they generate sharing but don't ensure every team has a knowledgeable person available. At 200+ devs, run both: champions for per-team support, community for cross-team knowledge. Below 200 devs, champions alone is sufficient and simpler.
+> ✅ ✅ **Our take: Use the **Champions model** until it breaks (which happens around 200+ developers). Champions provide directed, accountable support. Communities of practice are complementary but not a substitute — they generate sharing but don't ensure every team has a knowledgeable person available. At 200+ devs, run both: champions for per-team support, community for cross-team knowledge. Below 200 devs, champions alone is sufficient and simpler.
 
 **Community of Practice elements:**
 - Open Slack/Teams channel (anyone can join/contribute)

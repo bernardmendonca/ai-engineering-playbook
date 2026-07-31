@@ -74,7 +74,7 @@ Next quarter: [Specific initiative — new tool eval, deeper integration, etc.]
 | "ROI takes time to prove" | "Productivity gains visible in 4–6 weeks. Business ROI calculable after one quarter." |
 | "This is ongoing, not one-time" | "Like CI/CD or observability — a permanent capability with permanent cost and permanent benefit." |
 
-> **Our take:** Under-promise and over-deliver. Executive trust compounds the same way productivity gains do. One "we said X and delivered X+10%" builds more credibility than three "we said 10x and delivered 2x." Set conservative expectations. Beat them. Let the data do the selling.
+> ✅ ✅ **Our take: Under-promise and over-deliver. Executive trust compounds the same way productivity gains do. One "we said X and delivered X+10%" builds more credibility than three "we said 10x and delivered 2x." Set conservative expectations. Beat them. Let the data do the selling.
 
 ---
 

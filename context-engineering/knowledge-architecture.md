@@ -133,7 +133,7 @@ MCP servers are configured in your tool's settings. Example for Kiro/VS Code-bas
 | Complex internal systems | Build custom MCP server | 💰 1–2 weeks |
 | Database schema access | Use generic DB MCP server | 🆓 Hours to configure |
 
-**Our recommendation:** Start with community servers for standard tools. Build custom only for internal systems that provide high-value context.
+✅ **Our take: Start with community servers for standard tools. Build custom only for internal systems that provide high-value context.
 
 ---
 
@@ -162,7 +162,7 @@ RAG indexes your documentation and retrieves relevant chunks when the AI needs c
 | Custom RAG pipeline | 🏢 Significant engineering | High | Large orgs with unique knowledge management needs |
 | Simple docs-in-repo approach | 🆓 | Low | Small teams where key docs fit in the codebase |
 
-**Our recommendation for most teams:** Start with docs-in-repo (a `/docs` folder with key architecture docs). Graduate to MCP when you outgrow that. Only build custom RAG if you have 500+ developers or massive documentation needs.
+✅ **Our take: Start with docs-in-repo (a `/docs` folder with key architecture docs). Graduate to MCP when you outgrow that. Only build custom RAG if you have 500+ developers or massive documentation needs.
 
 ---
 

@@ -18,7 +18,7 @@ Documentation is always stale. Everyone knows it. Nobody fixes it. AI can break 
 | Write architectural docs | Low — lacks context and "why" | 🆓 But needs heavy editing |
 | Generate onboarding guides | Medium — good structure, may miss tribal knowledge | 🆓 Good starting point |
 
-> **Our take:** Let AI fully own **API reference documentation**. It's factual, verifiable, and generated from code — there's no "why" or judgment involved. Hook it into CI so it regenerates on merge. Humans should never manually maintain API reference docs again. Everything else (architecture docs, ADRs, onboarding guides) should be AI-drafted and human-edited. Architecture docs in particular should never be AI-only — the "why" is the valuable part and AI doesn't have it.
+> ✅ ✅ **Our take: Let AI fully own **API reference documentation**. It's factual, verifiable, and generated from code — there's no "why" or judgment involved. Hook it into CI so it regenerates on merge. Humans should never manually maintain API reference docs again. Everything else (architecture docs, ADRs, onboarding guides) should be AI-drafted and human-edited. Architecture docs in particular should never be AI-only — the "why" is the valuable part and AI doesn't have it.
 
 ---
 
@@ -99,7 +99,7 @@ Documentation is always stale. Everyone knows it. Nobody fixes it. AI can break 
 
 ---
 
-## Anti-Patterns
+## ⚠️ Anti-Patterns
 
 | Anti-pattern | Problem | Instead |
 |-------------|---------|---------|

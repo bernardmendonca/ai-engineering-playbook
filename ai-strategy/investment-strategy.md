@@ -23,7 +23,7 @@ AI tool costs don't fit neatly into existing budget categories:
 | **R&D / Innovation** | Exploratory investment | Protects from ROI pressure early | Vulnerable to cuts; perceived as optional |
 | **Platform / Infrastructure** | Foundational capability | Signals permanence | May over-invest before proving value |
 
-> **Our take:** Budget AI tools under **Developer Tooling** for tactical decisions (tool licenses, API costs) and under **Engineering Productivity** for strategic investment (enablement team, training, process change). Never put production AI tools under R&D — it signals "experiment" and makes budget fragile.
+> ✅ ✅ **Our take: Budget AI tools under **Developer Tooling** for tactical decisions (tool licenses, API costs) and under **Engineering Productivity** for strategic investment (enablement team, training, process change). Never put production AI tools under R&D — it signals "experiment" and makes budget fragile.
 
 ---
 
@@ -84,7 +84,7 @@ gantt
 
 **Each phase has a go/no-go gate.** This makes each "yes" small and evidence-based.
 
-> **Our take:** Always present Phase 1 as $0 and Phase 2 as a single budget ask. Get the small "yes," deliver data, then ask for more. Executives who see pilot results say "yes" to expansion 80% of the time. Executives asked to fund full rollout from nothing say "let me think about it" — which means no.
+> ✅ ✅ **Our take: Always present Phase 1 as $0 and Phase 2 as a single budget ask. Get the small "yes," deliver data, then ask for more. Executives who see pilot results say "yes" to expansion 80% of the time. Executives asked to fund full rollout from nothing say "let me think about it" — which means no.
 
 ---
 

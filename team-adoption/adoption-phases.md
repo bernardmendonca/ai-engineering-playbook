@@ -52,7 +52,7 @@ flowchart LR
 **Who:** One team (5–8 developers)
 **Budget:** 💰 Paid tier ($10–40/user/month)
 
-> **Our take on pilot duration:** Run your pilot for exactly **6 weeks**. 4 weeks is too short — the first 2 weeks are learning curve, so you only get 2 weeks of real data. 8 weeks is too long — you lose momentum and the organization loses patience. 6 weeks gives you 2 weeks of ramp-up + 4 weeks of stable usage data. This is enough to make a defensible recommendation.
+> ✅ **Our take on pilot duration:** Run your pilot for exactly **6 weeks**. 4 weeks is too short — the first 2 weeks are learning curve, so you only get 2 weeks of real data. 8 weeks is too long — you lose momentum and the organization loses patience. 6 weeks gives you 2 weeks of ramp-up + 4 weeks of stable usage data. This is enough to make a defensible recommendation.
 
 **Goals:**
 - Validate productivity gains with measurement

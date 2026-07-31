@@ -63,7 +63,7 @@ These are not goals — they're boundaries. If these get worse, AI adoption is n
 | **Quarterly** | Full metrics review, ROI calculation, survey | VP/Director + leadership |
 | **Annually** | Strategic review, vendor evaluation, budget planning | CTO / VP Engineering |
 
-> **Our take: Start with exactly 3 metrics.** If you're early in AI adoption, don't build a 12-metric dashboard. Start with: (1) **Adoption rate** — are people using it? (2) **PR cycle time** — is delivery faster? (3) **Bug introduction rate** — is quality holding? These three together tell you if adoption is real, if it's working, and if it's safe. Add more only after you've been tracking these for 8+ weeks and have specific questions they can't answer.
+> ✅ **Our take: Start with exactly 3 metrics.** If you're early in AI adoption, don't build a 12-metric dashboard. Start with: (1) **Adoption rate** — are people using it? (2) **PR cycle time** — is delivery faster? (3) **Bug introduction rate** — is quality holding? These three together tell you if adoption is real, if it's working, and if it's safe. Add more only after you've been tracking these for 8+ weeks and have specific questions they can't answer.
 
 ---
 
@@ -80,7 +80,7 @@ Minimum baseline (4–6 weeks of data):
 
 ---
 
-## Metric Anti-Patterns
+## ⚠️ Metric Anti-Patterns
 
 For detailed guidance on measurement *methods* (before/after studies, cohort comparison, task timing, surveys, DORA) and how to present results to different audiences, see [Measurement Approaches](../productivity/measurement-approaches.md).
 

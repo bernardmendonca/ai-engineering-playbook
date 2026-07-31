@@ -157,7 +157,7 @@ When making a decision about AI adoption, run through:
 5. **Risk/Reversibility** — How much diligence is appropriate?
 6. **80/20** — Are we pursuing the high-value or diminishing-returns part of the curve?
 
-> **Our take:** If you only use one model, use **Risk/Reversibility**. It tells you how much process to apply. Low risk + easy to reverse → just do it. High risk + hard to reverse → full evaluation. This single lens prevents both over-analysis of safe decisions and under-analysis of dangerous ones.
+> ✅ ✅ **Our take: If you only use one model, use **Risk/Reversibility**. It tells you how much process to apply. Low risk + easy to reverse → just do it. High risk + hard to reverse → full evaluation. This single lens prevents both over-analysis of safe decisions and under-analysis of dangerous ones.
 
 ---
 

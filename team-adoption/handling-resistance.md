@@ -95,7 +95,7 @@ flowchart TD
 
 ---
 
-## What Never Works
+## ⚠️ What Never Works
 
 | Tactic | Why it backfires |
 |--------|-----------------|
@@ -128,7 +128,7 @@ In most organizations:
 
 **Focus your energy on the 70%, not the 10%.** The 10% who don't adopt are not your problem to solve — they're a reality to accept, as long as they're still effective in their role.
 
-> **Our take on mandates vs. opt-in:** Never mandate AI tool *usage*. Always mandate AI tool *availability*. Meaning: every developer should have access, training, and support available. Nobody should be required to use it, and nobody should be measured on how often they use it. Mandating usage creates gaming, resentment, and meaningless metrics. Making it available and easy creates genuine adoption driven by actual value. The 70% will adopt because it helps them. The 10% who don't are still productive — let them be.
+> ✅ **Our take on mandates vs. opt-in:** Never mandate AI tool *usage*. Always mandate AI tool *availability*. Meaning: every developer should have access, training, and support available. Nobody should be required to use it, and nobody should be measured on how often they use it. Mandating usage creates gaming, resentment, and meaningless metrics. Making it available and easy creates genuine adoption driven by actual value. The 70% will adopt because it helps them. The 10% who don't are still productive — let them be.
 
 ---
 

@@ -21,7 +21,7 @@ Leaders need frameworks for evaluation, not just feature lists — because the b
 | [Evaluation Framework](./evaluation-framework.md) | Structured approach to comparing and selecting tools |
 | [Build vs. Buy](./build-vs-buy.md) | When to use off-the-shelf vs. custom-build vs. API integration |
 
-## Key Decision
+## 💡 Key Insight
 
 > **The question isn't "which tool is best?" — it's "which tool is best for our constraints?"**
 >

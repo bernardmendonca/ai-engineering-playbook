@@ -106,7 +106,7 @@ Not information — but rules about how the AI should behave. Automation trigger
 - Consistent output within a project
 - **Effort: 2–4 hours per project. Massive ROI.**
 
-> **Our take on where to start:** Start at Level 1 this week. Literally today. Write a CLAUDE.md (or equivalent) for your most active project. It takes 2 hours and immediately improves every AI interaction for every developer on that project. This is the single highest-ROI activity in AI adoption. Don't plan an org-wide context strategy before you've done this for one project. Do the simple thing first, experience the improvement, then scale.
+> ✅ **Our take on where to start:** Start at Level 1 this week. Literally today. Write a CLAUDE.md (or equivalent) for your most active project. It takes 2 hours and immediately improves every AI interaction for every developer on that project. This is the single highest-ROI activity in AI adoption. Don't plan an org-wide context strategy before you've done this for one project. Do the simple thing first, experience the improvement, then scale.
 
 ### Level 2: Team Context
 - Shared steering across multiple projects

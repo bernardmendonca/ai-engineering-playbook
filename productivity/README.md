@@ -21,7 +21,7 @@ This section covers how to define, measure, and demonstrate productivity impact 
 | [What AI Accelerates](./what-ai-accelerates.md) | Where AI genuinely saves time, and where it doesn't |
 | [Measurement Approaches](./measurement-approaches.md) | Methods for proving (or disproving) productivity gains |
 
-## Key Principle
+## 💡 Key Insight
 
 > **Productivity gains from AI compound over time — but only if quality doesn't regress.**
 >

@@ -383,7 +383,7 @@ There is no single best agent. The landscape is genuinely competitive, and the "
 
 5. **Where you are on the maturity curve** — Early exploration? Use free tiers of everything. Production rollout? Pick one or two and standardize.
 
-**Our opinionated take:** For most mid-to-large engineering organizations in 2025, the practical choice is between **GitHub Copilot** (if you want ecosystem integration and enterprise controls out of the box) and **Claude Code** (if you want maximum reasoning capability and are comfortable with API/token-based costs). Everything else is either a better fit for specific constraints (Q for AWS shops, Aider for air-gapped) or a matter of developer preference (Cursor, Windsurf).
+✅ **Our take: For most mid-to-large engineering organizations in 2025, the practical choice is between **GitHub Copilot** (if you want ecosystem integration and enterprise controls out of the box) and **Claude Code** (if you want maximum reasoning capability and are comfortable with API/token-based costs). Everything else is either a better fit for specific constraints (Q for AWS shops, Aider for air-gapped) or a matter of developer preference (Cursor, Windsurf).
 
 ---
 

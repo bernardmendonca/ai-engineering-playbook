@@ -108,7 +108,7 @@ flowchart LR
 
 ---
 
-## Anti-Patterns
+## ⚠️ Anti-Patterns
 
 | Anti-pattern | Why it's bad | Instead |
 |-------------|-------------|---------|
@@ -117,7 +117,7 @@ flowchart LR
 | Ignoring all AI feedback | Tool becomes useless noise | Tune sensitivity, keep only high-value checks |
 | Different standards for AI-authored PRs | Either too strict (blocking) or too lenient (risky) | Same quality bar, different focus areas |
 
-> **Our take:** AI code review should **never** be a merge blocker. It should be advisory only — comments that the author addresses or dismisses. The moment AI review blocks a merge, you've introduced a false-positive tax on every PR. Human review is the gate. AI review is the assistant that makes the human's job faster. This is non-negotiable for teams that want to maintain velocity.
+> ✅ ✅ **Our take: AI code review should **never** be a merge blocker. It should be advisory only — comments that the author addresses or dismisses. The moment AI review blocks a merge, you've introduced a false-positive tax on every PR. Human review is the gate. AI review is the assistant that makes the human's job faster. This is non-negotiable for teams that want to maintain velocity.
 
 ---
 

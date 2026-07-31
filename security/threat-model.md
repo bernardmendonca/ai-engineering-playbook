@@ -216,7 +216,7 @@ flowchart TD
 | Prompt injection via code | Low | Low-Medium | 🟢 Awareness, monitor industry |
 | Cost escalation | Low | Low | 🟢 Budget controls sufficient |
 
-> **Our take: If you can only do two things today, do these:**
+> ✅ **Our take: If you can only do two things today, do these:**
 > 1. **Scan for and remove secrets from code** — then classify repos. This addresses the #1 risk (secrets in AI context) at the source.
 > 2. **Sign an enterprise DPA with your AI tool vendor** (no training on your code). This contractually eliminates the #3 risk and makes the #1 risk manageable.
 >
