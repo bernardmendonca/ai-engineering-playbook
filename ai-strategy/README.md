@@ -22,6 +22,7 @@ This section is for **Directors, VPs, and CTOs** who need to answer: "What's our
 | [Organizational Models](./org-models.md) | CoE vs. Platform Team vs. Distributed — who owns AI enablement |
 | [Vendor Strategy](./vendor-strategy.md) | Multi-vendor vs. single-vendor, lock-in mitigation, exit planning |
 | [Executive Alignment](./executive-alignment.md) | Ongoing stakeholder management — not just initial buy-in |
+| [Operating Model](./operating-model.md) | How AI runs at steady state — roles, cadence, decision rights, feedback loops |
 
 ## 💡 Key Insight
 

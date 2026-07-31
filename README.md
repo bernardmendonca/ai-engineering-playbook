@@ -2,7 +2,7 @@
 
 > How should a modern engineering organization adopt AI responsibly, securely, and effectively?
 
-A decision framework and practical handbook for engineering leaders — VPs, Directors, Engineering Managers, and Principal Engineers — navigating the adoption of AI across their organizations.
+The AI Engineering Playbook is a practical operating manual for engineering leaders introducing AI into software organizations. Rather than focusing on individual tools, it provides decision frameworks, governance models, implementation guidance, and measurement strategies for scaling AI across teams.
 
 ## Why This Exists
 
@@ -26,7 +26,7 @@ The playbook is organized into three tracks. Start with the one that matches you
 | Section | What you'll learn |
 |---------|-------------------|
 | [Foundations](./foundations/) | Mental models, landscape overview, organizational readiness |
-| [AI Strategy](./ai-strategy/) | Investment, org models, vendor strategy, executive alignment |
+| [AI Strategy](./ai-strategy/) | Investment, org models, vendor strategy, executive alignment, [operating model](./ai-strategy/operating-model.md) |
 
 ### 🔧 Implement — Tools and Integration
 
