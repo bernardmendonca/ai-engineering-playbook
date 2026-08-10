@@ -36,7 +36,7 @@ The playbook is organized into three tracks. Start with the one that matches you
 |---------|-------------------|
 | [AI Tools](./ai-tools/) | Tool landscape, evaluation framework, build vs. buy |
 | [AI Coding Agents](./ai-coding-agents/) | Agent comparison, when to use, governance, getting started free |
-| [Context Engineering](./context-engineering/) | Project instructions, steering, skills, hooks, MCP, knowledge architecture |
+| [AI Engineering Practices](./ai-engineering-practices/) | Prompt engineering, context engineering, harness engineering |
 | [Engineering Workflows](./engineering-workflows/) | AI across the SDLC — review, testing, CI/CD, documentation |
 
 ### 🔁 Sustain — Governance, Measurement, and Scale
@@ -72,7 +72,7 @@ ai-engineering-playbook/
 │   🔧 IMPLEMENT
 ├── ai-tools/              # Tool landscape, comparison frameworks
 ├── ai-coding-agents/      # Agents deep-dive (Copilot, Q, Claude Code, etc.)
-├── context-engineering/   # Steering, skills, hooks, MCP, knowledge architecture
+├── ai-engineering-practices/# Prompt, context, and harness engineering
 ├── engineering-workflows/ # AI in SDLC, CI/CD, code review, testing, docs
 │
 │   🔁 SUSTAIN
@@ -130,7 +130,7 @@ flowchart LR
 | **Strategy** | Awareness, no coordinated approach | Strategy documented, budget allocated, owner assigned | Multi-team with governance, vendor agreements | AI embedded in engineering strategy, reviewed quarterly |
 | **Tools** | Free tiers explored | Paid tool for pilot team | Approved shortlist, enterprise eval | Enterprise agreement, regular re-evaluation |
 | **Agents** | Chat/autocomplete only | Agents on one team (supervised) | Agents across teams (governed) | Agents embedded in SDLC workflows |
-| **Context** | — | Project instructions written | Team steering + hooks + skills | Org-wide context strategy + MCP servers |
+| **Practices** | — | Prompt patterns + project instructions | Team context + steering + eval | Org-wide context + harness + observability |
 | **Workflows** | AI in IDE only (autocomplete) | AI in review + testing | AI in CI/CD + documentation | AI across full SDLC, continuously optimized |
 | **Security** | No policy (shadow IT) | Data classified, DPA signed | Enterprise controls, audit logging | DLP, proxy/gateway, anomaly detection |
 | **Productivity** | Anecdotal ("feels faster") | Baseline + pilot metrics | Team dashboards, DORA metrics | Automated ROI reporting, cohort analysis |

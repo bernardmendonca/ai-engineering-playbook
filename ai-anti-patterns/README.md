@@ -112,7 +112,7 @@ Reading this takes 10 minutes. It can save you 6 months of learning the hard way
 
 **The fix:** Write a project instructions file (CLAUDE.md, .cursorrules, etc.). Two hours of work. Immediately improves consistency for every developer on that project.
 
-→ [Context Engineering: Project Instructions](./context-engineering/project-instructions.md)
+→ [Context Engineering: Project Instructions](./ai-engineering-practices/project-instructions.md)
 
 ---
 
@@ -148,7 +148,7 @@ Reading this takes 10 minutes. It can save you 6 months of learning the hard way
 
 **The fix:** Invest 2–4 hours in project instructions. Add hooks for quality gates. The setup pays for itself within the first week.
 
-→ [Context Engineering](./context-engineering/)
+→ [Context Engineering](./ai-engineering-practices/)
 
 ---
 
