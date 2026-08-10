@@ -231,7 +231,7 @@ The biggest risk isn't having no model — it's having a model that exists on pa
 | Champions burned out | Too much demand, no recognition | Rotate, recognize publicly, limit scope |
 | Leadership surprised by problems | Feedback not flowing up | Fix monthly report, make issues visible earlier |
 
-> ✅ **Our take:** The model above is the maximum. Most orgs need 60% of this. Start with: (1) clear ownership, (2) one monthly sync, (3) quarterly review, (4) a cost dashboard. Add the rest as your maturity demands it. A lightweight model that's followed beats a comprehensive model that's ignored.
+> ✅ **My take:** The model above is the maximum. Most orgs need 60% of this. Start with: (1) clear ownership, (2) one monthly sync, (3) quarterly review, (4) a cost dashboard. Add the rest as your maturity demands it. A lightweight model that's followed beats a comprehensive model that's ignored.
 
 ---
 

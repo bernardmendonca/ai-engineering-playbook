@@ -29,7 +29,7 @@ flowchart TD
 
 **Value:** Reviewers get context immediately. Reduces "what does this PR do?" questions.
 
-> ✅ **Our take on where to start in CI:** PR summary generation. Full stop. It's the easiest to implement (one GitHub Action, 20 lines), cheapest to run ($0.01–0.10/PR), zero risk (advisory only), and immediately useful to every reviewer on every PR. If you're only going to add one AI step to your pipeline, this is it. Everything else (coverage suggestions, doc freshness, AI review) is Phase 2.
+> ✅ **My take on where to start in CI:** PR summary generation. Full stop. It's the easiest to implement (one GitHub Action, 20 lines), cheapest to run ($0.01–0.10/PR), zero risk (advisory only), and immediately useful to every reviewer on every PR. If you're only going to add one AI step to your pipeline, this is it. Everything else (coverage suggestions, doc freshness, AI review) is Phase 2.
 
 **Implementation (GitHub Actions):**
 ```yaml

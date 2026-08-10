@@ -212,7 +212,7 @@ prompts/
 | **Shared patterns** | Team has a prompts library. Common tasks have tested templates. New hires start productive. |
 | **Engineered discipline** | Prompts are versioned, tested, reviewed. Changes go through PRs. Regressions caught. |
 
-> ✅ **Our take:** Most teams should aim for "Shared patterns" (a prompts library with documented patterns). Only invest in full "Engineered discipline" for prompts used in automation or CI — those need testing because they run unattended. For daily interactive use, shared patterns are sufficient.
+> ✅ **My take:** Most teams should aim for "Shared patterns" (a prompts library with documented patterns). Only invest in full "Engineered discipline" for prompts used in automation or CI — those need testing because they run unattended. For daily interactive use, shared patterns are sufficient.
 
 ---
 

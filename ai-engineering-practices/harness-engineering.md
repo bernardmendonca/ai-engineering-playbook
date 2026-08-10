@@ -33,7 +33,7 @@ flowchart TD
 - Any AI workflow that runs without a human in the loop
 - AI interactions where quality must be consistent and measurable
 
-> ✅ **Our take:** Most engineering teams don't need harness engineering until they have AI running in automation (CI/CD) or internal tools. If AI is only used interactively by developers, prompt + context engineering is sufficient. The moment AI runs unattended — even just a PR summary bot — you need at minimum evaluation and observability.
+> ✅ **My take:** Most engineering teams don't need harness engineering until they have AI running in automation (CI/CD) or internal tools. If AI is only used interactively by developers, prompt + context engineering is sufficient. The moment AI runs unattended — even just a PR summary bot — you need at minimum evaluation and observability.
 
 ---
 
@@ -232,7 +232,7 @@ flowchart TD
     E -->|No - internal/advisory only| G[Start at Level 1: guardrails + error alerting]
 ```
 
-> ✅ **Our take:** Don't over-invest in harness engineering before you need it. If AI is only interactive (developers in IDE), context engineering is your priority. The moment you have a single AI step in CI or an internal bot calling an API, add basic guardrails (Level 1). Only build full observability when you have 3+ AI automation workflows — before that, logs are sufficient.
+> ✅ **My take:** Don't over-invest in harness engineering before you need it. If AI is only interactive (developers in IDE), context engineering is your priority. The moment you have a single AI step in CI or an internal bot calling an API, add basic guardrails (Level 1). Only build full observability when you have 3+ AI automation workflows — before that, logs are sufficient.
 
 ---
 
