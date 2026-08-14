@@ -22,6 +22,7 @@ flowchart TD
     D --> D1[Hallucinated dependencies]
     D --> D2[License contamination]
     D --> D3[Dependency confusion]
+    D --> D4[Malicious/vulnerable MCP servers]
 
     E --> E1[Agent with excessive permissions]
     E --> E2[Cost escalation attacks]
@@ -158,6 +159,23 @@ flowchart TD
 - Private registry configuration that resolves internal packages first
 - Never trust AI-suggested install commands without verification
 
+### Malicious or Vulnerable MCP Servers
+
+**What happens:** Developers and platform teams increasingly extend AI agents with third-party MCP (Model Context Protocol) servers — for knowledge access, tool integration, or workflow automation (see [Knowledge Architecture](../ai-engineering-practices/knowledge-architecture.md)). Unlike a dependency that only runs in your build/runtime, an MCP server runs *inside the agent's context* — it can read files, execute commands, and access whatever the agent's permissions allow. A malicious or compromised MCP server is a direct path to code execution and data exfiltration, not just a vulnerable library.
+
+**Risk level:** Medium-High (growing as MCP adoption increases — this is the supply-chain risk with the least mature tooling today)
+
+**Attack scenario:** A developer installs a community MCP server that looks like it does one thing (e.g., "fetch Jira tickets") but also silently reads and exfiltrates repo contents, environment variables, or credentials the agent has access to. Because MCP servers run with the same trust level as the agent itself, standard code-review practices for application dependencies don't automatically catch this — the server isn't shipped code, it's a running process the agent talks to.
+
+**Mitigations:**
+| Control | Effectiveness | Cost |
+|---------|--------------|------|
+| Vet MCP servers before install (source, maintainer, permissions requested) | High — catches most obviously malicious servers | 🆓 Requires discipline |
+| Prefer first-party or well-known/maintained MCP servers over obscure community ones | High | 🆓 |
+| Run MCP servers with minimal permissions (scope file/command access) | High — limits blast radius even if compromised | 🆓/💰 depending on tooling |
+| Maintain an approved MCP server allowlist at the platform-team level | Medium-High — prevents ad-hoc installs of unvetted servers | 🆓 Process, owned by platform/enablement team |
+| Treat MCP server configuration changes like dependency changes (review in PR) | Medium | 🆓 |
+
 ---
 
 ## Threat 4: Operational Risks
@@ -211,6 +229,7 @@ flowchart TD
 | Code sent to AI (sensitive) | Medium | Medium-High | 🟡 Address before scaling |
 | Hallucinated dependencies | Medium | Medium | 🟡 Address before scaling |
 | Agent excessive permissions | Medium | High | 🟡 Address before scaling |
+| Malicious/vulnerable MCP servers | Medium (growing) | High | 🟡 Address before scaling |
 | Training on your code | Low (enterprise) | Medium | 🟢 Contractual — verify once |
 | License contamination | Low | Medium | 🟢 Monitor, legal review |
 | Prompt injection via code | Low | Low-Medium | 🟢 Awareness, monitor industry |
@@ -220,7 +239,7 @@ flowchart TD
 > 1. **Scan for and remove secrets from code** — then classify repos. This addresses the #1 risk (secrets in AI context) at the source.
 > 2. **Sign an enterprise DPA with your AI tool vendor** (no training on your code). This contractually eliminates the #3 risk and makes the #1 risk manageable.
 >
-> Everything else is important but these two actions eliminate the majority of realistic risk for most organizations.
+> Everything else is important but these two actions eliminate the majority of realistic risk for most organizations. If your teams are adopting MCP servers, add a third: **establish an approved MCP server allowlist before adoption spreads** — this is the one risk category above where tooling and norms are still immature, so process discipline is doing more of the work than it will need to in a year or two.
 
 ---
 

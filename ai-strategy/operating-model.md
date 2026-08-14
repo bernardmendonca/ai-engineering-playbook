@@ -213,7 +213,7 @@ flowchart LR
 | Org size | Model configuration |
 |----------|-------------------|
 | **<50 devs** | No dedicated platform time. One senior dev + 2–3 champions. Quarterly review by engineering lead. |
-| **50–200 devs** | 0.5–1 FTE platform/enablement. 5–15 champions. Monthly leadership touchpoint. |
+| **50–200 devs** | 0.25–1 FTE platform/enablement. 5–15 champions. Monthly leadership touchpoint. |
 | **200–500 devs** | 1–2 FTE platform team. 15–30 champions. Dedicated budget owner. Quarterly exec reporting. |
 | **500+ devs** | 2–5 FTE (or CoE). 30+ champions. Formal governance committee. Board-level annual reporting. |
 

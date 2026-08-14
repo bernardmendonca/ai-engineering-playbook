@@ -1,4 +1,4 @@
-# AI Coding Agent Landscape (2025)
+# AI Coding Agent Landscape
 
 > A detailed comparison of current AI coding agents — capabilities, cost, enterprise readiness, and where each shines.
 
@@ -12,7 +12,7 @@ This page compares agents across dimensions that matter for organizational decis
 - **Cost** — What does it really cost at scale?
 - **Best for** — Where each tool has a genuine advantage
 
-> ⚠️ **This landscape moves fast.** Tools release features weekly. Prices change. This page reflects the state as of mid-2025. If something looks outdated, it probably is — check the vendor's current docs and consider contributing an update.
+> ⚠️ **This landscape moves fast.** Tools release features weekly, prices change, and products get acquired or rebranded outright (Windsurf → Devin Desktop, Amazon Q Developer → Kiro — both happened within the last year). This page was last substantively updated mid-2026. If something looks outdated, it probably is — check the vendor's current docs and consider contributing an update.
 
 ---
 
@@ -60,7 +60,7 @@ This page compares agents across dimensions that matter for organizational decis
 
 | Dimension | Details |
 |-----------|---------|
-| **Mode** | IDE (VS Code, JetBrains), GitHub.com (Copilot Workspace) |
+| **Mode** | IDE (VS Code, JetBrains), GitHub.com (via the Copilot coding agent) |
 | **Autonomy levels** | Autocomplete → Chat → Edit → Agent (progressive) |
 | **Multi-file** | Yes (in agent mode) |
 | **Command execution** | Yes (terminal commands in agent mode) |
@@ -90,38 +90,48 @@ This page compares agents across dimensions that matter for organizational decis
 
 ---
 
-### Amazon Q Developer
+### Amazon Q Developer — end-of-life, see Kiro
 
-**What it is:** AWS's AI coding assistant with deep integration into AWS services, IDE support, and agent capabilities for code transformation and generation.
+> ⚠️ **Status change:** Amazon Q Developer stopped accepting new signups in May 2026 and reaches full end-of-support in April 2027. AWS's designated successor is **Kiro** (profiled below). If you're evaluating AWS's coding-agent option today, evaluate Kiro directly — the entry below is kept only for teams still migrating off an existing Q Developer deployment.
+
+**What it was:** AWS's AI coding assistant with deep integration into AWS services, IDE support, and agent capabilities for code transformation and generation — particularly strong for Java modernization and AWS-native workflows. If you have an existing Q Developer deployment, AWS's migration guidance points to Kiro for equivalent and expanded capability.
+
+---
+
+### Kiro (AWS / Amazon)
+
+**What it is:** An AI-powered IDE built on VS Code with a focus on spec-driven development, and AWS's GA successor to Amazon Q Developer. Agents work from structured requirements through design to implementation via a spec workflow, alongside a conversational mode for less structured work.
 
 | Dimension | Details |
 |-----------|---------|
-| **Mode** | IDE (VS Code, JetBrains), CLI, AWS Console |
-| **Autonomy levels** | Autocomplete → Chat → Agent (code transformation) |
-| **Multi-file** | Yes (especially for migrations/upgrades) |
-| **Command execution** | Yes (in agent mode) |
-| **Context window** | Varies by task type |
-| **Customization** | Context from workspace, AWS resource awareness |
-| **Enterprise controls** | IAM integration, organizational policies, SSO, audit via CloudTrail |
-| **Data handling** | Enterprise: no code stored or used for training. AWS data handling standards. |
+| **Mode** | IDE (VS Code-based) |
+| **Autonomy levels** | Supervised (approve each change) → Autopilot (autonomous execution) |
+| **Multi-file** | Yes |
+| **Command execution** | Yes |
+| **Context window** | Dynamic model selection |
+| **Customization** | Steering files (.kiro/steering/), hooks, skills (SKILL.md), CLAUDE.md-equivalent |
+| **Enterprise controls** | Hooks for access control, MCP integration, structured workflows |
+| **Data handling** | AWS-backed infrastructure |
 
 **Cost:**
 | Tier | Price | What you get |
 |------|-------|-------------|
-| 🆓 Free | $0 | Generous — code suggestions, chat, basic agent, security scans |
-| 💰 Pro | $19/user/month | Higher limits, organizational features, admin controls |
-| 🏢 Enterprise | Custom | Full governance, customization, dedicated support |
+| 🆓 Free | $0 | Core agent and spec-workflow capability |
+| 💰 Pro | ~$19–20/month | Higher usage limits |
+| 💰 Pro+ | ~$39–40/month | Further increased limits |
+| 💰 Pro Max | ~$100/month | Highest individual usage tier |
+| 🏢 Enterprise | Custom | Org-wide governance, procurement via AWS |
 
 **Best for:**
-- AWS-heavy shops (Lambda, CDK, CloudFormation expertise baked in)
-- Java modernization (language upgrades, framework migrations)
-- Teams wanting the most generous free tier for exploration
-- Organizations already managing identity through AWS IAM
+- AWS-heavy shops (Lambda, CDK, CloudFormation expertise baked in) migrating off Amazon Q Developer
+- Teams wanting structured, spec-driven development (requirements → design → tasks)
+- Organizations that value repeatability and auditability in AI-assisted work
+- Those who want agent hooks and event-driven automation
 
 **Watch out for:**
-- AWS-centric context means less depth for non-AWS infrastructure
-- Agent capabilities more focused on specific transformation tasks than general-purpose coding
-- Smaller community/ecosystem compared to Copilot or Claude
+- Newer entrant than Copilot or Cursor — community and ecosystem still building
+- Spec workflow has a learning curve (but enforces good practices)
+- Verify current enterprise-control specifics (SSO, audit, IP indemnification) directly with AWS before committing at scale — this is an area that's actively maturing
 
 ---
 
@@ -162,49 +172,16 @@ This page compares agents across dimensions that matter for organizational decis
 
 ---
 
-### Kiro (AWS / Amazon)
+### Devin Desktop (formerly Windsurf)
 
-**What it is:** An AI-powered IDE built on VS Code with a focus on spec-driven development. Agents work from structured requirements through design to implementation via a spec workflow.
-
-| Dimension | Details |
-|-----------|---------|
-| **Mode** | IDE (VS Code-based) |
-| **Autonomy levels** | Supervised (approve each change) → Autopilot (autonomous execution) |
-| **Multi-file** | Yes |
-| **Command execution** | Yes |
-| **Context window** | Dynamic model selection |
-| **Customization** | Steering files (.kiro/steering/), hooks, skills, CLAUDE.md-equivalent |
-| **Enterprise controls** | Hooks for access control, MCP integration, structured workflows |
-| **Data handling** | AWS-backed infrastructure |
-
-**Cost:**
-| Tier | Price | What you get |
-|------|-------|-------------|
-| 🆓 Free (Preview) | $0 | Full access during preview period |
-
-**Best for:**
-- Teams wanting structured, spec-driven development (requirements → design → tasks)
-- Organizations that value repeatability and auditability in AI-assisted work
-- Those who want agent hooks and event-driven automation
-- Early adopters comfortable with newer tooling
-
-**Watch out for:**
-- Still in preview — pricing and enterprise features will evolve
-- Newer entrant — community and ecosystem still building
-- Spec workflow has a learning curve (but enforces good practices)
-
----
-
-### Windsurf (Codeium)
-
-**What it is:** An AI IDE (VS Code fork) from Codeium, focused on "flows" — multi-step agent interactions with strong codebase awareness.
+**What it is:** An AI IDE (VS Code fork), focused on "flows" — multi-step agent interactions with strong codebase awareness. Formerly Windsurf/Codeium; Cognition (maker of the autonomous agent Devin) acquired the product and rebranded it Devin Desktop in June 2026, delivered to existing Windsurf users as an automatic update. Existing plans, pricing, and settings carried over unchanged at the time of the rebrand — verify current specifics, as Cognition has continued integrating it with the broader Devin product family (e.g. replacing the former "Cascade" agent mode with "Devin Local").
 
 | Dimension | Details |
 |-----------|---------|
-| **Mode** | IDE (Windsurf editor — VS Code fork) |
-| **Autonomy levels** | Autocomplete → Chat → Cascade (agent mode) |
+| **Mode** | IDE (Devin Desktop editor — VS Code fork) |
+| **Autonomy levels** | Autocomplete → Chat → Devin Local (agent mode, formerly "Cascade") |
 | **Multi-file** | Yes |
-| **Command execution** | Yes (in Cascade mode) |
+| **Command execution** | Yes (in agent mode) |
 | **Context window** | Large (proprietary indexing) |
 | **Customization** | Project rules, context pinning |
 | **Enterprise controls** | Team plans, admin controls |
@@ -214,19 +191,21 @@ This page compares agents across dimensions that matter for organizational decis
 | Tier | Price | What you get |
 |------|-------|-------------|
 | 🆓 Free | $0 (limited) | Limited flow actions and completions |
-| 💰 Pro | $15/month | Unlimited flows, priority models |
-| 💰 Teams | $30/user/month | Admin controls, team features |
+| 💰 Pro | ~$15/month | Unlimited flows, priority models |
+| 💰 Teams | ~$30/user/month | Admin controls, team features |
 | 🏢 Enterprise | Custom | SSO, audit, deployment options |
+
+*Pricing carried over from Windsurf at the time of the June 2026 rebrand — confirm current tiers directly with Cognition, since post-acquisition products often re-price.*
 
 **Best for:**
 - Developers who like Cursor's approach but want an alternative
-- Cost-sensitive teams (Pro tier is cheaper than Cursor)
-- Those who want strong codebase indexing without extensive setup
+- Cost-sensitive teams (historically cheaper than Cursor at the Pro tier)
+- Teams interested in Cognition's broader Devin agent ecosystem, now that the two products share a vendor
 
 **Watch out for:**
-- Relatively newer — enterprise track record still building
+- Mid-transition product — verify which features are still "Windsurf as it was" vs. newly integrated Devin capability
 - Smaller community than Copilot or Cursor
-- Feature parity with competitors is still catching up in some areas
+- Brand and product-direction uncertainty following the acquisition — re-evaluate before committing at scale
 
 ---
 
@@ -305,27 +284,31 @@ This page compares agents across dimensions that matter for organizational decis
 
 ### Capability Comparison
 
-| Feature | Claude Code | Copilot | Q Developer | Cursor | Kiro | Windsurf | Aider | Cline |
-|---------|:-----------:|:-------:|:-----------:|:------:|:----:|:--------:|:-----:|:-----:|
-| Multi-file editing | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Command execution | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | Limited | ✅ |
-| Codebase indexing | Via context | ✅ | ✅ | ✅ | ✅ | ✅ | Manual | Via context |
-| Self-correction loop | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Custom instructions | ✅ | ✅ | Limited | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Model choice | Anthropic | Multiple | AWS models | Multiple | Dynamic | Codeium | Any | Any |
-| Open source | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ✅ |
+| Feature | Claude Code | Copilot | Kiro | Cursor | Devin Desktop | Aider | Cline |
+|---------|:-----------:|:-------:|:----:|:------:|:-------------:|:-----:|:-----:|
+| Multi-file editing | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Command execution | ✅ | ✅ | ✅ | ✅ | ✅ | Limited | ✅ |
+| Codebase indexing | Via context | ✅ | ✅ | ✅ | ✅ | Manual | Via context |
+| Self-correction loop | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Custom instructions | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Model choice | Anthropic | Multiple | Dynamic | Multiple | Cognition/multiple | Any | Any |
+| Open source | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ✅ |
+
+*Amazon Q Developer is omitted — see the "end-of-life, see Kiro" note above.*
 
 ### Enterprise Readiness
 
-| Feature | Claude Code | Copilot | Q Developer | Cursor | Kiro | Windsurf | Aider | Cline |
-|---------|:-----------:|:-------:|:-----------:|:------:|:----:|:--------:|:-----:|:-----:|
-| SSO/SAML | 🏢 | ✅ | ✅ (IAM) | 🏢 | TBD | 🏢 | ❌ | ❌ |
-| Audit logging | API logs | ✅ | ✅ (CloudTrail) | 🏢 | Hooks | 🏢 | ❌ | ❌ |
-| Content exclusion | ❌ | ✅ | ✅ | ❌ | Steering | ❌ | Manual | Manual |
-| IP indemnification | ❌ | ✅ (Enterprise) | ✅ | ❌ | TBD | ❌ | ❌ | ❌ |
-| Admin dashboard | API dashboard | ✅ | ✅ | ✅ (Business) | TBD | ✅ (Teams) | ❌ | ❌ |
-| Self-hosted option | Via API | GHES | ❌ | ❌ | ❌ | ❌ | ✅ | ✅ |
-| No training on code | ✅ (API) | ✅ (Enterprise) | ✅ (Pro+) | Privacy mode | TBD | ✅ (Enterprise) | N/A | N/A |
+| Feature | Claude Code | Copilot | Kiro | Cursor | Devin Desktop | Aider | Cline |
+|---------|:-----------:|:-------:|:----:|:------:|:-------------:|:-----:|:-----:|
+| SSO/SAML | 🏢 | ✅ | Verify with AWS | 🏢 | 🏢 | ❌ | ❌ |
+| Audit logging | API logs | ✅ | Hooks | 🏢 | 🏢 | ❌ | ❌ |
+| Content exclusion | ❌ | ✅ | Steering | ❌ | ❌ | Manual | Manual |
+| IP indemnification | ❌ | ✅ (Enterprise) | Verify with AWS | ❌ | ❌ | ❌ | ❌ |
+| Admin dashboard | API dashboard | ✅ | Verify with AWS | ✅ (Business) | ✅ (Teams) | ❌ | ❌ |
+| Self-hosted option | Via API | GHES | ❌ | ❌ | ❌ | ✅ | ✅ |
+| No training on code | ✅ (API) | ✅ (Enterprise) | Verify with AWS | Privacy mode | ✅ (Enterprise) | N/A | N/A |
+
+*Kiro's enterprise-control specifics are marked "Verify with AWS" rather than asserted, since this is an area still actively maturing post-GA — confirm current details before an enterprise commitment rather than relying on this table.*
 
 ### Cost at Scale (50 developers, monthly)
 
@@ -333,14 +316,14 @@ This page compares agents across dimensions that matter for organizational decis
 |------|----------------------|-------|
 | GitHub Copilot Enterprise | ~$1,950 | $39/user × 50. Predictable. |
 | GitHub Copilot Business | ~$950 | $19/user × 50. Most common tier. |
-| Amazon Q Pro | ~$950 | $19/user × 50. Generous free tier for eval. |
+| Kiro Pro | ~$950–1,000 | ~$19–20/user × 50. |
 | Cursor Business | ~$2,000 | $40/user × 50. |
-| Windsurf Teams | ~$1,500 | $30/user × 50. |
+| Devin Desktop Teams | ~$1,500 | ~$30/user × 50 (carried over from Windsurf pricing at rebrand — confirm current tier). |
 | Claude Code (API) | ~$1,500–5,000+ | Highly variable. Depends on usage patterns. |
 | Aider + API | ~$500–3,000+ | No seat fee. API costs only. Variable. |
 | Cline + API | ~$500–3,000+ | No seat fee. API costs only. Variable. |
 
-> **Key insight:** Seat-based pricing (Copilot, Q, Cursor) is predictable but you pay for inactive users. Token-based pricing (Claude Code API, Aider, Cline) is variable but you only pay for actual usage. For heavy users, token-based can be more expensive. For light users, it's cheaper.
+> **Key insight:** Seat-based pricing (Copilot, Kiro, Cursor) is predictable but you pay for inactive users. Token-based pricing (Claude Code API, Aider, Cline) is variable but you only pay for actual usage. For heavy users, token-based can be more expensive. For light users, it's cheaper.
 
 ---
 
@@ -352,13 +335,13 @@ flowchart TD
 
     B -->|Enterprise controls mandatory| C{Existing ecosystem?}
     C -->|GitHub| D[GitHub Copilot Enterprise]
-    C -->|AWS| E[Amazon Q Developer Pro]
+    C -->|AWS| E[Kiro — verify current enterprise controls with AWS]
     C -->|Neither/Both| F[Evaluate both + Cursor Business]
 
     B -->|Cost sensitivity| G{Budget for per-seat licensing?}
-    G -->|Yes| H[Copilot Business or Q Pro]
+    G -->|Yes| H[Copilot Business or Kiro Pro]
     G -->|No, pay-per-use| I[Claude Code API or Aider + API]
-    G -->|Zero budget| J[Q Free + Aider with local models]
+    G -->|Zero budget| J[Kiro Free + Aider with local models]
 
     B -->|Maximum AI capability| K{Prefer CLI or IDE?}
     K -->|CLI| L[Claude Code]
@@ -373,7 +356,7 @@ flowchart TD
 
 There is no single best agent. The landscape is genuinely competitive, and the "best" choice depends on:
 
-1. **Your existing ecosystem** — If you're all-in on GitHub, Copilot's integration advantage is real. If you're AWS-native, Q's context awareness matters.
+1. **Your existing ecosystem** — If you're all-in on GitHub, Copilot's integration advantage is real. If you're AWS-native, Kiro's AWS context awareness matters.
 
 2. **Your security posture** — If you need air-gapped or self-hosted, your options narrow to open-source tools with local models.
 
@@ -383,7 +366,7 @@ There is no single best agent. The landscape is genuinely competitive, and the "
 
 5. **Where you are on the maturity curve** — Early exploration? Use free tiers of everything. Production rollout? Pick one or two and standardize.
 
-✅ **My take: For most mid-to-large engineering organizations in 2025, the practical choice is between **GitHub Copilot** (if you want ecosystem integration and enterprise controls out of the box) and **Claude Code** (if you want maximum reasoning capability and are comfortable with API/token-based costs). Everything else is either a better fit for specific constraints (Q for AWS shops, Aider for air-gapped) or a matter of developer preference (Cursor, Windsurf).
+✅ **My take:** For most mid-to-large engineering organizations, the practical choice is between **GitHub Copilot** (if you want ecosystem integration and enterprise controls out of the box) and **Claude Code** (if you want maximum reasoning capability and are comfortable with API/token-based costs). Everything else is either a better fit for specific constraints (Kiro for AWS-native shops, Aider for air-gapped) or a matter of developer preference (Cursor, Devin Desktop).
 
 ---
 

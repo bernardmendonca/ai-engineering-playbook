@@ -19,8 +19,8 @@ flowchart TD
     B -->|2–3 hours| D[Path 2: Real exploration]
     B -->|A full day| E[Path 3: Deep evaluation]
 
-    C --> C1[GitHub Copilot Free<br/>or Amazon Q Free Tier]
-    D --> D1[Cursor free trial<br/>or Kiro preview]
+    C --> C1[GitHub Copilot Free<br/>or Kiro Free tier]
+    D --> D1[Cursor free trial<br/>or Kiro]
     E --> E1[Aider + API credits<br/>or Claude Code trial]
 ```
 
@@ -49,22 +49,24 @@ flowchart TD
 
 ---
 
-### Option B: Amazon Q Developer Free Tier
+### Option B: Kiro Free Tier
 
-🆓 **Cost:** $0 (generous limits — code suggestions, chat, security scans, agent capabilities)
+> **Note:** Amazon Q Developer — the tool previously recommended here — stopped accepting new signups in May 2026 and reaches full end-of-support in April 2027. AWS's successor product is Kiro, which has since gone GA. If you're already on Amazon Q, start planning your migration; new explorers should start with Kiro directly.
+
+🆓 **Cost:** $0 (Free tier — generous limits on agent-driven coding, chat, and spec workflows)
 
 **Setup:**
-1. Install VS Code or JetBrains IDE
-2. Install the Amazon Q extension
-3. Sign up with AWS Builder ID (free, no credit card)
+1. Download Kiro from kiro.dev
+2. Sign in
+3. Open your project
 4. Start using — no configuration needed
 
 **Try this task:**
 > "Analyze this codebase and suggest improvements to error handling. Then implement the improvements."
 
-**What you'll observe:** Strong free tier with real agent capabilities. Good codebase understanding, especially for AWS-related work.
+**What you'll observe:** A capable free tier with real agent capabilities and, distinctively, an optional structured spec workflow (requirements → design → tasks) alongside conversational mode.
 
-**Why this is the most generous free option:** Amazon Q's free tier includes meaningful agent capabilities without hard per-message limits.
+**Why this is worth trying first:** Kiro's free tier includes meaningful agent capabilities without needing a credit card, and it's the actively developed, currently-supported option in AWS's coding-agent lineup.
 
 ---
 
@@ -100,9 +102,9 @@ flowchart TD
 
 ---
 
-### Option B: Kiro (Preview)
+### Option B: Kiro
 
-🆓 **Cost:** $0 (full access during preview period)
+🆓 **Cost:** $0 (Free tier — see [Path 1](#option-b-kiro-free-tier) above for setup if you haven't already; paid Pro/Pro+/Pro Max tiers exist for higher usage)
 
 **Setup:**
 1. Download Kiro from kiro.dev
@@ -120,7 +122,7 @@ flowchart TD
 
 **What you'll observe:** Spec mode is distinctly different from other agents — it enforces structure before implementation. This is valuable for teams that want repeatability and auditability.
 
-**Why this is interesting for leaders:** The spec-driven workflow is closer to how engineering should work (requirements → design → implementation) vs. the "just do it" approach of other agents.
+**Why this is interesting for leaders:** The spec-driven workflow appeals to teams that want repeatability and auditability before implementation begins — a different tradeoff than the "just do it" approach of other agents, not a strictly better one. Whether that structure helps or adds friction depends on your team and task type.
 
 ---
 

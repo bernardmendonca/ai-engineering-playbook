@@ -48,14 +48,14 @@ Rate your organization on each dimension (1 = not ready, 5 = fully ready):
 
 ## Interpreting Your Score
 
-**Total score: 15 dimensions, max 75**
+**Total score: 14 dimensions, max 70**
 
 | Score | Interpretation | Recommended action |
 |-------|---------------|-------------------|
-| 55–75 | **Ready for org-wide adoption** | Move fast. Your main risk is going too slow while competitors move. |
-| 40–54 | **Ready for team pilots** | Start with willing teams. Use the pilot to build missing readiness. |
-| 25–39 | **Ready for individual exploration** | Encourage personal learning. Work on prerequisites in parallel. |
-| 15–24 | **Foundation building needed** | Fix basic engineering practices first. AI tools amplify what you have — including chaos. |
+| 51–70 | **Ready for org-wide adoption** | Move fast. Your main risk is going too slow while competitors move. |
+| 37–50 | **Ready for team pilots** | Start with willing teams. Use the pilot to build missing readiness. |
+| 23–36 | **Ready for individual exploration** | Encourage personal learning. Work on prerequisites in parallel. |
+| 14–22 | **Foundation building needed** | Fix basic engineering practices first. AI tools amplify what you have — including chaos. |
 
 ---
 
@@ -128,12 +128,12 @@ Not all AI capabilities require the same readiness:
 
 | AI Capability | Minimum readiness needed | Key prerequisites |
 |--------------|------------------------|-------------------|
-| Code autocomplete | Low (score 20+) | IDE standardization, basic awareness |
-| Chat assistants | Low (score 25+) | Developer interest, basic security awareness |
-| Coding agents | Medium (score 35+) | CI/CD, code review culture, data classification |
-| Automated code review AI | Medium (score 35+) | Existing review culture, PR-based workflow |
-| AI in CI/CD pipelines | Medium-High (score 40+) | Mature CI/CD, security baseline, cost monitoring |
-| Org-wide standardization | High (score 50+) | All of the above, plus governance and measurement |
+| Code autocomplete | Low (score 19+) | IDE standardization, basic awareness |
+| Chat assistants | Low (score 23+) | Developer interest, basic security awareness |
+| Coding agents | Medium (score 33+) | CI/CD, code review culture, data classification |
+| Automated code review AI | Medium (score 33+) | Existing review culture, PR-based workflow |
+| AI in CI/CD pipelines | Medium-High (score 37+) | Mature CI/CD, security baseline, cost monitoring |
+| Org-wide standardization | High (score 47+) | All of the above, plus governance and measurement |
 
 ---
 

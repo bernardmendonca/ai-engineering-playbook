@@ -46,11 +46,10 @@ flowchart TD
 | Tool | Cost | Key differentiator |
 |------|------|-------------------|
 | GitHub Copilot | 🆓 Free tier / 💰 $10–39/mo | Broadest language support, GitHub integration |
-| Amazon Q Developer | 🆓 Generous free tier / 💰 $19/mo | AWS-aware, strong Java/Python |
+| Kiro *(AWS's successor to Amazon Q Developer, which stopped accepting new signups May 2026)* | 🆓 Free tier / 💰 ~$19–20/mo (Pro) | AWS-aware, strong Java/Python, spec-driven workflow option |
 | Cursor | 🆓 Limited / 💰 $20/mo | Deep codebase indexing, fast |
-| Codeium / Windsurf | 🆓 Free tier / 💰 $15–30/mo | Good free tier, enterprise options |
+| Windsurf *(rebranded to Devin Desktop by Cognition, June 2026)* | 🆓 Free tier / 💰 $15–30/mo | Good free tier, enterprise options |
 | Tabnine | 💰 $12/mo / 🏢 Enterprise | On-premise deployment, privacy focus |
-| Supermaven | 🆓 Free / 💰 $10/mo | Speed-optimized, large context |
 
 ✅ ✅ **My take: This category is a commodity. All major options are good enough. Choose based on your ecosystem (GitHub → Copilot, AWS → Q), security requirements (on-prem → Tabnine), or IDE preference (Cursor-specific → Cursor).
 
@@ -78,9 +77,9 @@ Every major coding tool now includes this. The differentiation is in context awa
 |------|------|----------------|
 | GitHub Copilot (PR review) | 💰 Included in Copilot plans | General issues, summaries |
 | CodeRabbit | 🆓 Free for OSS / 💰 $15/user/mo | Comprehensive review, security, style |
-| Amazon CodeGuru | 💰 Pay-per-line-reviewed | Performance issues, AWS best practices |
+| Amazon CodeGuru *(in maintenance mode; being discontinued as of Nov 2025 — no longer a viable new option)* | 💰 Pay-per-line-reviewed | Performance issues, AWS best practices |
 | Sourcery | 🆓 Free for OSS / 💰 $14/user/mo | Python-focused, refactoring suggestions |
-| Qodo (CodiumAI) | 🆓 Free tier / 💰 Paid plans | Test-focused review, PR suggestions |
+| Qodo (formerly CodiumAI) | 🆓 Free tier / 💰 Paid plans | Test-focused review, PR suggestions |
 
 ✅ ✅ **My take: AI code review is best as a *complement* to human review, not a replacement. Use it to catch the mechanical issues (unused variables, common bugs, security patterns) so human reviewers can focus on design, intent, and correctness.
 
@@ -94,7 +93,7 @@ Every major coding tool now includes this. The differentiation is in context awa
 |------|------|---------|
 | Built-in agent test gen | 🆓/💰 Included in coding tools | General test generation from code |
 | Diffblue Cover | 🏢 Enterprise pricing | Java-specific, AI-generated unit tests at scale |
-| CodiumAI / Qodo | 🆓 Free tier / 💰 Paid | Test suggestions during development |
+| Qodo (formerly CodiumAI) | 🆓 Free tier / 💰 Paid | Test suggestions during development |
 | Ponicode (CircleCI) | 💰 Paid | Unit test generation, coverage expansion |
 
 ✅ ✅ **My take: Test generation from coding agents (Copilot, Claude Code, etc.) is usually good enough. Specialized testing tools make sense only for large Java codebases (Diffblue) or if you need CI-integrated coverage expansion.
@@ -171,7 +170,7 @@ Every major coding tool now includes this. The differentiation is in context awa
 |------|------|-------------|
 | Linear + AI | 💰 Included | Issue writing, triage suggestions |
 | Jira AI | 💰 Included in Premium | Summarization, smart suggestions |
-| GitHub Copilot Workspace | 💰 Copilot plan | Issue → code plan → implementation |
+| GitHub Copilot coding agent *(successor to the retired Copilot Workspace, May 2025)* | 💰 Copilot plan | Issue → code plan → implementation |
 
 ✅ ✅ **My take: These are early-stage. Useful for drafting and summarization, not yet reliable for autonomous planning or estimation.
 
@@ -198,7 +197,7 @@ In 2025, the trend is toward **platform consolidation**. Rather than a different
 
 - **GitHub Copilot** → Autocomplete + Chat + Agent + Code Review + Security
 - **Amazon Q** → Autocomplete + Chat + Agent + Security + IaC + AWS Operations
-- **Cursor/Windsurf** → Autocomplete + Chat + Agent (IDE-focused)
+- **Cursor** → Autocomplete + Chat + Agent (IDE-focused) — and this consolidation trend played out even at the vendor level: Windsurf itself was acquired by Cognition and rebranded Devin Desktop (June 2026), folding into Cognition's own agent platform
 
 **Implication:** You may not need 6 different AI tools. One or two platform choices might cover most needs. Evaluate whether a platform approach (fewer vendors, simpler governance) beats best-of-breed (better tool per category, more governance overhead).
 

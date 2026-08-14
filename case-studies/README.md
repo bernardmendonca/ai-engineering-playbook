@@ -41,19 +41,19 @@ Each case study follows this structure:
 |---------|-----------|-------------------|
 | Champions-led grassroots adoption | Mid-Size | Peer influence > mandates |
 | Security-first, then speed | Enterprise | Cleared blockers before scaling |
-| Measurement from day one | All | Data-driven decisions at every stage |
+| Baseline metrics before pilot access | Mid-Size, Enterprise | Data-driven decisions from day one |
 | Phased rollout with checkpoints | Mid-Size, Enterprise | Built confidence gradually |
-| Free-tier exploration before budget | All | Leaders had hands-on experience |
+| Free-tier / shadow-IT exploration before budget | All | Leaders had hands-on experience |
 
 ### What Didn't Work
 
 | Pattern | Case Study | Why it failed |
 |---------|-----------|--------------|
-| Big-bang org-wide rollout | Enterprise (first attempt) | Overwhelmed support, inconsistent adoption |
-| Mandated usage metrics | Mid-Size (abandoned) | Gaming, resentment, meaningless data |
-| No baseline metrics before pilot | Startup | Couldn't prove improvement to investors |
-| Ignoring security review | Startup (caught early) | Almost exposed customer data |
-| Choosing tool by hype, not fit | Mid-Size (first attempt) | Wrong tool for their ecosystem |
+| Big-bang org-wide rollout | Mid-Size (first expansion attempt) | Overwhelmed support, two teams disengaged for 4 months |
+| Excluding entire teams from any AI access | Enterprise | Restricted-code teams felt left out; should have offered non-code-sending features |
+| No baseline metrics before pilot | Startup | Couldn't prove improvement to investors until month 4 |
+| Ignoring data classification | Startup (caught early in review) | Almost sent customer data to an AI service |
+| Choosing tool by hype, not fit | Mid-Size (first attempt) | Wrong tool for their Java ecosystem, 3 weeks wasted |
 
 ## Contributing
 

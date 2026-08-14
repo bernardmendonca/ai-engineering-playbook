@@ -6,6 +6,8 @@
 
 This action calls an AI API to generate a structured PR description from the diff.
 
+> ⚠️ **Security note:** A PR diff is attacker-controllable content — anyone who can open a PR controls what's in it, including code comments or string literals crafted to break out of a shell command or a manually-built JSON string. The pattern below writes the diff to a file and builds the JSON payload with `jq --rawfile` instead of interpolating `${{ steps.diff.outputs.diff }}` directly into `run:` script text. Never interpolate diff/PR content directly into a shell command or GitHub Actions expression inside `run:` — treat it the same as any other untrusted input.
+
 ```yaml
 # .github/workflows/pr-summary.yml
 name: Generate PR Summary
@@ -25,29 +27,31 @@ jobs:
           fetch-depth: 0
 
       - name: Get diff
-        id: diff
         run: |
-          DIFF=$(git diff origin/${{ github.base_ref }}...HEAD -- '*.ts' '*.tsx' '*.py' '*.java' | head -c 10000)
-          echo "diff<<EOF" >> $GITHUB_OUTPUT
-          echo "$DIFF" >> $GITHUB_OUTPUT
-          echo "EOF" >> $GITHUB_OUTPUT
+          git diff origin/${{ github.base_ref }}...HEAD -- '*.ts' '*.tsx' '*.py' '*.java' \
+            | head -c 10000 > diff.txt
 
       - name: Generate summary
-        id: summary
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
-          # Call AI API with diff, parse response
-          # This is a simplified example — production would use a proper script
+          # Build the request body with jq --rawfile so the diff content is
+          # never interpolated into the shell command or hand-built into a
+          # JSON string. This avoids both script injection (a diff containing
+          # shell metacharacters or quote sequences can't break out of the
+          # command) and JSON-escaping bugs from raw string interpolation.
+          jq -n --rawfile diff diff.txt \
+            '{
+              model: "claude-3-5-haiku-20241022",
+              max_tokens: 1024,
+              messages: [{role: "user", content: ("Summarize this PR diff in 3-5 bullet points. Focus on what changed and why it matters:\n\n" + $diff)}]
+            }' > payload.json
+
           curl -s https://api.anthropic.com/v1/messages \
             -H "x-api-key: $ANTHROPIC_API_KEY" \
             -H "content-type: application/json" \
             -H "anthropic-version: 2023-06-01" \
-            -d '{
-              "model": "claude-3-5-haiku-20241022",
-              "max_tokens": 1024,
-              "messages": [{"role": "user", "content": "Summarize this PR diff in 3-5 bullet points. Focus on what changed and why it matters:\n\n${{ steps.diff.outputs.diff }}"}]
-            }' | jq -r '.content[0].text' > summary.txt
+            -d @payload.json | jq -r '.content[0].text' > summary.txt
 
       - name: Post comment
         uses: actions/github-script@v7
@@ -63,17 +67,20 @@ jobs:
             });
 ```
 
-**Cost:** ~$0.01–0.05 per PR (using Haiku for summarization).
+**Cost:** 💰 ~$0.01–0.05 per PR (using Haiku for summarization).
 
 **Notes:**
 - Uses Haiku (cheapest model) since summarization doesn't need deep reasoning
 - Truncates diff to 10K chars to control cost
 - Disclaimer on the comment so reviewers know it's AI-generated
 - Only processes code files (skips lock files, generated code)
+- Diff is written to a file (`diff.txt`) rather than a `$GITHUB_OUTPUT` step output — multi-line step outputs use a heredoc-style delimiter internally, and diff content containing a line that happens to match the delimiter can corrupt the output. Writing to a file sidesteps that risk entirely and is the same safe pattern used in Example 3 below.
 
 ---
 
 ## Example 2: Coverage Gap Detector
+
+> This example is illustrative, not runnable as-is — `scripts/check-coverage-gaps.js` is referenced but not included. Treat the `run` step below as pseudocode describing the logic you'd implement, not a drop-in script.
 
 ```yaml
 # .github/workflows/coverage-check.yml
@@ -123,6 +130,8 @@ jobs:
 
 ## Example 3: AI-Assisted Security Scan
 
+> This example is illustrative, not runnable as-is — `scripts/ai-security-review.js` is referenced but not included. It shows the recommended safe pattern (diff written to a file, filename passed as an argument) rather than interpolating diff content into `run:` directly — follow this pattern, not Example 1's original form, when writing your own script.
+
 ```yaml
 # .github/workflows/security-ai.yml
 name: AI Security Review
@@ -159,7 +168,7 @@ jobs:
           node scripts/ai-security-review.js security-diff.txt
 ```
 
-**Cost:** ~$0.05–0.30 per relevant PR (only triggers for auth/admin code changes).
+**Cost:** 💰 ~$0.05–0.30 per relevant PR (only triggers for auth/admin code changes).
 
 **Key design decisions:**
 - Only runs when security-relevant paths change (not every PR)

@@ -37,7 +37,7 @@ flowchart TD
     A --> E[Process Costs]
 
     B -.- B1[Licenses: $20-40/user/month<br/>API/tokens: variable<br/>Review tools: $15-30/user/month]
-    C -.- C1[Enablement: 0.25-1 FTE<br/>Champions: 10% of N developers<br/>Security review: internal time]
+    C -.- C1[Enablement: 0.25-2 FTE, scales with org size<br/>Champions: 10% of N developers<br/>Security review: internal time]
     D -.- D1[Self-hosted models: $50-200K/year (if needed)<br/>Proxy/DLP: $5-15/user/month<br/>Monitoring: included in existing tools]
     E -.- E1[Training: 2-4 hours/developer one-time<br/>Policy development: 1-2 weeks<br/>Evaluation cycles: quarterly]
 ```
@@ -49,8 +49,8 @@ flowchart TD
 | Org size | Year 1 investment (realistic) | Breakdown |
 |----------|-------------------------------|-----------|
 | **Startup (< 50 devs)** | $15K–50K/year | Tools only. No dedicated people. Governance is lightweight. |
-| **Mid-size (50–200 devs)** | $80K–300K/year | Tools + 0.25–0.5 FTE enablement + training + enterprise tier |
-| **Enterprise (200–1000 devs)** | $300K–1.5M/year | Tools + 0.5–2 FTE enablement + infrastructure + governance + vendor management |
+| **Mid-size (50–200 devs)** | $80K–450K/year | Tools + 0.25–1 FTE enablement + training + enterprise tier |
+| **Enterprise (200–1000 devs)** | $300K–1.5M/year | Tools + 1–2 FTE enablement (scaling toward a dedicated team/CoE at 500+ devs — see [Organizational Models](./org-models.md)) + infrastructure + governance + vendor management |
 
 **Context:** For a 200-developer org, $300K/year is:
 - Less than 2 senior developer hires
@@ -96,13 +96,19 @@ gantt
 Annual value per developer:
   30 min saved/day × 220 working days × $75/hour = ~$8,250
 
-Annual cost per developer:
-  Tool license ($3,000) + API costs ($1,000) + enablement overhead ($500) = ~$4,500
+Annual cost per developer (at ~100 devs — see org-size table above; per-developer
+cost trends down at larger scale due to volume pricing and enablement economies):
+  Tool license ($2,500) + API costs ($800) + enablement overhead ($700) = ~$4,000
 
-Net value per developer: ~$3,750/year
-ROI: 83%
+Net value per developer: ~$4,250/year
+ROI: ~106%
 
-At 100 developers: $375,000 net annual value
+At 100 developers: $425,000 net annual value
+
+Note: this per-developer cost is illustrative for a ~100-dev org specifically.
+Don't apply it flatly across org sizes — check the org-size table above, since
+per-developer cost doesn't scale linearly (a 50-dev org has less pricing leverage
+per seat; a 500-dev org has more).
 ```
 
 ### The Honest Model (Use after pilot data)

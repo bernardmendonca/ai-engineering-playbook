@@ -69,7 +69,7 @@
 | New hire onboarding | 3.5 weeks | 2 weeks | 43% faster |
 | Developer satisfaction (AI) | N/A | 3.9/5 | Strong |
 | SOC 2 compliance | ✅ | ✅ (with AI docs) | Maintained |
-| Monthly AI tool cost | $0 official | ~$8,500 | $56/active user/month |
+| Monthly AI tool cost | $0 official | ~$8,500 | ~$75/active user/month (113 of 150 active) |
 | Shadow IT usage | ~40% unofficial | <5% unofficial | Dramatic reduction |
 
 ## Lessons Learned

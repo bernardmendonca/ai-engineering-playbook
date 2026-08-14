@@ -55,7 +55,7 @@ flowchart TD
 
 **When it fails:** CoE builds an elaborate internal platform nobody uses because they didn't talk to developers. Or CoE becomes a gate that slows adoption.
 
-> ✅ ✅ **My take: Don't create a CoE until you have at least 200 developers using AI tools and clear evidence that distributed ownership isn't working. Most orgs jump to CoE too early, creating overhead before value. Start with Model 2 or 3, graduate to CoE when the complexity demands it.
+> ✅ **My take:** Don't create a CoE until you have at least 500 developers using AI tools and clear evidence that distributed ownership isn't working. Most orgs jump to CoE too early, creating overhead before value. Start with Model 2 or 3, graduate to CoE when the complexity demands it.
 
 ---
 
@@ -84,7 +84,7 @@ flowchart TD
 | Natural integration with existing toolchain | AI might be deprioritized vs. other platform work |
 | No new team to create or justify | Needs clear prioritization from leadership |
 
-> ✅ ✅ **My take: This is the right model for most organizations in 2025. AI tools are developer infrastructure — they belong with the team that manages developer infrastructure. Add 0.25–0.5 FTE of capacity to the platform team for AI enablement. Don't create a new team unless that capacity is insufficient after 6 months.
+> ✅ **My take:** This is the right model for most organizations. AI tools are developer infrastructure — they belong with the team that manages developer infrastructure. Add 0.25–1 FTE of capacity to the platform team for AI enablement, scaling with headcount (see [Operating Model](./operating-model.md) for the full breakdown by org size). Don't create a new team unless that capacity is insufficient after 6 months.
 
 ---
 
@@ -110,7 +110,7 @@ flowchart TD
 | Fast local decisions | Governance gaps (nobody owns security review) |
 | Fits autonomous engineering cultures | Doesn't scale past ~100 devs |
 
-> ✅ ✅ **My take: Fine for <50 devs or as a Phase 1/2 approach. Not sustainable at scale. The coordination cost eventually exceeds the autonomy benefit. Plan to graduate to Model 2 when you have 50+ developers using AI tools regularly.
+> ✅ **My take:** Fine for <50 devs or as a Phase 1/2 approach. Not sustainable at scale. The coordination cost eventually exceeds the autonomy benefit. Plan to graduate to Model 2 when you have 50+ developers using AI tools regularly.
 
 ---
 
@@ -120,10 +120,11 @@ flowchart TD
 flowchart TD
     A[Choose ownership model] --> B{How many devs using AI?}
     B -->|< 50| C[Model 3: Distributed<br/>Champions network<br/>Lightweight]
-    B -->|50–200| D[Model 2: Platform Team<br/>Add AI to existing DevEx scope<br/>0.25–0.5 FTE]
-    B -->|200+| E{Strategic priority?}
+    B -->|50–200| D[Model 2: Platform Team<br/>Add AI to existing DevEx scope<br/>0.25–1 FTE]
+    B -->|200–500| H[Model 2: Platform Team<br/>Larger allocation<br/>1–2 FTE]
+    B -->|500+| E{Strategic priority?}
     E -->|Yes, board-level attention| F[Model 1: CoE<br/>Dedicated team<br/>2–5 FTE]
-    E -->|Important but not top-3 priority| G[Model 2: Platform Team<br/>Larger allocation<br/>1–2 FTE]
+    E -->|Important but not top-3 priority| G[Model 2: Platform Team<br/>Continue scaling allocation]
 ```
 
 ---

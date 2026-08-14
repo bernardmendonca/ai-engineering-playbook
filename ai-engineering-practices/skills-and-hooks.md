@@ -86,16 +86,16 @@ See `src/routes/users.ts` and `tests/routes/users.test.ts`
 
 ### Skills in Kiro
 
-Kiro has first-class skill support:
+Kiro has first-class skill support, following the open Agent Skills standard:
 
 ```
 .kiro/skills/
 ├── my-skill/
-│   ├── instructions.md    # Loaded when skill is activated
+│   ├── SKILL.md            # Required — instructions, loaded when skill is activated
 │   └── [additional files]
 ```
 
-Skills are activated via context (`#SkillName` in chat) or automatically based on configuration. They can include file references for additional context.
+Skills activate in one of two ways: **automatically**, when Kiro matches the skill's description to your request, or **explicitly**, by typing `/` in the chat input to see and select available skills as slash commands (a skill named `pr-review` becomes the `/pr-review` command). Selecting a slash command loads the full skill instructions, giving you explicit control over when it fires. They can include file references for additional context.
 
 ### Skills in Other Tools
 

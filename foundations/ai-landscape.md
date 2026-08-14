@@ -78,7 +78,7 @@ flowchart TD
 
 **Maturity:** Medium. Good at catching patterns, less good at understanding intent.
 
-**Examples:** CodeRabbit, GitHub Copilot PR review, Amazon CodeGuru, Sourcery
+**Examples:** CodeRabbit, GitHub Copilot PR review, Sourcery *(Amazon CodeGuru Reviewer entered maintenance mode in Nov 2025 and is being discontinued — no longer a live option for new adoption)*
 
 **Impact:** Faster review turnaround, consistent baseline quality checks. Doesn't replace human review for design and intent.
 
@@ -92,7 +92,7 @@ flowchart TD
 
 **Maturity:** Medium-Low. Generates plausible tests but quality varies. Best for coverage expansion rather than replacing thoughtful test design.
 
-**Examples:** Copilot test generation, Diffblue (Java), CodiumAI
+**Examples:** Copilot test generation, Diffblue (Java), Qodo (formerly CodiumAI)
 
 **Impact:** Increases coverage for undertested codebases. Quality of generated tests needs human curation.
 

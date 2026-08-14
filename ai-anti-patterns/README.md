@@ -26,7 +26,7 @@ Reading this takes 10 minutes. It can save you 6 months of learning the hard way
 
 **The fix:** Start exploring now with free tiers. Waiting for certainty is choosing the risk of irrelevance over the risk of imperfection.
 
-→ [Foundations: Org Readiness](./foundations/org-readiness.md)
+→ [Foundations: Org Readiness](../foundations/org-readiness.md)
 
 ---
 
@@ -38,7 +38,7 @@ Reading this takes 10 minutes. It can save you 6 months of learning the hard way
 
 **The fix:** Frame as developer tooling infrastructure (same category as CI/CD, IDEs, observability). Permanent capability, not experiment.
 
-→ [AI Strategy: Investment Strategy](./ai-strategy/investment-strategy.md)
+→ [AI Strategy: Investment Strategy](../ai-strategy/investment-strategy.md)
 
 ---
 
@@ -50,7 +50,7 @@ Reading this takes 10 minutes. It can save you 6 months of learning the hard way
 
 **The fix:** Start with developers using tools. Let structure emerge from need, not speculation. CoE (if needed) comes after you have 100+ developers using AI tools — not before.
 
-→ [AI Strategy: Organizational Models](./ai-strategy/org-models.md)
+→ [AI Strategy: Organizational Models](../ai-strategy/org-models.md)
 
 ---
 
@@ -62,7 +62,7 @@ Reading this takes 10 minutes. It can save you 6 months of learning the hard way
 
 **The fix:** Phased rollout. Pilot one team, measure, expand with support. Never skip from "one person tried it" to "everyone must use it."
 
-→ [Team Adoption: Adoption Phases](./team-adoption/adoption-phases.md)
+→ [Team Adoption: Adoption Phases](../team-adoption/adoption-phases.md)
 
 ---
 
@@ -74,7 +74,7 @@ Reading this takes 10 minutes. It can save you 6 months of learning the hard way
 
 **The fix:** Security review in parallel with Phase 1 exploration — not sequentially after. It takes 2 weeks. Start it when you start exploring.
 
-→ [Security: Threat Model](./security/threat-model.md)
+→ [Security: Threat Model](../security/threat-model.md)
 
 ---
 
@@ -88,7 +88,7 @@ Reading this takes 10 minutes. It can save you 6 months of learning the hard way
 
 **The fix:** Start with supervised mode. Earn autonomy through demonstrated quality. Human reviews every agent PR until trust is established.
 
-→ [AI Coding Agents: When to Use Agents](./ai-coding-agents/when-to-use-agents.md)
+→ [AI Coding Agents: When to Use Agents](../ai-coding-agents/when-to-use-agents.md)
 
 ---
 
@@ -100,7 +100,7 @@ Reading this takes 10 minutes. It can save you 6 months of learning the hard way
 
 **The fix:** Fix fundamentals first. CI, code review, and basic test coverage are prerequisites — not nice-to-haves.
 
-→ [Foundations: Org Readiness](./foundations/org-readiness.md)
+→ [Foundations: Org Readiness](../foundations/org-readiness.md)
 
 ---
 
@@ -112,7 +112,7 @@ Reading this takes 10 minutes. It can save you 6 months of learning the hard way
 
 **The fix:** Write a project instructions file (CLAUDE.md, .cursorrules, etc.). Two hours of work. Immediately improves consistency for every developer on that project.
 
-→ [Context Engineering: Project Instructions](./ai-engineering-practices/project-instructions.md)
+→ [Context Engineering: Project Instructions](../ai-engineering-practices/project-instructions.md)
 
 ---
 
@@ -124,7 +124,7 @@ Reading this takes 10 minutes. It can save you 6 months of learning the hard way
 
 **The fix:** Define task suitability. Agents for: refactoring, tests, boilerplate, migrations. Humans for: architecture, security design, novel algorithms, ambiguous requirements.
 
-→ [AI Coding Agents: When to Use Agents](./ai-coding-agents/when-to-use-agents.md)
+→ [AI Coding Agents: When to Use Agents](../ai-coding-agents/when-to-use-agents.md)
 
 ---
 
@@ -136,7 +136,7 @@ Reading this takes 10 minutes. It can save you 6 months of learning the hard way
 
 **The fix:** Review AI tests with one question: "If I rewrote the implementation differently but correctly, would these tests still pass?" If no, the tests are worthless.
 
-→ [Engineering Workflows: Testing](./engineering-workflows/testing.md)
+→ [Engineering Workflows: Testing](../engineering-workflows/testing.md)
 
 ---
 
@@ -148,7 +148,7 @@ Reading this takes 10 minutes. It can save you 6 months of learning the hard way
 
 **The fix:** Invest 2–4 hours in project instructions. Add hooks for quality gates. The setup pays for itself within the first week.
 
-→ [Context Engineering](./ai-engineering-practices/)
+→ [Context Engineering](../ai-engineering-practices/)
 
 ---
 
@@ -162,7 +162,7 @@ Reading this takes 10 minutes. It can save you 6 months of learning the hard way
 
 **The fix:** Mandate availability, not usage. Measure outcomes (cycle time, quality), not inputs (tool usage count). Let value drive adoption.
 
-→ [Team Adoption: Handling Resistance](./team-adoption/handling-resistance.md)
+→ [Team Adoption: Handling Resistance](../team-adoption/handling-resistance.md)
 
 ---
 
@@ -174,7 +174,7 @@ Reading this takes 10 minutes. It can save you 6 months of learning the hard way
 
 **The fix:** Capture baseline metrics (PR cycle time, deployment frequency, bug rate) for 4–6 weeks BEFORE introducing tools. It's the single most important thing you can do for your future self.
 
-→ [Metrics: Metrics Framework](./metrics/metrics-framework.md)
+→ [Metrics: Metrics Framework](../metrics/metrics-framework.md)
 
 ---
 
@@ -186,7 +186,7 @@ Reading this takes 10 minutes. It can save you 6 months of learning the hard way
 
 **The fix:** Tiered governance. Light for low-risk work, strict for sensitive work. Data classification drives the tier, not a blanket rule.
 
-→ [Security: Data Classification](./security/data-classification.md)
+→ [Security: Data Classification](../security/data-classification.md)
 
 ---
 
@@ -198,7 +198,7 @@ Reading this takes 10 minutes. It can save you 6 months of learning the hard way
 
 **The fix:** Quarterly review cadence: Is our tool still the right choice? Is our policy still current? Are our metrics still relevant? Is adoption healthy?
 
-→ [AI Strategy: Vendor Strategy](./ai-strategy/vendor-strategy.md)
+→ [AI Strategy: Vendor Strategy](../ai-strategy/vendor-strategy.md)
 
 ---
 
@@ -210,7 +210,7 @@ Reading this takes 10 minutes. It can save you 6 months of learning the hard way
 
 **The fix:** Engage skeptics directly. Address concerns honestly. Give them valued roles (security reviewer for AI code, quality gatekeeper). Their scrutiny makes your adoption stronger.
 
-→ [Team Adoption: Handling Resistance](./team-adoption/handling-resistance.md)
+→ [Team Adoption: Handling Resistance](../team-adoption/handling-resistance.md)
 
 ---
 
@@ -222,7 +222,7 @@ Reading this takes 10 minutes. It can save you 6 months of learning the hard way
 
 **The fix:** Phased rollout with support at each stage. Pilot → expand → normalize. Each stage has support capacity matching demand.
 
-→ [AI Coding Agents: Production Rollout](./ai-coding-agents/production-rollout.md)
+→ [AI Coding Agents: Production Rollout](../ai-coding-agents/production-rollout.md)
 
 ---
 
@@ -234,7 +234,7 @@ Reading this takes 10 minutes. It can save you 6 months of learning the hard way
 
 **The fix:** Same quality bar, different focus. When reviewing AI code: check coherence, completeness, security boundaries, scope discipline, and test quality specifically.
 
-→ [Engineering Workflows: Code Review](./engineering-workflows/code-review.md)
+→ [Engineering Workflows: Code Review](../engineering-workflows/code-review.md)
 
 ---
 
@@ -266,4 +266,4 @@ If you remember nothing else, avoid these:
 
 ## Contributing
 
-Experienced an anti-pattern not listed here? [Contribute](./CONTRIBUTING.md) it. The most valuable additions include: what it looked like, why it failed, and what you did instead.
+Experienced an anti-pattern not listed here? [Contribute](../CONTRIBUTING.md) it. The most valuable additions include: what it looked like, why it failed, and what you did instead.

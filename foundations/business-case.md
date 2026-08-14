@@ -52,8 +52,10 @@ They're not an R&D experiment. They're a productivity tool with measurable ROI.
 |---|---|---|---|
 | Time saved/dev/day | 30 min | 45 min | 60 min |
 | Annual value (100 devs) | $825,000 | $1,237,500 | $1,650,000 |
-| Tool cost (100 devs) | $240,000–500,000 | $240,000–500,000 | $240,000–500,000 |
-| Net annual value | $325,000–585,000 | $737,500–997,500 | $1,150,000–1,410,000 |
+| Tool cost (100 devs) | $150,000–350,000 | $150,000–350,000 | $150,000–350,000 |
+| Net annual value | $475,000–675,000 | $887,500–1,087,500 | $1,300,000–1,500,000 |
+
+*Tool cost range reflects a 100-developer org sitting in the middle of the [50–200 dev "mid-size" band](../ai-strategy/investment-strategy.md) — see that page for the full breakdown including enablement FTE.*
 
 > **Important:** These numbers assume time saved translates to value. In practice, "saved time" might mean more features shipped, fewer bugs, faster onboarding, or reduced overtime — not headcount reduction. Frame accordingly.
 
@@ -79,7 +81,7 @@ They're not an R&D experiment. They're a productivity tool with measurable ROI.
 
 ### "What's the total cost?"
 
-**Answer:** For a 100-developer org: $240K–500K/year in tool costs (comparable to your CI/CD or observability spend). Plus ~0.5 FTE for enablement and governance. Total: $300K–600K/year for estimated $800K–1.6M in productivity value.
+**Answer:** For a 100-developer org: $150K–350K/year in tool costs (comparable to your CI/CD or observability spend), plus roughly 0.5–1 FTE for enablement and governance. Total: $200K–450K/year — consistent with the [mid-size band in Investment Strategy](../ai-strategy/investment-strategy.md) — for an estimated $825K–1.65M in productivity value (see the table above).
 
 ---
 
@@ -113,7 +115,7 @@ Don't ask for the full budget upfront. Propose a phased approach that de-risks t
 - Governance in place
 - Deliverable: Proven playbook, ROI data for org-wide decision
 
-**Phase 4 (Month 8+): Org-wide — $250K–500K annualized (for 100 devs)**
+**Phase 4 (Month 8+): Org-wide — $200K–450K annualized (for 100 devs — see [Investment Strategy](../ai-strategy/investment-strategy.md) for the full org-size breakdown)**
 - Enterprise agreement
 - Full governance and support
 - Deliverable: Sustained productivity improvement

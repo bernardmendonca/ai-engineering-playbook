@@ -40,7 +40,7 @@ For a full list of terms and acronyms used throughout this playbook, see the [Gl
 | Tool | Documentation | Pricing |
 |------|--------------|---------|
 | GitHub Copilot | https://docs.github.com/copilot | https://github.com/features/copilot#pricing |
-| Amazon Q Developer | https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/ | https://aws.amazon.com/q/developer/pricing/ |
+| Kiro *(AWS's successor to Amazon Q Developer, which reaches end-of-support April 2027)* | https://kiro.dev/docs | https://kiro.dev/pricing |
 | Cursor | https://docs.cursor.com | https://cursor.com/pricing |
 | Claude Code | https://docs.anthropic.com/en/docs/claude-code | https://www.anthropic.com/pricing |
 | Kiro | https://kiro.dev/docs | https://kiro.dev |
