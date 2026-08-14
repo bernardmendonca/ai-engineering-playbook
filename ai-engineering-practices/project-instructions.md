@@ -12,11 +12,11 @@ Every major AI coding tool supports some form of this:
 |------|---------------|--------|
 | Claude Code | `CLAUDE.md` in project root | Markdown |
 | Kiro | `.kiro/steering/*.md` files | Markdown with front-matter |
-| Cursor | `.cursorrules` in project root | Markdown/text |
+| Cursor | `.cursor/rules/*.mdc` (project root) — `.cursorrules` still works but is deprecated by Cursor in favor of this | Markdown/MDC |
 | GitHub Copilot | `.github/copilot-instructions.md` | Markdown |
 | Aider | `.aider.conf.yml` + conventions file | YAML + Markdown |
-| Windsurf | `.windsurfrules` | Markdown/text |
-| Cline | Custom instructions in settings | Text |
+| Devin Desktop *(formerly Windsurf)* | Project rules (carried over from Windsurf's `.windsurfrules` mechanism at rebrand — verify current file name with Cognition's docs) | Markdown/text |
+| Cline | `.clinerules` in project root | Markdown/text |
 
 ---
 
@@ -78,7 +78,6 @@ Every project instructions file should cover these areas:
 **Best for:** CLI-based agent workflows, complex multi-file tasks.
 
 For a full copy-paste example: see [Examples: Java/Spring Boot CLAUDE.md](../examples/project-instructions/).
-- Auth validated via JWT — never accept unsigned tokens
 
 ---
 
@@ -137,9 +136,9 @@ inclusion: auto
 
 ---
 
-### .cursorrules (Cursor)
+### Project Rules (Cursor)
 
-**Loaded:** When Cursor opens a project with `.cursorrules` in the root.
+**Loaded:** When Cursor opens a project with rule files in `.cursor/rules/*.mdc`. The older single-file `.cursorrules` still works but Cursor's own docs mark it deprecated — new projects should use the `.cursor/rules/` directory.
 
 **Best for:** IDE-native developers who want codebase-wide AI behavior tuning.
 
@@ -149,7 +148,7 @@ For copy-paste examples: see [Examples: React .cursorrules](../examples/project-
 
 ### .github/copilot-instructions.md (GitHub Copilot)
 
-**Loaded:** By Copilot when working in the repository (Enterprise/Business tiers).
+**Loaded:** By Copilot Chat across supported clients (VS Code, Visual Studio, JetBrains, and more) — not gated to a specific paid tier, though enterprise policy controls may affect how it's enforced org-wide. Verify current client support in GitHub's docs, as this has broadened over time.
 
 **Best for:** Organizations standardized on GitHub ecosystem.
 

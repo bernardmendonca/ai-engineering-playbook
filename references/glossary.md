@@ -14,6 +14,9 @@
 | **MCP** | Model Context Protocol — an open standard for connecting AI tools to external data sources (databases, APIs, ticket systems) |
 | **RAG** | Retrieval-Augmented Generation — a technique where AI retrieves relevant documents/data before generating a response, improving accuracy for domain-specific questions |
 | **Context Engineering** | The discipline of structuring and delivering the right information to AI tools so they produce consistently useful output across an organization |
+| **Harness Engineering** | The discipline of building the orchestration layer that makes AI reliable when it runs in automation or production (CI/CD steps, bots, unattended workflows) — covers routing, evaluation, guardrails, and observability. Distinct from prompt engineering (individual skill) and context engineering (team/org information delivery); harness engineering is about infrastructure for AI running without a human in the loop |
+| **Guardrails** | One of the two core pillars of harness engineering — constraints placed on AI automation (cost caps, timeouts, permission boundaries, content filters) that limit the blast radius when something goes wrong |
+| **Observability** | One of the two core pillars of harness engineering — logging, monitoring, and tracing for AI automation (cost per call, error rate, output quality over time) so degradation or drift is caught rather than discovered by users |
 | **Steering** | Configuration files that provide persistent instructions to AI tools about project conventions, patterns, and rules |
 | **Prompt Engineering** | The skill of writing effective instructions for AI tools in individual interactions |
 

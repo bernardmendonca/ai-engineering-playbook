@@ -126,7 +126,7 @@ AI tools have a carbon footprint. At scale, it's worth acknowledging:
 | Training models (not your problem) | High (but vendor responsibility) | Choose vendors with sustainability commitments |
 | Self-hosted GPU infrastructure | High if applicable | Factor into build-vs-buy decisions |
 
-**Practical stance:** This isn't a reason to avoid AI tools (the productivity gains likely offset the energy cost). But it's worth tracking and reporting if your organization has sustainability commitments.
+**Practical stance:** This isn't presented here as a reason to avoid AI tools — but whether productivity gains offset the energy cost isn't something this playbook has a quantified answer for, and you shouldn't assert it as settled either. If your organization has sustainability commitments, treat this as a genuine open question worth tracking and reporting on with real numbers, not a foregone conclusion.
 
 ---
 

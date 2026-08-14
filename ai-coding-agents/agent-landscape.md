@@ -146,7 +146,7 @@ This page compares agents across dimensions that matter for organizational decis
 | **Multi-file** | Yes — Composer and Agent mode work across files |
 | **Command execution** | Yes (in agent mode) |
 | **Context window** | Large (codebase indexing + model context) |
-| **Customization** | .cursorrules, project-level instructions, @-mentions for context |
+| **Customization** | `.cursor/rules/*.mdc` (project-level instructions — the older single-file `.cursorrules` still works but is deprecated), @-mentions for context |
 | **Enterprise controls** | Privacy mode, team settings, usage analytics |
 | **Data handling** | Privacy mode available (no code stored). Check terms for non-privacy mode. |
 

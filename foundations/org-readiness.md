@@ -112,7 +112,7 @@ Rate your organization on each dimension (1 = not ready, 5 = fully ready):
 
 ### "We have no budget"
 
-**Why it matters:** Exploration is free. Production isn't.
+**Why it matters:** Exploration is 🆓 free. Production isn't.
 
 **How to work with this:**
 1. Start with free tiers — genuinely generous options exist (see [Getting Started Free](../ai-coding-agents/getting-started-free.md))
@@ -150,7 +150,7 @@ If you want to start AI adoption tomorrow with minimal prerequisites:
 
 That's it. You can start exploring with free tiers. Everything else can be built in parallel as you learn.
 
-> ✅ ✅ **My take: Most organizations wait too long. If you have the six items above, start this week. Perfection is the enemy of progress — you'll learn more from 2 weeks of hands-on exploration than 2 months of readiness planning. The prerequisites that genuinely block you (CI/CD, data classification) can be built in parallel with Phase 1 exploration.
+> ✅ **My take:** Most organizations wait too long. If you have the six items above, start this week. Perfection is the enemy of progress — you'll learn more from 2 weeks of hands-on exploration than 2 months of readiness planning. The prerequisites that genuinely block you (CI/CD, data classification) can be built in parallel with Phase 1 exploration.
 
 ---
 

@@ -1,4 +1,4 @@
-# 10 — Case Studies
+# 12 — Case Studies
 
 > Real-world patterns of AI adoption in engineering organizations — what worked, what didn't, and lessons learned.
 

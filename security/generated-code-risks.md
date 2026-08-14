@@ -93,7 +93,7 @@ AI models trained on copyleft-licensed code (GPL, AGPL) might generate output th
 
 - No court has ruled on this definitively (as of 2025)
 - The legal risk is theoretical but non-zero
-- Most enterprise AI tools offer IP indemnification (they assume the legal risk)
+- Many enterprise AI tools offer IP indemnification (they assume the legal risk) — GitHub Copilot Enterprise is well-documented here; verify current terms directly with any other vendor rather than assuming coverage
 - Practically: AI-generated code tends to be generic enough that substantial similarity is rare
 
 ### Mitigations

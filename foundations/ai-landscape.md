@@ -19,7 +19,7 @@ flowchart TD
 
     A -.- A1[GPT-4, Claude, Gemini, Llama, Mistral<br/>The raw intelligence layer]
     B -.- B1[OpenAI API, Anthropic API, AWS Bedrock<br/>Access + infrastructure]
-    C -.- C1[Copilot, Cursor, Claude Code, Q Developer<br/>Tools developers use daily]
+    C -.- C1[Copilot, Cursor, Claude Code, Kiro<br/>Tools developers use daily]
     D -.- D1[CI/CD integration, code review bots, doc generation<br/>AI embedded in process]
     E -.- E1[Governance, measurement, culture<br/>Organizational maturity]
 ```
@@ -36,7 +36,7 @@ flowchart TD
 
 **Maturity:** High. Mature technology, widely deployed, well-understood value.
 
-**Examples:** GitHub Copilot (inline), Amazon Q (inline), Cursor (tab completion)
+**Examples:** GitHub Copilot (inline), Kiro (inline), Cursor (tab completion)
 
 **Impact:** 10–30% reduction in keystrokes for routine code. Biggest impact on boilerplate and repetitive patterns.
 
@@ -50,7 +50,7 @@ flowchart TD
 
 **Maturity:** High. Every major tool offers this.
 
-**Examples:** Copilot Chat, Amazon Q Chat, ChatGPT, Claude.ai
+**Examples:** Copilot Chat, Kiro Chat, ChatGPT, Claude.ai
 
 **Impact:** Reduces context switching (no more tab to StackOverflow). Accelerates understanding unfamiliar code. Good for exploration.
 
@@ -120,7 +120,7 @@ flowchart TD
 
 **Maturity:** Medium-Low. Good for scaffolding, less reliable for complex infrastructure decisions.
 
-**Examples:** Amazon Q (CloudFormation/CDK), Pulumi AI, AI-assisted Terraform
+**Examples:** Kiro / Amazon Q (CloudFormation/CDK), Pulumi AI, AI-assisted Terraform
 
 **Impact:** Accelerates infrastructure work but requires experienced review (misconfigured infra has high blast radius).
 
@@ -135,26 +135,28 @@ quadrantChart
     title AI Capability Maturity vs. Impact
     x-axis Low Maturity --> High Maturity
     y-axis Low Impact --> High Impact
-    quadrant-1 Invest carefully
-    quadrant-2 Adopt now
+    quadrant-1 Adopt now - table stakes
+    quadrant-2 Invest carefully
     quadrant-3 Evaluate later
-    quadrant-4 Table stakes
+    quadrant-4 Low priority
 
-    Code Completion: [0.85, 0.5]
-    Chat Assistants: [0.8, 0.55]
-    Coding Agents: [0.55, 0.8]
-    Code Review AI: [0.5, 0.6]
+    Code Completion: [0.85, 0.55]
+    Chat Assistants: [0.8, 0.6]
+    Coding Agents: [0.4, 0.8]
+    Code Review AI: [0.55, 0.6]
     AI Testing: [0.35, 0.45]
     Doc Generation: [0.45, 0.35]
     AI for Infra: [0.3, 0.5]
 ```
 
+*Note on reading this chart: per Mermaid's convention, quadrant-1 is top-right (high maturity, high impact), quadrant-2 is top-left (low maturity, high impact), quadrant-3 is bottom-left (low maturity, low impact), quadrant-4 is bottom-right (high maturity, low impact).*
+
 **Interpretation:**
-- **Adopt now (high maturity, high impact):** Code completion and chat are table stakes. If your org isn't using them, you're leaving easy wins on the table.
+- **Adopt now / table stakes (high maturity, high impact):** Code completion and chat are table stakes. If your org isn't using them, you're leaving easy wins on the table.
 - **Invest carefully (lower maturity, high impact):** Coding agents have the highest ceiling but require governance and selective application.
 - **Evaluate (lower maturity, lower impact):** Testing and documentation tools are worth piloting but aren't transformative yet.
 
-> ✅ ✅ **My take: If your org has zero AI tools today, start with **code completion** (autocomplete). It's the lowest-risk, lowest-effort, highest-certainty investment. Don't start with agents — start with autocomplete, add chat, then graduate to agents once you have context engineering and governance in place. The progression matters.
+> ✅ **My take:** If your org has zero AI tools today, start with **code completion** (autocomplete). It's the lowest-risk, lowest-effort, highest-certainty investment. Don't start with agents — start with autocomplete, add chat, then graduate to agents once you have context engineering and governance in place. The progression matters.
 
 ---
 

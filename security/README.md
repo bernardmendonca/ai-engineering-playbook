@@ -1,4 +1,4 @@
-# 05 — Security
+# 07 — Security
 
 > Threat models, data privacy, supply chain risks, and compliance for AI in engineering.
 

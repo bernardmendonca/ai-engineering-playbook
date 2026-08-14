@@ -36,17 +36,19 @@ They're not an R&D experiment. They're a productivity tool with measurable ROI.
 
 | Variable | Conservative value | Source |
 |----------|-------------------|--------|
-| Developer fully-loaded cost | $150,000/year | Industry average for experienced dev |
+| Developer fully-loaded cost | $150,000/year | Industry average for experienced dev (US-market assumption — adjust for your region) |
 | Hourly cost (2,000 hrs/year) | $75/hour | |
 | Time saved per developer per day | 30 minutes | Conservative; studies show 30–90 min |
 | Working days per year | 220 | |
 | Annual time saved per developer | 110 hours | 30 min × 220 days |
 | Value of saved time per developer | $8,250/year | 110 hours × $75/hour |
-| Tool cost per developer | $2,400–5,000/year | Range across tools and tiers |
+| Tool cost per developer (💰 team tier) | $2,400–5,000/year | Range across tools and tiers |
 | **Net value per developer** | **$3,250–5,850/year** | After tool cost |
 | **ROI** | **65–240%** | Net value / tool cost |
 
-### At Scale (100 developers)
+> **On the "Source" column:** Where this table says "industry average" or "studies show," treat that as a starting assumption to validate, not a citation — no specific study is named here, and published estimates for time-saved-per-day vary widely by task type and methodology. Use this model for your *initial* pitch only. Once you have pilot data, replace every row with your own measured numbers (see "The Honest Model" in [Investment Strategy](../ai-strategy/investment-strategy.md)) — that's the version worth defending to a skeptical executive.
+
+### At Scale (100 developers, 💰 team/enterprise tier)
 
 | | Conservative | Moderate | Optimistic |
 |---|---|---|---|
@@ -81,7 +83,7 @@ They're not an R&D experiment. They're a productivity tool with measurable ROI.
 
 ### "What's the total cost?"
 
-**Answer:** For a 100-developer org: $150K–350K/year in tool costs (comparable to your CI/CD or observability spend), plus roughly 0.5–1 FTE for enablement and governance. Total: $200K–450K/year — consistent with the [mid-size band in Investment Strategy](../ai-strategy/investment-strategy.md) — for an estimated $825K–1.65M in productivity value (see the table above).
+**Answer:** For a 100-developer org: 💰 $150K–350K/year in tool costs (comparable to your CI/CD or observability spend), plus roughly 0.5–1 FTE for enablement and governance. Total: $200K–450K/year — consistent with the [mid-size band in Investment Strategy](../ai-strategy/investment-strategy.md) — for an estimated $825K–1.65M in productivity value (see the table above). Note these dollar figures assume US-market costs; adjust proportionally for your region.
 
 ---
 
@@ -98,31 +100,31 @@ They're not an R&D experiment. They're a productivity tool with measurable ROI.
 
 ## Phased Investment Approach
 
-Don't ask for the full budget upfront. Propose a phased approach that de-risks the investment:
+Don't ask for the full budget upfront. Propose a phased approach that de-risks the investment. *(This is the same phasing framework as [Investment Strategy's Phased Investment section](../ai-strategy/investment-strategy.md#phased-investment-de-risking) — the version below is scoped to a 100-developer example for the executive pitch; see that page for the org-size-general breakdown.)*
 
-**Phase 1 (Month 1–2): Exploration — $0**
+**Phase 1 (Month 1–2): Exploration — 🆓 $0**
 - Individual developers explore free tiers
 - Leader builds hands-on experience
 - Deliverable: Informed recommendation
 
-**Phase 2 (Month 2–4): Pilot — $5K–10K**
+**Phase 2 (Month 2–4): Pilot — 💰 $5K–10K**
 - One team on paid tier (6–8 seats)
 - Measure impact against baseline
 - Deliverable: Data-driven recommendation to expand or stop
 
-**Phase 3 (Month 4–8): Expansion — $50K–100K annualized**
+**Phase 3 (Month 4–8): Expansion — 💰 $50K–100K annualized**
 - Multiple teams, standardized tool
 - Governance in place
 - Deliverable: Proven playbook, ROI data for org-wide decision
 
-**Phase 4 (Month 8+): Org-wide — $200K–450K annualized (for 100 devs — see [Investment Strategy](../ai-strategy/investment-strategy.md) for the full org-size breakdown)**
+**Phase 4 (Month 8+): Org-wide — 🏢 $200K–450K annualized (for 100 devs — see [Investment Strategy](../ai-strategy/investment-strategy.md) for the full org-size breakdown)**
 - Enterprise agreement
 - Full governance and support
 - Deliverable: Sustained productivity improvement
 
 Each phase has a clear go/no-go gate. This makes it an easy "yes" — you're only asking for Phase 1 approval today.
 
-> ✅ ✅ **My take: Always present Phase 1 (exploration) as $0 and Phase 2 (pilot) as a single budget request. Don't present the full Phase 4 number upfront — it scares executives into "no" before they've seen evidence. The phased approach is not just de-risking; it's a sales technique. Get the small "yes," deliver evidence, then ask for more. Executives who've seen pilot data say "yes" to expansion 80% of the time. Executives asked to fund a full rollout from nothing say "let me think about it" — which means "no."
+> ✅ **My take:** Always present Phase 1 (exploration) as $0 and Phase 2 (pilot) as a single budget request. Don't present the full Phase 4 number upfront — it scares executives into "no" before they've seen evidence. The phased approach is not just de-risking; it's a sales technique. Get the small "yes," deliver evidence, then ask for more. This is a pattern observed anecdotally across pitches, not a benchmarked statistic — see [Investment Strategy](../ai-strategy/investment-strategy.md) for the fuller version of this argument.
 
 ---
 

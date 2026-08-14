@@ -131,7 +131,7 @@ This is a real question with no universal answer yet. Establish a team norm:
 | Shared attribution (human + AI noted) | Honest, but ownership can be ambiguous |
 | Agent output tagged, different review bar | Transparent, allows for different review rigor |
 
-✅ **My take: The developer who initiates and approves agent output owns it. Tag commits for transparency, but accountability stays with the human. This is the only model that works with existing code review and on-call responsibilities.
+> ✅ **My take:** The developer who initiates and approves agent output owns it. Tag commits for transparency, but accountability stays with the human. This is the only model that works with existing code review and on-call responsibilities.
 
 ---
 

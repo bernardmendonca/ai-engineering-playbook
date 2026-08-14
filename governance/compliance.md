@@ -129,7 +129,7 @@ These are two genuinely different questions with different answers — don't con
 
 ### Practical Actions
 
-1. **Get IP indemnification** from your AI tool vendor (Copilot Enterprise and Q offer this)
+1. **Get IP indemnification** from your AI tool vendor (GitHub Copilot Enterprise is well-documented here — verify current terms directly with other vendors before assuming equivalent coverage)
 2. **Document AI involvement** (protects against future disputes)
 3. **Don't claim copyright on purely AI-generated work** without human creative contribution
 4. **Review legal terms** of your AI tool agreement with counsel

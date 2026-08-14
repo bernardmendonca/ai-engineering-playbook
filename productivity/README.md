@@ -1,4 +1,4 @@
-# 06 — Productivity
+# 08 — Productivity
 
 > Measuring and improving developer productivity with AI tools — beyond anecdotes.
 

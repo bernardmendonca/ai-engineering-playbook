@@ -19,7 +19,7 @@ Getting initial budget is Step 1. Maintaining executive support through quarters
 | Stakeholder | What they care about | Your message |
 |------------|---------------------|-------------|
 | **CEO** | Competitive position, board narrative | "We're investing responsibly and seeing measurable results." |
-| **CFO** | Cost, ROI, predictability | "X spend → Y return. Phased. Cancelable. Here's the data." |
+| **CFO** | Cost, ROI, predictability | "X spend → Y return. Phased (🆓 explore → 💰 pilot → 🏢 org-wide). Cancelable. Here's the data." |
 | **CTO** | Technical excellence, talent, velocity | "Better tools → better engineers → faster delivery." |
 | **CISO** | Risk, compliance, data protection | "Governance in place. Auditable. No training on our code." |
 | **VP Engineering** | Team productivity, delivery, quality | "Teams are shipping faster without quality regression." |
@@ -34,7 +34,7 @@ Getting initial budget is Step 1. Maintaining executive support through quarters
 Frame as: "Small, safe experiment with clear success criteria."
 
 ```
-What we want: $[small amount] for 6 weeks with one team.
+What we want: 🆓 $[small amount] for 6 weeks with one team.
 What we'll learn: Whether AI tools improve delivery in our context.
 If it works: We'll come back with data and a recommendation.
 If it doesn't: We stop. Cost is [trivial amount].
@@ -46,7 +46,7 @@ Frame as: "Evidence-based expansion with managed risk."
 
 ```
 What we found: [data from pilot — cycle time, velocity, developer sentiment]
-What we recommend: Expand to [N] teams. Cost: $[amount]/year.
+What we recommend: Expand to [N] teams. Cost: 💰 $[amount]/year.
 Risk: Managed — governance in place, security reviewed, quality stable.
 If we don't expand: We lose the momentum and the talent advantage.
 ```
@@ -74,7 +74,7 @@ Next quarter: [Specific initiative — new tool eval, deeper integration, etc.]
 | "ROI takes time to prove" | "Productivity gains visible in 4–6 weeks. Business ROI calculable after one quarter." |
 | "This is ongoing, not one-time" | "Like CI/CD or observability — a permanent capability with permanent cost and permanent benefit." |
 
-> ✅ ✅ **My take: Under-promise and over-deliver. Executive trust compounds the same way productivity gains do. One "we said X and delivered X+10%" builds more credibility than three "we said 10x and delivered 2x." Set conservative expectations. Beat them. Let the data do the selling.
+> ✅ **My take:** Under-promise and over-deliver. Executive trust compounds the same way productivity gains do. One "we said X and delivered X+10%" builds more credibility than three "we said 10x and delivered 2x." Set conservative expectations. Beat them. Let the data do the selling.
 
 ---
 

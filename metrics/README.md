@@ -1,4 +1,4 @@
-# 08 — Metrics
+# 10 — Metrics
 
 > Defining success metrics, measuring ROI, and reporting AI adoption impact to leadership.
 

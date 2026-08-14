@@ -16,14 +16,14 @@ AI tool costs don't fit neatly into existing budget categories:
 
 ## Where AI Belongs in Your Budget
 
-| Budget category | Framing | Advantage | Risk |
-|----------------|---------|-----------|------|
-| **Developer Tooling** | Same line as IDEs, CI/CD, observability | Natural fit, familiar category, easy to justify | May inherit "tooling" budget constraints |
-| **Engineering Productivity** | Investment in team velocity | Outcome-oriented, ties to business metrics | Harder to measure attribution |
-| **R&D / Innovation** | Exploratory investment | Protects from ROI pressure early | Vulnerable to cuts; perceived as optional |
-| **Platform / Infrastructure** | Foundational capability | Signals permanence | May over-invest before proving value |
+| Budget category | Framing | Typical cost tier | Advantage | Risk |
+|----------------|---------|:-----:|-----------|------|
+| **Developer Tooling** | Same line as IDEs, CI/CD, observability | 💰 | Natural fit, familiar category, easy to justify | May inherit "tooling" budget constraints |
+| **Engineering Productivity** | Investment in team velocity | 💰🏢 | Outcome-oriented, ties to business metrics | Harder to measure attribution |
+| **R&D / Innovation** | Exploratory investment | 🆓💰 | Protects from ROI pressure early | Vulnerable to cuts; perceived as optional |
+| **Platform / Infrastructure** | Foundational capability | 🏢 | Signals permanence | May over-invest before proving value |
 
-> ✅ ✅ **My take: Budget AI tools under **Developer Tooling** for tactical decisions (tool licenses, API costs) and under **Engineering Productivity** for strategic investment (enablement team, training, process change). Never put production AI tools under R&D — it signals "experiment" and makes budget fragile.
+> ✅ **My take:** Budget AI tools under **Developer Tooling** for tactical decisions (tool licenses, API costs) and under **Engineering Productivity** for strategic investment (enablement team, training, process change). Never put production AI tools under R&D — it signals "experiment" and makes budget fragile.
 
 ---
 
@@ -46,11 +46,16 @@ flowchart TD
 
 ## Investment by Organization Size
 
-| Org size | Year 1 investment (realistic) | Breakdown |
-|----------|-------------------------------|-----------|
-| **Startup (< 50 devs)** | $15K–50K/year | Tools only. No dedicated people. Governance is lightweight. |
-| **Mid-size (50–200 devs)** | $80K–450K/year | Tools + 0.25–1 FTE enablement + training + enterprise tier |
-| **Enterprise (200–1000 devs)** | $300K–1.5M/year | Tools + 1–2 FTE enablement (scaling toward a dedicated team/CoE at 500+ devs — see [Organizational Models](./org-models.md)) + infrastructure + governance + vendor management |
+*Dollar figures throughout this page assume US-market costs (tool pricing, developer compensation). Adjust proportionally for your region — relative ratios (e.g., tool cost vs. FTE cost) generally hold better across regions than the absolute numbers do.*
+
+*Org-size bands below match the ones used in [Operating Model](./operating-model.md) and [Organizational Models](./org-models.md) — use the same bands everywhere so numbers stay comparable across pages.*
+
+| Org size | Cost tier | Year 1 investment (realistic) | Breakdown |
+|----------|:---------:|-------------------------------|-----------|
+| **Startup (< 50 devs)** | 🆓💰 | $15K–50K/year | Tools only. No dedicated people. Governance is lightweight. |
+| **Mid-size (50–200 devs)** | 💰 | $80K–450K/year | Tools + 0.25–1 FTE enablement + training + enterprise tier |
+| **Growth (200–500 devs)** | 🏢 | $300K–900K/year | Tools + 1–2 FTE enablement + infrastructure + governance + vendor management |
+| **Enterprise (500+ devs)** | 🏢 | $700K–1.5M+/year | Tools + 2–5 FTE (scaling toward a dedicated team/CoE — see [Organizational Models](./org-models.md)) + infrastructure + governance + vendor management |
 
 **Context:** For a 200-developer org, $300K/year is:
 - Less than 2 senior developer hires
@@ -61,7 +66,7 @@ flowchart TD
 
 ## Phased Investment (De-Risking)
 
-Never ask for the full amount upfront. Phase it:
+Never ask for the full amount upfront. Phase it. *(See also [Business Case's Phased Investment Approach](../foundations/business-case.md#phased-investment-approach) for the same framework worked through for a specific 100-developer executive pitch.)*
 
 ```mermaid
 gantt
@@ -69,22 +74,22 @@ gantt
     dateFormat YYYY-MM
     axisFormat %b
 
-    section Phase 1: Explore
-    Free tiers, leader exploration    :done, 2025-01, 2025-02
+    section Phase 1: Explore 🆓
+    Free tiers, leader exploration    :done, 2026-01, 2026-02
 
-    section Phase 2: Pilot
-    1 team, paid tier ($5-10K)        :active, 2025-02, 2025-04
+    section Phase 2: Pilot 💰
+    1 team, paid tier ($5-10K)        :active, 2026-02, 2026-04
 
-    section Phase 3: Expand
-    Multiple teams ($50-100K ann.)    :2025-04, 2025-08
+    section Phase 3: Expand 💰
+    Multiple teams ($50-100K ann.)    :2026-04, 2026-08
 
-    section Phase 4: Scale
-    Org-wide ($200-500K ann.)         :2025-08, 2025-12
+    section Phase 4: Scale 🏢
+    Org-wide ($200-500K ann.)         :2026-08, 2026-12
 ```
 
 **Each phase has a go/no-go gate.** This makes each "yes" small and evidence-based.
 
-> ✅ ✅ **My take: Always present Phase 1 as $0 and Phase 2 as a single budget ask. Get the small "yes," deliver data, then ask for more. Executives who see pilot results say "yes" to expansion 80% of the time. Executives asked to fund full rollout from nothing say "let me think about it" — which means no.
+> ✅ **My take:** Always present Phase 1 as $0 and Phase 2 as a single budget ask. Get the small "yes," deliver data, then ask for more. Executives who see pilot results are, anecdotally, considerably more likely to say "yes" to expansion than executives asked to fund a full rollout from nothing — the latter tends to get "let me think about it," which means no. (This is a pattern observed in practice, not a cited statistic — treat it as a heuristic, not a benchmark.)
 
 ---
 

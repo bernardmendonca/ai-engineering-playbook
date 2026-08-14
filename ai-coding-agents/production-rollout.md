@@ -121,7 +121,7 @@ flowchart TD
     E -.- E1[Expand by task type<br/>Phase 1: Tests everywhere<br/>Phase 2: Features<br/>Phase 3: Full SDLC]
 ```
 
-✅ **My take: Opt-in with support capacity as the bottleneck. This ensures every new team gets adequate onboarding without overwhelming your platform/enablement capacity.
+> ✅ **My take:** Opt-in with support capacity as the bottleneck. This ensures every new team gets adequate onboarding without overwhelming your platform/enablement capacity.
 
 ### What Changes at Scale
 
@@ -155,7 +155,7 @@ At some point you'll face: **one tool for everyone, or let teams choose?**
 | **Approved shortlist (2–3)** | Flexibility, teams match tool to needs | More governance overhead, split community knowledge |
 | **No restriction** | Maximum developer autonomy | Governance nightmare, no bulk pricing, fragmented support |
 
-✅ **My take: Approved shortlist of 2–3 tools. Typically one IDE-integrated (Copilot or Cursor) and one CLI/API-based (Claude Code or Aider). This covers most developer preferences without governance explosion.
+> ✅ **My take:** Approved shortlist of 2–3 tools. Typically one IDE-integrated (Copilot or Cursor) and one CLI/API-based (Claude Code or Aider). This covers most developer preferences without governance explosion.
 
 ---
 

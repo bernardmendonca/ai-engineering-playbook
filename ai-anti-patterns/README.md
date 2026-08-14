@@ -24,7 +24,7 @@ Reading this takes 10 minutes. It can save you 6 months of learning the hard way
 
 **Why it fails:** The dust won't settle — this is a continuous evolution. Meanwhile, your developers use tools on personal accounts (zero governance), competitors ship faster, and your best talent leaves for companies that provide AI tools.
 
-**The fix:** Start exploring now with free tiers. Waiting for certainty is choosing the risk of irrelevance over the risk of imperfection.
+**The fix:** Start exploring now with 🆓 free tiers. Waiting for certainty is choosing the risk of irrelevance over the risk of imperfection.
 
 → [Foundations: Org Readiness](../foundations/org-readiness.md)
 
@@ -36,7 +36,7 @@ Reading this takes 10 minutes. It can save you 6 months of learning the hard way
 
 **Why it fails:** Experiments get cut. When budget pressure comes, "experiments" are first on the chopping block — regardless of results. Also signals internally that this isn't serious.
 
-**The fix:** Frame as developer tooling infrastructure (same category as CI/CD, IDEs, observability). Permanent capability, not experiment.
+**The fix:** Frame as developer tooling infrastructure (💰 same category as CI/CD, IDEs, observability). Permanent capability, not experiment.
 
 → [AI Strategy: Investment Strategy](../ai-strategy/investment-strategy.md)
 
@@ -170,7 +170,7 @@ Reading this takes 10 minutes. It can save you 6 months of learning the hard way
 
 **What it looks like:** Deploy tools, skip baselining, figure out metrics "once things are running."
 
-**Why it fails:** Three months later, someone asks "is this working?" and you have no baseline to compare against. You can't prove improvement. Budget renewal becomes a political fight instead of a data conversation.
+**Why it fails:** Three months later, someone asks "is this working?" and you have no baseline to compare against. You can't prove improvement. 💰 Budget renewal becomes a political fight instead of a data conversation.
 
 **The fix:** Capture baseline metrics (PR cycle time, deployment frequency, bug rate) for 4–6 weeks BEFORE introducing tools. It's the single most important thing you can do for your future self.
 
@@ -244,7 +244,7 @@ If you remember nothing else, avoid these:
 
 | # | Anti-pattern | One-line fix |
 |---|-------------|-------------|
-| 1 | Waiting for AI to mature | Start now. Free tiers. Zero risk. |
+| 1 | Waiting for AI to mature | Start now. 🆓 Free tiers. Zero risk. |
 | 7 | AI on broken processes | Fix CI/review first. AI amplifies what exists. |
 | 8 | No project instructions | Write CLAUDE.md today. Two hours. |
 | 12 | Mandating usage metrics | Measure outcomes, not tool opens. |

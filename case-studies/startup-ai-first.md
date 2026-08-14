@@ -21,10 +21,10 @@
 
 ### Month 1–2: Foundation
 
-- **Tool choice:** GitHub Copilot Business for everyone ($19/user/month) + Claude Code for senior engineers (API budget per engineer)
+- **Tool choice:** Cursor Business for everyone ($40/user/month) + Claude Code for senior engineers (API budget per engineer) — chosen over Copilot after a 2-week trial showed noticeably better multi-file agent performance on their TypeScript/React codebase
 - **No formal governance:** Team small enough for verbal norms and trust
 - **Expectation set:** "Use AI tools. They're part of our stack. Review output like you'd review anyone's code."
-- **Budget:** $600/month for Copilot + ~$500/month for Claude Code API → ~$1,100/month total
+- **Budget:** $1,200/month for Cursor + ~$500/month for Claude Code API → ~$1,700/month total
 
 ### Month 3–6: Patterns Emerge
 
@@ -40,7 +40,7 @@
 - New hires productive in 1–1.5 weeks (industry norm: 3–4 weeks)
 - Added automated PR summaries and test generation in CI
 - One engineer built internal Slack bot for codebase Q&A (using Claude API + RAG)
-- Total AI tool cost: ~$3,000/month for 50 engineers
+- Total AI tool cost: ~$4,300/month for 50 engineers (Cursor Business at scale + Claude Code API budget)
 
 ## Results
 
@@ -51,7 +51,7 @@
 | Deployment frequency | 2/day | 4–5/day | 2.5x increase |
 | Test coverage | 45% | 72% | 27 point increase |
 | Bug introduction rate | ~12/month | ~10/month | Slight improvement |
-| Monthly AI tool cost | $0 | ~$3,000 | $60/engineer/month |
+| Monthly AI tool cost | $0 | ~$4,300 | $86/engineer/month |
 | Developer satisfaction (AI) | N/A | 4.4/5 | High |
 
 ## Lessons Learned
@@ -73,7 +73,7 @@
 
 ### ⚠️ Mistakes Made
 
-- **No `.copilotignore` for secrets:** One developer accidentally included an environment file in context. No exposure (enterprise tier), but prompted policy creation.
+- **No `.cursorignore` for secrets:** One developer accidentally included an environment file in context. No exposure (enterprise tier), but prompted policy creation.
 - **Cost spike incident:** Senior developer ran a large migration agent task that cost $87 in one session. Prompted per-session cost alerts.
 - **Junior developer submitting untested AI code:** Merged PR that broke staging. Led to "all AI-generated code requires tests" policy.
 

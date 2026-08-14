@@ -6,13 +6,13 @@
 
 Most AI tool vendors provide usage dashboards. Start here.
 
-| Vendor | Dashboard location | Export option |
-|--------|-------------------|-------------|
-| GitHub Copilot | github.com → Organization → Copilot | CSV export, API |
-| Amazon Q | AWS Console → Q Developer | CloudWatch metrics |
-| Anthropic (API) | console.anthropic.com → Usage | API, CSV |
-| OpenAI (API) | platform.openai.com → Usage | API, CSV |
-| Cursor | cursor.com → Team settings | Dashboard only |
+| Vendor | Cost | Dashboard location | Export option |
+|--------|------|--------------------|-------------|
+| GitHub Copilot | 💰🏢 | github.com → Organization → Copilot | CSV export, API |
+| Kiro *(AWS's successor to Amazon Q Developer)* | 🆓💰 | AWS Console / kiro.dev | Usage dashboard, CloudWatch metrics |
+| Anthropic (API) | 💰 | console.anthropic.com → Usage | API, CSV |
+| OpenAI (API) | 💰 | platform.openai.com → Usage | API, CSV |
+| Cursor | 💰🏢 | cursor.com → Team settings | Dashboard only |
 
 ---
 
@@ -67,7 +67,7 @@ Set spending limits in the Anthropic console:
 - Per-API-key daily limit: $[Y]
 - Alert at 80% of limit
 
-### AWS (for Amazon Q / Bedrock)
+### AWS (for Kiro / Bedrock) 💰
 ```json
 {
   "BudgetName": "AI-Tools-Monthly",

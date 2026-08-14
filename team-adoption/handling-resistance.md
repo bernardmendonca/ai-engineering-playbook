@@ -20,7 +20,7 @@ Resistance isn't a problem to solve — it's a signal to investigate. Behind eve
 **Honest response:**
 > "AI tools don't replace developers — they shift what developers do. Less boilerplate, more design and review. The skill floor rises, but the need for skilled engineers doesn't disappear. Our roadmap ambition grows with our capacity — we ship more, not hire less."
 
-**Evidence you can point to:** No major company has reduced engineering headcount because of AI coding tools (as of 2025). Most are hiring more to take advantage of increased capacity.
+**A more honest framing:** The relationship between AI coding tools and headcount is genuinely mixed and evolving — some companies have cited AI efficiency gains as a factor in restructuring, while others are hiring more to take advantage of increased capacity. Don't promise a guarantee you can't back up. What you *can* say honestly: "Our roadmap ambition, not some fixed notion of 'enough developers,' determines headcount. If AI lets us do more with the same team, that's usually reflected in more shipped work, not fewer jobs — but I won't pretend no company anywhere has ever made a different call."
 
 **What NOT to say:** "Don't worry, your job is safe forever." You don't know that, and empty reassurance insults intelligence.
 

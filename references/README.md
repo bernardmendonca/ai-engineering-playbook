@@ -22,7 +22,7 @@ For a full list of terms and acronyms used throughout this playbook, see the [Gl
 - **GitHub Security Research** — Studies on vulnerability patterns in AI-generated code
 - **OWASP AI Security** — Guidance on AI-specific security threats
   - https://owasp.org/www-project-ai-security-and-privacy-guide/
-- **Asleep at the Keyboard** (Stanford, 2022) — Research on security of AI-generated code
+- **Asleep at the Keyboard?** (NYU Tandon, 2021) — Pearce, Dolan-Gavitt, Karri et al. research on security of Copilot-generated code
 
 ### Responsible AI
 
@@ -37,32 +37,31 @@ For a full list of terms and acronyms used throughout this playbook, see the [Gl
 
 ### AI Coding Assistants
 
-| Tool | Documentation | Pricing |
-|------|--------------|---------|
-| GitHub Copilot | https://docs.github.com/copilot | https://github.com/features/copilot#pricing |
-| Kiro *(AWS's successor to Amazon Q Developer, which reaches end-of-support April 2027)* | https://kiro.dev/docs | https://kiro.dev/pricing |
-| Cursor | https://docs.cursor.com | https://cursor.com/pricing |
-| Claude Code | https://docs.anthropic.com/en/docs/claude-code | https://www.anthropic.com/pricing |
-| Kiro | https://kiro.dev/docs | https://kiro.dev |
-| Windsurf | https://docs.codeium.com | https://codeium.com/pricing |
-| Aider | https://aider.chat/docs | Open source (free) |
-| Cline | https://github.com/cline/cline | Open source (free) |
+| Tool | Cost | Documentation | Pricing |
+|------|------|--------------|---------|
+| GitHub Copilot | 🆓💰🏢 | https://docs.github.com/copilot | https://github.com/features/copilot#pricing |
+| Kiro *(AWS's successor to Amazon Q Developer, which reaches end-of-support April 2027)* | 🆓💰 | https://kiro.dev/docs | https://kiro.dev/pricing |
+| Cursor | 🆓💰🏢 | https://docs.cursor.com | https://cursor.com/pricing |
+| Claude Code | 🆓💰🏢 | https://docs.anthropic.com/en/docs/claude-code | https://www.anthropic.com/pricing |
+| Devin Desktop *(formerly Windsurf, rebranded by Cognition June 2026)* | 🆓💰🏢 | https://devin.ai/desktop | https://devin.ai/desktop/pricing |
+| Aider | 🆓 | https://aider.chat/docs | Open source (free) |
+| Cline | 🆓 | https://github.com/cline/cline | Open source (free) |
 
 ### AI Code Review
 
-| Tool | Documentation |
-|------|--------------|
-| CodeRabbit | https://docs.coderabbit.ai |
-| Sourcery | https://docs.sourcery.ai |
+| Tool | Cost | Documentation |
+|------|------|--------------|
+| CodeRabbit | 🆓💰 | https://docs.coderabbit.ai |
+| Sourcery | 🆓💰 | https://docs.sourcery.ai |
 
 ### AI APIs (for custom integrations)
 
-| Provider | API Docs | Pricing |
-|----------|----------|---------|
-| Anthropic (Claude) | https://docs.anthropic.com | https://www.anthropic.com/pricing |
-| OpenAI | https://platform.openai.com/docs | https://openai.com/pricing |
-| AWS Bedrock | https://docs.aws.amazon.com/bedrock | https://aws.amazon.com/bedrock/pricing |
-| Google Vertex AI | https://cloud.google.com/vertex-ai/docs | https://cloud.google.com/vertex-ai/pricing |
+| Provider | Cost | API Docs | Pricing |
+|----------|------|----------|---------|
+| Anthropic (Claude) | 💰🏢 | https://docs.anthropic.com | https://www.anthropic.com/pricing |
+| OpenAI | 💰🏢 | https://platform.openai.com/docs | https://openai.com/pricing |
+| AWS Bedrock | 💰🏢 | https://docs.aws.amazon.com/bedrock | https://aws.amazon.com/bedrock/pricing |
+| Google Vertex AI | 💰🏢 | https://cloud.google.com/vertex-ai/docs | https://cloud.google.com/vertex-ai/pricing |
 
 ---
 

@@ -1,4 +1,4 @@
-# 02 — AI Tools
+# 03 — AI Tools
 
 > Evaluating, comparing, and choosing AI developer tools for your organization.
 

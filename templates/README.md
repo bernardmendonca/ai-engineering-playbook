@@ -7,6 +7,8 @@
 | Template | Purpose | When to use |
 |----------|---------|-------------|
 | [AI Tool Evaluation Scorecard](./ai-tool-evaluation-scorecard.md) | Structured comparison for choosing between AI tools | Selecting tools for team or org |
+| [AI Decision RFC](./ai-decision-rfc.md) | Document a significant AI-adoption decision with options considered | Any tool/org-model/policy decision worth a paper trail |
+| [AI Output Evaluation Plan](./ai-output-eval-plan.md) | Design an evaluation approach for an AI feature's *output quality* before shipping it | Building an AI-powered automation or unattended workflow |
 | [AI Pilot Proposal](./ai-pilot-proposal.md) | Propose an AI tool pilot to leadership | Getting budget/approval for a pilot |
 | [AI Acceptable Use Policy](./ai-acceptable-use-policy.md) | Org-wide policy template for AI tool usage | Before team-wide rollout |
 | [Vendor Security Assessment](./vendor-security-assessment.md) | Questions to ask AI tool vendors | Procurement and security review |

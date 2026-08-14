@@ -51,7 +51,7 @@ flowchart TD
 | Windsurf *(rebranded to Devin Desktop by Cognition, June 2026)* | 🆓 Free tier / 💰 $15–30/mo | Good free tier, enterprise options |
 | Tabnine | 💰 $12/mo / 🏢 Enterprise | On-premise deployment, privacy focus |
 
-✅ ✅ **My take: This category is a commodity. All major options are good enough. Choose based on your ecosystem (GitHub → Copilot, AWS → Q), security requirements (on-prem → Tabnine), or IDE preference (Cursor-specific → Cursor).
+> ✅ **My take:** This category is a commodity. All major options are good enough. Choose based on your ecosystem (GitHub → Copilot, AWS → Kiro), security requirements (on-prem → Tabnine), or IDE preference (Cursor-specific → Cursor).
 
 > **Note:** These same tools also offer agent/chat capabilities at their paid tiers. For a detailed comparison of agent-mode features, enterprise readiness, and cost-at-scale projections, see [Agent Landscape](../ai-coding-agents/agent-landscape.md).
 
@@ -81,7 +81,7 @@ Every major coding tool now includes this. The differentiation is in context awa
 | Sourcery | 🆓 Free for OSS / 💰 $14/user/mo | Python-focused, refactoring suggestions |
 | Qodo (formerly CodiumAI) | 🆓 Free tier / 💰 Paid plans | Test-focused review, PR suggestions |
 
-✅ ✅ **My take: AI code review is best as a *complement* to human review, not a replacement. Use it to catch the mechanical issues (unused variables, common bugs, security patterns) so human reviewers can focus on design, intent, and correctness.
+> ✅ **My take:** AI code review is best as a *complement* to human review, not a replacement. Use it to catch the mechanical issues (unused variables, common bugs, security patterns) so human reviewers can focus on design, intent, and correctness.
 
 **🆓 Getting started free:** CodeRabbit and Sourcery both offer free tiers for open-source. Try them on a public repo to evaluate quality before paying.
 
@@ -96,7 +96,7 @@ Every major coding tool now includes this. The differentiation is in context awa
 | Qodo (formerly CodiumAI) | 🆓 Free tier / 💰 Paid | Test suggestions during development |
 | Ponicode (CircleCI) | 💰 Paid | Unit test generation, coverage expansion |
 
-✅ ✅ **My take: Test generation from coding agents (Copilot, Claude Code, etc.) is usually good enough. Specialized testing tools make sense only for large Java codebases (Diffblue) or if you need CI-integrated coverage expansion.
+> ✅ **My take:** Test generation from coding agents (Copilot, Claude Code, etc.) is usually good enough. Specialized testing tools make sense only for large Java codebases (Diffblue) or if you need CI-integrated coverage expansion.
 
 ### AI Security Scanning
 
@@ -104,12 +104,12 @@ Every major coding tool now includes this. The differentiation is in context awa
 
 | Tool | Cost | Focus |
 |------|------|-------|
-| Amazon Q (security scans) | 🆓 Included free | Vulnerabilities in application code |
+| Kiro / Amazon Q (security scans) | 🆓 Included free | Vulnerabilities in application code |
 | GitHub Advanced Security + Copilot | 🏢 Enterprise | Autofix for security alerts |
 | Snyk + AI | 💰 Per-project pricing | Dependencies + code, AI-assisted fix suggestions |
 | Semgrep + AI rules | 🆓 OSS / 💰 Teams | Custom rules, AI-generated fixes |
 
-✅ ✅ **My take: Layer AI security on top of existing SAST/SCA. It's not a replacement for your security toolchain — it's an enhancement that reduces noise and suggests fixes.
+> ✅ **My take:** Layer AI security on top of existing SAST/SCA. It's not a replacement for your security toolchain — it's an enhancement that reduces noise and suggests fixes.
 
 ---
 
@@ -121,11 +121,11 @@ Every major coding tool now includes this. The differentiation is in context awa
 
 | Tool | Cost | Platform |
 |------|------|---------|
-| Amazon Q (IaC) | 🆓 Free tier | CloudFormation, CDK |
+| Kiro / Amazon Q (IaC) | 🆓 Free tier | CloudFormation, CDK |
 | Pulumi AI | 🆓 Free | Pulumi (multi-cloud) |
 | Coding agents (general) | 💰 Various | Any IaC language |
 
-✅ ✅ **My take: Good for scaffolding. Dangerous for complex infrastructure without expert review. IaC mistakes have high blast radius — a misconfigured security group or an overly permissive IAM role can expose your entire environment.
+> ✅ **My take:** Good for scaffolding. Dangerous for complex infrastructure without expert review. IaC mistakes have high blast radius — a misconfigured security group or an overly permissive IAM role can expose your entire environment.
 
 **⚠️ Caution:** Always review AI-generated infrastructure code with the same rigor as production application code. Preferably more.
 
@@ -135,11 +135,11 @@ Every major coding tool now includes this. The differentiation is in context awa
 
 | Tool | Cost | Approach |
 |------|------|---------|
-| Amazon Q (AWS Console) | 🆓 Free | AWS-specific troubleshooting |
+| Kiro / Amazon Q (AWS Console) | 🆓 Free | AWS-specific troubleshooting |
 | Datadog AI | 💰 Included in plans | Log analysis, anomaly explanation |
 | PagerDuty AI | 💰 Included in plans | Incident summarization, runbook suggestions |
 
-✅ ✅ **My take: Helpful but supplementary. Good for reducing mean-time-to-understand during incidents. Not a replacement for operational expertise.
+> ✅ **My take:** Helpful but supplementary. Good for reducing mean-time-to-understand during incidents. Not a replacement for operational expertise.
 
 ---
 
@@ -172,7 +172,7 @@ Every major coding tool now includes this. The differentiation is in context awa
 | Jira AI | 💰 Included in Premium | Summarization, smart suggestions |
 | GitHub Copilot coding agent *(successor to the retired Copilot Workspace, May 2025)* | 💰 Copilot plan | Issue → code plan → implementation |
 
-✅ ✅ **My take: These are early-stage. Useful for drafting and summarization, not yet reliable for autonomous planning or estimation.
+> ✅ **My take:** These are early-stage. Useful for drafting and summarization, not yet reliable for autonomous planning or estimation.
 
 ---
 
@@ -193,10 +193,10 @@ Most teams don't need a tool in every category. Prioritize based on pain:
 
 ## The Consolidation Trend
 
-In 2025, the trend is toward **platform consolidation**. Rather than a different AI tool for each category, major platforms are expanding:
+The trend is toward **platform consolidation**. Rather than a different AI tool for each category, major platforms are expanding:
 
 - **GitHub Copilot** → Autocomplete + Chat + Agent + Code Review + Security
-- **Amazon Q** → Autocomplete + Chat + Agent + Security + IaC + AWS Operations
+- **AWS (Kiro, successor to Amazon Q)** → Autocomplete + Chat + Agent + Security + IaC + AWS Operations
 - **Cursor** → Autocomplete + Chat + Agent (IDE-focused) — and this consolidation trend played out even at the vendor level: Windsurf itself was acquired by Cognition and rebranded Devin Desktop (June 2026), folding into Cognition's own agent platform
 
 **Implication:** You may not need 6 different AI tools. One or two platform choices might cover most needs. Evaluate whether a platform approach (fewer vendors, simpler governance) beats best-of-breed (better tool per category, more governance overhead).

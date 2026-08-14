@@ -33,7 +33,7 @@ quadrantChart
 
 ## High Acceleration Tasks
 
-### Boilerplate and Repetitive Code (70–90% faster)
+### Boilerplate and Repetitive Code (70–90% faster, per practitioner reports — validate against your own baseline)
 
 **Examples:** CRUD endpoints, form components, configuration files, similar-structure classes.
 
@@ -41,7 +41,7 @@ quadrantChart
 
 **Real-world impact:** A developer who spends 2 hours on boilerplate daily saves 1.5–2 hours. But not every developer spends this much time on boilerplate — measure your baseline.
 
-### Test Generation (50–80% faster)
+### Test Generation (50–80% faster, per practitioner reports)
 
 **Examples:** Unit tests for existing functions, edge case generation, test data creation.
 
@@ -49,7 +49,7 @@ quadrantChart
 
 **Caveat:** Speed ≠ quality. AI-generated tests need human review for meaningfulness. See [Testing Workflows](../engineering-workflows/testing.md).
 
-### Documentation (60–80% faster for first draft)
+### Documentation (60–80% faster for first draft, per practitioner reports)
 
 **Examples:** API docs from code, README generation, inline comment generation.
 
@@ -57,7 +57,7 @@ quadrantChart
 
 **Caveat:** First draft only. Human must add "why" context, verify accuracy, and curate.
 
-### Multi-File Refactoring (50–70% faster)
+### Multi-File Refactoring (50–70% faster, per practitioner reports)
 
 **Examples:** Rename across codebase, pattern migration, interface updates.
 
@@ -109,7 +109,7 @@ quadrantChart
 
 ## Time Saved: Realistic Estimates
 
-Based on available research and practitioner reports:
+Based on available research and practitioner reports — treat these as directional starting points, not benchmarks. Published estimates vary widely by study methodology and task definition (for comparison, McKinsey's 2023 estimates for similar categories run lower than the ranges below in several areas, e.g. code generation and refactoring). Measure your own baseline before committing to a number in front of leadership — see [Measurement Approaches](./measurement-approaches.md):
 
 | Developer profile | Realistic daily time saved | Where the time goes |
 |------------------|--------------------------|---------------------|

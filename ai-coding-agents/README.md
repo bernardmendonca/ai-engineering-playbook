@@ -1,10 +1,10 @@
-# 03 — AI Coding Agents
+# 04 — AI Coding Agents
 
 > Understanding, evaluating, and deploying AI agents that write and modify code autonomously.
 
 ## Why This Section Matters
 
-AI coding agents represent the biggest shift in developer tooling since the IDE. Unlike autocomplete or chat assistants, agents can plan multi-step tasks, execute commands, modify multiple files, and iterate on their own output.
+AI coding agents are a meaningfully different category of tool than autocomplete or chat assistants — they can plan multi-step tasks, execute commands, modify multiple files, and iterate on their own output, rather than just suggesting the next line or answering a question.
 
 **What goes wrong without guidance:**
 - Teams use agents without guardrails — a 30-file PR generated in 5 minutes that nobody fully reviews

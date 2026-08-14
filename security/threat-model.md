@@ -86,7 +86,7 @@ flowchart TD
 
 **Risk level:** Medium-High
 
-**Reality check:** Studies show AI-generated code has similar vulnerability rates to human-written code — but the *volume* can be higher if review discipline drops.
+**Reality check:** Findings on whether AI-generated code has meaningfully different vulnerability rates than human-written code are mixed and study-dependent — don't treat this as a settled question either way. What's more consistently observed: the *volume* of code produced can increase faster than review capacity, so if review discipline drops, more vulnerable code reaches production regardless of the per-line rate.
 
 **Mitigations:**
 - SAST/DAST in CI pipeline (catches known patterns regardless of author)
@@ -143,7 +143,7 @@ flowchart TD
 **Risk level:** Low-Medium (legal uncertainty remains)
 
 **Mitigations:**
-- IP indemnification from vendor (GitHub Copilot Enterprise, Amazon Q offer this)
+- IP indemnification from vendor (GitHub Copilot Enterprise is well-documented here; verify current specifics with any other vendor, including AWS's Kiro, directly — coverage terms vary and change)
 - Code scanning for license markers
 - For high-risk scenarios: generate, then review for originality
 - Legal counsel review of AI tool terms

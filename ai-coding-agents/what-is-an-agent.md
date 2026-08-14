@@ -129,7 +129,7 @@ flowchart LR
     D -.- D1[Agent plans, codes, runs, iterates<br/>Human reviews final output]
 ```
 
-✅ **My take: Start with lower autonomy.** Let developers build trust and understanding before increasing agent independence.
+> ✅ **My take:** Start with lower autonomy. Let developers build trust and understanding before increasing agent independence.
 - **Match autonomy to risk.** Internal tools can tolerate higher autonomy. Security-critical paths need human checkpoints.
 - **Never go fully autonomous on production-affecting changes** without CI/CD gates downstream.
 
