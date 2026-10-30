@@ -14,6 +14,7 @@ Security is the most common blocker for AI adoption in enterprise environments �
 | [Data Classification](./data-classification.md) | What code can go where — frameworks for data handling decisions |
 | [AI-Generated Code Risks](./generated-code-risks.md) | Vulnerabilities, license issues, and supply chain risks in AI output |
 | [Enterprise Controls](./enterprise-controls.md) | Network, identity, DLP, and monitoring controls for AI tools |
+| [Agentic Security](./agentic-security.md) | OWASP Agentic Top 10 applied to coding agents; skill and instruction files as code; agent memory; AI and MCP gateways |
 
 ## 💡 Key Insight
 

@@ -2,6 +2,8 @@
 
 > Frameworks for thinking clearly about AI adoption — beyond hype and fear.
 
+> **Last verified:** 2026-10-30 · **Re-check by:** 2027-01-30
+
 ## Why Mental Models Matter
 
 Without clear mental models, AI decisions devolve into opinion battles ("I read that AI will replace all developers" vs. "AI is just hype"). Leaders need shared frameworks that structure thinking and enable productive discussion.
@@ -51,7 +53,7 @@ flowchart TD
     H -->|Yes| J[Integrate — use APIs + custom layer]
 ```
 
-**For most engineering organizations in 2025:** Buy (for coding assistants, code review). Integrate (for custom workflows, internal tools). Build is rarely justified unless you're a large enterprise with extreme data sensitivity.
+**For most engineering organizations today:** Buy (for coding assistants, code review). Integrate (for custom workflows, internal tools). Build is rarely justified unless you're a large enterprise with extreme data sensitivity.
 
 ---
 
@@ -79,28 +81,26 @@ flowchart LR
 
 ## Model 4: Cost Model Mental Map
 
-AI tools have fundamentally different cost structures. Understanding these prevents budget surprise.
+AI tools have different cost structures. Understanding these prevents budget surprise. Through 2026 the market converged: most vendors moved from flat seats to seats with included usage plus metered overage, because agent sessions cost far more to serve than autocomplete.
 
-### Per-Seat (Predictable)
-- **How it works:** Fixed price per developer per month, regardless of usage
-- **Examples:** GitHub Copilot ($10–39/user/month), Amazon Q ($0–19/user/month)
-- **Advantage:** Budgetable, no surprises
-- **Disadvantage:** Paying for inactive users; heavy users subsidized by light users
-- **Budget as:** Developer tooling line item (like IDE licenses)
+### Seat + Included Usage (Now the Default)
+- **How it works:** A per-seat fee includes a monthly allowance of usage credits. Past the allowance, usage is billed at published per-model rates, or blocked if an admin set a hard cap
+- **Examples:** GitHub Copilot (AI Credits, pooled across the org, since June 2026), Kiro (credits per tier, opt-in overage), Cursor (X Subscription tiers, third-party models billed at API rates), Claude Team (Standard and Premium seats)
+- **Advantage:** Predictable floor; admins can pool credits and set budgets at org, cost-center, and user level
+- **Disadvantage:** The seat price no longer tells you the bill; heavy agent users can cost several times their seat
+- **Budget as:** Seat fee + a usage line sized from pilot telemetry, with a hard cap or alert
 
 ### Per-Token (Variable)
 - **How it works:** Pay for actual AI compute consumed (input + output tokens)
-- **Examples:** Claude Code via API, Aider + OpenAI/Anthropic API
+- **Examples:** Claude Code or Codex with an API key, Aider + any provider API, Claude Enterprise (seat + all usage at API rates)
 - **Advantage:** Pay only for what you use; zero cost when idle
 - **Disadvantage:** Unpredictable monthly spend; power users can be expensive
 - **Budget as:** Cloud compute (like AWS usage — variable but trackable)
 
-### Hybrid (Mixed)
-- **How it works:** Seat fee includes a usage quota; overages charged additionally or throttled
-- **Examples:** Cursor (seat + "fast" request limits), Windsurf (seat + flow limits)
-- **Advantage:** Predictable base, flexibility for heavy use
-- **Disadvantage:** Confusing pricing, "slow" fallback can frustrate power users
-- **Budget as:** Seat fee + contingency buffer
+### Pure Per-Seat (Mostly Gone)
+- **How it works:** Fixed price per developer per month, regardless of usage
+- **Where it survives:** Inline code completion, which most vendors still don't meter, and some enterprise agreements that negotiate flat pricing
+- **Watch out for:** Annual contracts signed under old flat terms. Check what happens at renewal
 
 ### The Real Cost (Often Missed)
 

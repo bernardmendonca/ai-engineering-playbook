@@ -2,21 +2,34 @@
 
 > Configuring AI tools at the project level — the highest-leverage context engineering activity.
 
+> **Last verified:** 2026-10-30 · **Re-check by:** 2027-01-30
+
 ## What Project Instructions Are
 
 Project instruction files are static context that AI tools read at the start of every interaction. They tell the AI: "Here's how this project works. Follow these conventions."
 
-Every major AI coding tool supports some form of this:
+### Start with AGENTS.md
 
-| Tool | File/mechanism | Format |
-|------|---------------|--------|
-| Claude Code | `CLAUDE.md` in project root | Markdown |
-| Kiro | `.kiro/steering/*.md` files | Markdown with front-matter |
-| Cursor | `.cursor/rules/*.mdc` (project root) — `.cursorrules` still works but is deprecated by Cursor in favor of this | Markdown/MDC |
-| GitHub Copilot | `.github/copilot-instructions.md` | Markdown |
-| Aider | `.aider.conf.yml` + conventions file | YAML + Markdown |
-| Devin Desktop *(formerly Windsurf)* | Project rules (carried over from Windsurf's `.windsurfrules` mechanism at rebrand — verify current file name with Cognition's docs) | Markdown/text |
-| Cline | `.clinerules` in project root | Markdown/text |
+[`AGENTS.md`](https://agents.md) is a plain Markdown file in the repository root that gives any coding agent project-specific guidance. It began as a cross-vendor convention (OpenAI Codex, Cursor, Google, and others) and is now stewarded by the Linux Foundation's Agentic AI Foundation, alongside MCP. Most major agents read it natively.
+
+> ✅ **My take:** Write one `AGENTS.md` as the source of truth, and add tool-specific files only as thin overlays for features a tool needs (conditional inclusion in Kiro, path-scoped rules in Cursor or Copilot). This keeps your context investment portable when you change or add tools, and avoids maintaining the same conventions in four files that drift apart.
+
+Nested `AGENTS.md` files in subdirectories apply to the code beneath them, which is useful in monorepos.
+
+### Tool-specific files
+
+Every major AI coding tool also supports its own format:
+
+| Tool | Reads `AGENTS.md`? | Native file/mechanism | Format |
+|------|:------------------:|-----------------------|--------|
+| Claude Code | No — import it | `CLAUDE.md` in project root. Add a line `@AGENTS.md` to import the shared file | Markdown |
+| OpenAI Codex | ✅ | `AGENTS.md` is the native format | Markdown |
+| GitHub Copilot | ✅ | `.github/copilot-instructions.md`, plus path-scoped `.github/instructions/*.instructions.md` | Markdown |
+| Kiro | ✅ (workspace root or `~/.kiro/steering/`) | `.kiro/steering/*.md` files with inclusion modes | Markdown with front-matter |
+| Cursor | ✅ | `.cursor/rules/*.mdc` (the older `.cursorrules` file is deprecated) | Markdown/MDC |
+| Aider | Via config (`read:` in `.aider.conf.yml`) | `.aider.conf.yml` + conventions file | YAML + Markdown |
+| Devin Desktop *(formerly Windsurf)* | ✅ (nested files apply to their directory) | Rules in `.devin/rules/*.md` or `.windsurf/rules/*.md`; legacy `.windsurfrules` still read | Markdown with trigger front-matter |
+| Cline | ✅ | Rules in `.clinerules/` or `.cline/rules/` (also reads `.cursorrules` and `.windsurfrules`) | Markdown, optional `paths` front-matter |
 
 ---
 
@@ -67,7 +80,14 @@ Every project instructions file should cover these areas:
 
 ### CLAUDE.md (Claude Code / Claude)
 
-**Loaded:** Automatically when Claude Code starts in a directory with CLAUDE.md.
+**Loaded:** Automatically when Claude Code starts in a directory with CLAUDE.md. Claude Code does not read `AGENTS.md` on its own. If you keep shared conventions in `AGENTS.md`, make CLAUDE.md import it:
+
+```markdown
+@AGENTS.md
+
+## Claude Code-specific notes
+- (anything that only applies to Claude Code)
+```
 
 **Power features:**
 - Supports nested CLAUDE.md files (subdirectory-specific instructions)
@@ -83,7 +103,13 @@ For a full copy-paste example: see [Examples: Java/Spring Boot CLAUDE.md](../exa
 
 ### Kiro Steering Files (.kiro/steering/)
 
-**Loaded:** Based on inclusion mode (always, file-match, or manual).
+**Loaded:** Based on the `inclusion` front-matter key:
+- `always` (the default if omitted) — loaded into every interaction
+- `fileMatch` — loaded when files matching `fileMatchPattern` are in context
+- `manual` — loaded only when a developer references it with `#` in chat
+- `auto` — loaded when the request matches the file's `description` (requires `name` and `description` keys)
+
+Kiro also picks up an `AGENTS.md` in the workspace root or in `~/.kiro/steering/`.
 
 **Power features:**
 - Multiple files with different triggers (conditional inclusion)
@@ -118,7 +144,7 @@ Use AppError class. See pattern in: src/api/users/handler.ts
 
 ```markdown
 ---
-inclusion: auto
+inclusion: always
 ---
 
 # Always-Active Standards
@@ -142,13 +168,13 @@ inclusion: auto
 
 **Best for:** IDE-native developers who want codebase-wide AI behavior tuning.
 
-For copy-paste examples: see [Examples: React .cursorrules](../examples/project-instructions/).
+For copy-paste examples: see [Examples: React Cursor rule](../examples/project-instructions/).
 
 ---
 
 ### .github/copilot-instructions.md (GitHub Copilot)
 
-**Loaded:** By Copilot Chat across supported clients (VS Code, Visual Studio, JetBrains, and more) — not gated to a specific paid tier, though enterprise policy controls may affect how it's enforced org-wide. Verify current client support in GitHub's docs, as this has broadened over time.
+**Loaded:** By Copilot across supported clients (VS Code, Visual Studio, JetBrains, and more) and by the Copilot cloud agent — not gated to a specific paid tier, though enterprise policy controls may affect how it's enforced org-wide. Copilot also reads `AGENTS.md` and path-scoped `.github/instructions/*.instructions.md` files (with an `applyTo` glob in front-matter). Verify current client support in GitHub's docs, as this has broadened over time.
 
 **Best for:** Organizations standardized on GitHub ecosystem.
 
@@ -185,7 +211,7 @@ For copy-paste examples: see [Examples: Python/FastAPI copilot-instructions](../
 
 ## Getting Started (30 minutes)
 
-1. Create the appropriate file for your tool (CLAUDE.md, .cursorrules, etc.)
+1. Create `AGENTS.md` in the repo root (and, if your team uses Claude Code, a CLAUDE.md containing `@AGENTS.md`)
 2. Write 3 sections: Stack, Conventions, Don'ts
 3. Include your build/test commands
 4. Add one "Security" rule (even just "no secrets in code")

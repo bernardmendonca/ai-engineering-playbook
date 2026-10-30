@@ -25,7 +25,7 @@
 - **Executive sponsorship secured:** CTO championed with CISO and General Counsel
 - **Cross-functional working group:** Engineering + Security + Legal + Compliance + Risk
 - **Data classification exercise:** All 200+ repositories classified (70% Internal, 25% Restricted, 5% Public)
-- **Vendor evaluation:** Formal RFP process evaluating Copilot Enterprise, Amazon Q, and self-hosted options
+- **Vendor evaluation:** Formal RFP process evaluating Copilot Enterprise, Amazon Q Developer, and self-hosted options *(an organization running this RFP today would evaluate Kiro instead: Amazon Q Developer closed new signups in May 2026 and reaches end of support April 30, 2027)*
 - **Policy drafted:** Comprehensive AI acceptable use policy through legal review
 
 **Key decision:** Approved Copilot Enterprise for Internal-classified code. Restricted code remains off-limits for cloud AI. Evaluated self-hosted options for future.

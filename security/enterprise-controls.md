@@ -2,6 +2,8 @@
 
 > Network, identity, DLP, and monitoring controls to enforce AI security at scale.
 
+> **Last verified:** 2026-10-30 · **Re-check by:** 2027-01-30
+
 ## Defense in Depth
 
 No single control is sufficient. Layer controls across multiple dimensions:
@@ -34,6 +36,10 @@ flowchart TD
 | Cloud proxy (Cloudflare, Zscaler) | 💰 Per-user pricing | Medium |
 | Self-hosted proxy (mitmproxy, custom) | 💰 Infra + engineering | High |
 | Vendor-provided gateway (Bedrock Guardrails) | 💰 API usage based | Low-Medium |
+| AI (LLM) gateway (LiteLLM, Portkey, Kong AI Gateway, Cloudflare AI Gateway) | 🆓 OSS / 💰 Managed | Medium — central logging, spend caps, redaction for API-key-based agents |
+| MCP gateway / allowlist | 🆓/💰 | Medium — approved catalog of MCP servers and audit of tool calls |
+
+See [Agentic Security](./agentic-security.md#ai-and-mcp-gateways) for when gateways are worth it and how to secure them.
 
 ### Egress Filtering
 
@@ -57,10 +63,12 @@ flowchart TD
 **Availability by tool:**
 | Tool | SSO available | Tier required |
 |------|:------------:|:------------:|
-| GitHub Copilot | ✅ | Enterprise |
-| Amazon Q | ✅ | Any (via IAM) |
-| Cursor | ✅ | Business/Enterprise |
-| Windsurf | ✅ | Enterprise |
+| GitHub Copilot | ✅ | Business/Enterprise (SSO via your GitHub Enterprise Cloud account) |
+| Claude Code | ✅ | Team/Enterprise (SCIM on Enterprise) |
+| OpenAI Codex | ✅ | ChatGPT Business/Enterprise |
+| Kiro | ✅ (AWS IAM Identity Center, Okta, or Microsoft Entra ID; custom OIDC in AWS GovCloud) | Enterprise subscription |
+| Cursor | ✅ | Teams/Enterprise (re-verify: contracting entity changed to SpaceXSI in Oct 2026) |
+| Devin Desktop *(formerly Windsurf)* | ✅ (SAML/OIDC) | Enterprise |
 
 ### Role-Based Access
 
@@ -92,9 +100,11 @@ flowchart TD
 **What:** Prevent specific files/repos from entering AI context.
 
 **Implementation:**
-- `.copilotignore` files in repositories
-- Admin-level exclusion rules (by repository, path pattern, or file type)
+- Admin-level exclusion rules (by repository, path pattern, or file type) — for Copilot these live in repository/organization/enterprise settings, not in a file
+- Tool-specific mechanisms: `.cursorignore`, Claude Code `permissions.deny` rules in managed settings
 - Repository classification → automatic exclusion of 🔴 Restricted repos
+
+> ⚠️ Exclusion rules mostly don't bind agents. Copilot's content exclusion does not apply to agent mode, the CLI, or the cloud agent, and any agent with shell access can usually read an "excluded" file. For 🔴 Restricted code, keep it out of agent workspaces entirely.
 
 ---
 

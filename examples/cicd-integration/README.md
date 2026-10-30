@@ -34,15 +34,19 @@ jobs:
       - name: Generate summary
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          # Set this repository variable to a current small/fast model ID
+          # from Anthropic's models page. Keeping it out of the workflow
+          # means a model retirement is a one-line settings change.
+          AI_SUMMARY_MODEL: ${{ vars.AI_SUMMARY_MODEL }}
         run: |
           # Build the request body with jq --rawfile so the diff content is
           # never interpolated into the shell command or hand-built into a
           # JSON string. This avoids both script injection (a diff containing
           # shell metacharacters or quote sequences can't break out of the
           # command) and JSON-escaping bugs from raw string interpolation.
-          jq -n --rawfile diff diff.txt \
+          jq -n --rawfile diff diff.txt --arg model "$AI_SUMMARY_MODEL" \
             '{
-              model: "claude-3-5-haiku-20241022",
+              model: $model,
               max_tokens: 1024,
               messages: [{role: "user", content: ("Summarize this PR diff in 3-5 bullet points. Focus on what changed and why it matters:\n\n" + $diff)}]
             }' > payload.json
@@ -67,10 +71,11 @@ jobs:
             });
 ```
 
-**Cost:** 💰 ~$0.01–0.05 per PR (using Haiku for summarization).
+**Cost:** 💰 ~$0.01–0.05 per PR (using a small, fast model for summarization).
 
 **Notes:**
-- Uses Haiku (cheapest model) since summarization doesn't need deep reasoning
+- Uses a small, fast model tier (e.g., Anthropic's Haiku tier) since summarization doesn't need deep reasoning. The model ID lives in the `AI_SUMMARY_MODEL` repository variable, not in the workflow, because vendors retire model versions every few months
+- Treat the summary as untrusted output: the diff can contain prompt-injection text, so never let this job's output drive further automated actions
 - Truncates diff to 10K chars to control cost
 - Disclaimer on the comment so reviewers know it's AI-generated
 - Only processes code files (skips lock files, generated code)
@@ -179,7 +184,7 @@ jobs:
 
 ## Cost Management Tips
 
-1. **Use cheap models for simple tasks** — Haiku/GPT-4o-mini for summaries, better models for security
+1. **Use cheap models for simple tasks** — the small/fast tier from your provider for summaries, more capable tiers for security. Keep model IDs in configuration so retirements don't break pipelines
 2. **Truncate inputs** — Don't send entire files when a diff suffices
 3. **Trigger selectively** — Not every PR needs every AI check
 4. **Cache where possible** — Don't re-analyze unchanged files

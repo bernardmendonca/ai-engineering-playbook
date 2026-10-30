@@ -2,9 +2,11 @@
 
 > Navigating the regulatory landscape for AI in engineering — what to watch, what to do now.
 
+> **Last verified:** 2026-10-30 · **Re-check by:** 2027-01-30
+
 ## The Regulatory Landscape
 
-> Last substantively reviewed mid-2026. This area moves fast — the EU AI Act timeline alone shifted by 16 months in a single legislative update this year. Re-verify dates before using this page to set a compliance deadline.
+> This area moves fast — the EU AI Act timeline alone shifted by 16 months in a single legislative update this year. Re-verify dates before using this page to set a compliance deadline.
 
 Regulation is catching up to AI adoption. As a leader, you don't need to be a legal expert — but you need awareness of what's coming and how it affects your engineering practices.
 
@@ -106,8 +108,8 @@ Below are the **compliance-specific** considerations that go beyond data classif
 ### Government (FedRAMP)
 
 - FedRAMP-scoped code: Only FedRAMP-authorized tools
-- Most AI coding tools are still NOT FedRAMP authorized, but this is changing — GitHub shipped FedRAMP Moderate-authorized models with US/EU data residency directly in Copilot (April 2026), available to GitHub Enterprise Cloud customers, not just self-hosted GitHub Enterprise Server
-- Kiro (AWS's successor to Amazon Q Developer) may have a FedRAMP path via AWS GovCloud — verify current authorization status directly with AWS before relying on it for FedRAMP-scoped work
+- Most AI coding tools are still NOT FedRAMP authorized, but this is changing — GitHub added US/EU data residency for Copilot in April 2026, and enterprises on GitHub Enterprise Cloud with US data residency can enforce a policy that limits users to FedRAMP Moderate-authorized models. (Copilot is not available on self-hosted GitHub Enterprise Server.)
+- Kiro (AWS's successor to Amazon Q Developer) is available in AWS GovCloud (US) Regions. Availability in GovCloud is not the same as FedRAMP authorization for your workload — check AWS's FedRAMP services-in-scope list and your authorizing official before using it for FedRAMP-scoped work
 - Check current authorization status for any tool before assuming coverage — this list changes faster than this page does
 
 ---
@@ -129,7 +131,7 @@ These are two genuinely different questions with different answers — don't con
 
 ### Practical Actions
 
-1. **Get IP indemnification** from your AI tool vendor (GitHub Copilot Enterprise is well-documented here — verify current terms directly with other vendors before assuming equivalent coverage)
+1. **Get IP indemnification** from your AI tool vendor. GitHub (Copilot Business/Enterprise), Anthropic (Commercial Terms, covering Claude Code on Team, Enterprise, and API), OpenAI (Copyright Shield for ChatGPT Enterprise and API), and AWS (Kiro paid tiers) all offer copyright indemnity. Scope and exclusions differ (for example, modified outputs or disabled safety filters), so have counsel read the actual clause. See [Agent Landscape](../ai-coding-agents/agent-landscape.md#enterprise-readiness) for which tools offer it
 2. **Document AI involvement** (protects against future disputes)
 3. **Don't claim copyright on purely AI-generated work** without human creative contribution
 4. **Review legal terms** of your AI tool agreement with counsel

@@ -30,7 +30,7 @@ Before starting a pilot, you should have:
 
 - [ ] At least one leader with hands-on agent experience (see [Getting Started Free](./getting-started-free.md))
 - [ ] A clear hypothesis to test ("We believe agents will reduce X by Y%")
-- [ ] Budget approval for paid tier (typically $19–40/user/month)
+- [ ] Budget approval for paid tier (typically $19–40/user/month in seats, plus a usage budget — daily agent users often consume $100–200/month; see [Governing Agents](./governing-agents.md#setting-usage-budgets))
 - [ ] Security review of the chosen tool (at minimum: data handling terms reviewed)
 - [ ] Agreement on success criteria with your manager/sponsor
 
@@ -247,8 +247,8 @@ flowchart TD
     A --> D[Infrastructure]
     A --> E[People & Time]
 
-    B -.- B1[$19-40/user/month<br/>Negotiate volume discounts<br/>Account for inactive users]
-    C -.- C1[Variable per usage<br/>Set team budgets<br/>Monitor for outliers]
+    B -.- B1[$19-40/user/month seats<br/>Negotiate volume discounts<br/>Account for inactive users]
+    C -.- C1[Usage beyond included credits<br/>Pooled budgets, caps per cost center<br/>Monitor for outliers]
     D -.- D1[Self-hosted models if needed<br/>Proxy/gateway infrastructure<br/>Monitoring tooling]
     E -.- E1[Champion time allocation<br/>Training development<br/>Governance overhead]
 ```
@@ -312,31 +312,19 @@ Frame as: "Based on our pilot, agents save X hours/developer/week on Y tasks. At
 
 ## Timeline: Realistic Expectations
 
-```mermaid
-gantt
-    title Realistic Agent Rollout Timeline
-    dateFormat  YYYY-MM
-    axisFormat  %b %Y
-
-    section Preparation
-    Leader exploration & learning     :done, 2025-01, 2025-02
-    Security & legal review           :done, 2025-02, 2025-03
-    Tool selection & procurement      :done, 2025-02, 2025-03
-
-    section Pilot
-    Team pilot (4-6 weeks)            :active, 2025-03, 2025-04
-    Pilot evaluation & decision       :2025-04, 2025-05
-
-    section Expansion
-    Wave 1 (3 more teams)             :2025-05, 2025-06
-    Governance formalization          :2025-05, 2025-06
-    Wave 2 (all willing teams)        :2025-07, 2025-08
-
-    section Standardization
-    Enterprise agreement              :2025-08, 2025-09
-    Org-wide availability             :2025-09, 2025-10
-    Optimization & maturation         :2025-10, 2025-12
-```
+| Stage | Activity | Months (from start) |
+|-------|----------|:-------------------:|
+| **Preparation** | Leader exploration & learning | 1 |
+| | Security & legal review | 2 |
+| | Tool selection & procurement | 2 |
+| **Pilot** | Team pilot (4–6 weeks) | 3 |
+| | Pilot evaluation & decision | 4 |
+| **Expansion** | Wave 1 (3 more teams) | 5 |
+| | Governance formalization | 5 |
+| | Wave 2 (all willing teams) | 7 |
+| **Standardization** | Enterprise agreement | 8 |
+| | Org-wide availability | 9 |
+| | Optimization & maturation | 10–12 |
 
 **Total timeline:** 9–12 months from "leader starts exploring" to "org-wide standardized usage." This is not slow — it's responsible. Rushing skips governance and security steps that create risk at scale.
 
@@ -392,3 +380,4 @@ gantt
 - Want to understand tool options in detail? → [Agent Landscape](./agent-landscape.md)
 - Looking for org-wide adoption strategies beyond tooling? → [Team Adoption](../team-adoption/)
 - Need to define metrics for your rollout? → [Metrics](../metrics/)
+- Moving from interactive to delegated agents? → [Delegated and Parallel Agents](./delegated-agents.md)

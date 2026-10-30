@@ -57,7 +57,7 @@ flowchart TD
     A --> C[Dynamic Context]
     A --> D[Behavioral Context]
 
-    B --> B1[Project instructions<br/>CLAUDE.md, .cursorrules, steering]
+    B --> B1[Project instructions<br/>AGENTS.md, CLAUDE.md, steering]
     B --> B2[Code conventions<br/>Linting rules, style guides]
     B --> B3[Architecture docs<br/>ADRs, system diagrams]
 
@@ -93,6 +93,33 @@ Not information — but rules about how the AI should behave. Automation trigger
 
 ---
 
+## Managing the Context Window
+
+Context engineering isn't only about giving AI *more* information. Giving it too much hurts.
+
+**Context rot.** Model quality degrades as input grows, well before the context window is full. Chroma's 2025 research tested 18 frontier models and found every one got worse as input length increased, often in uneven and surprising ways. A 1M-token window raises the ceiling; it doesn't remove the effect. For coding agents, long sessions full of old file contents, logs, and failed attempts produce worse decisions late in the session than early.
+
+**Symptoms to recognize:**
+- The agent forgets constraints it followed earlier in the session
+- It repeats a fix it already tried
+- Answers get vaguer or contradict earlier ones
+- Quality drops after a long run of tool output (test logs, large diffs)
+
+### Techniques
+
+| Technique | What it does | How |
+|-----------|-------------|-----|
+| **Short always-on instructions** | Keeps the permanent part of the context small | Keep `AGENTS.md` and always-on steering short; move detail into files the agent reads on demand ("docs as a map") |
+| **Load on demand** | Brings in detail only when relevant | Agent Skills load full instructions only when a task matches; conditional rules (Kiro `fileMatch`, Cursor globs, Copilot `applyTo`) load by file path |
+| **Subagents** | Isolates exploration so its noise doesn't fill the main session | Delegate searches, log analysis, or research to a subagent that returns a summary |
+| **Compaction and fresh sessions** | Clears accumulated history | Use the tool's compact or summarize command, or start a new session per task with a short handoff note |
+| **Fewer MCP tools** | Cuts tool definitions that load before you type anything | Anthropic has reported tool definitions and results consuming 50,000+ tokens before an agent reads the request. Enable only the MCP servers a project needs, and use tools that defer tool loading (for example, Claude Code's tool search) |
+| **Trim tool output** | Stops huge logs and diffs from flooding context | Ask for failing tests only, filter logs, cap diff sizes |
+
+> ✅ **My take:** The most common context mistake in 2026 is the opposite of the 2024 one. Teams used to give AI too little context; now they connect a dozen MCP servers, write a 600-line instructions file, and run marathon sessions. Keep the always-on context small, let detail load on demand, and start fresh sessions often.
+
+---
+
 ## What Good Context Engineering Looks Like
 
 ### Level 0: Nothing
@@ -101,12 +128,12 @@ Not information — but rules about how the AI should behave. Automation trigger
 - Inconsistent output, low adoption
 
 ### Level 1: Project Instructions
-- One instruction file per project (CLAUDE.md, .cursorrules, etc.)
+- One instruction file per project (`AGENTS.md`, with tool overlays such as CLAUDE.md where needed)
 - AI knows your stack, conventions, and patterns
 - Consistent output within a project
 - **Effort: 2–4 hours per project. Massive ROI.**
 
-> ✅ **My take on where to start:** Start at Level 1 this week. Literally today. Write a CLAUDE.md (or equivalent) for your most active project. It takes 2 hours and immediately improves every AI interaction for every developer on that project. This is the single highest-ROI activity in AI adoption. Don't plan an org-wide context strategy before you've done this for one project. Do the simple thing first, experience the improvement, then scale.
+> ✅ **My take on where to start:** Start at Level 1 this week. Literally today. Write an AGENTS.md (or your tool's equivalent) for your most active project. It takes 2 hours and immediately improves every AI interaction for every developer on that project. This is the single highest-ROI activity in AI adoption. Don't plan an org-wide context strategy before you've done this for one project. Do the simple thing first, experience the improvement, then scale.
 
 ### Level 2: Team Context
 - Shared steering across multiple projects
@@ -135,7 +162,7 @@ Not information — but rules about how the AI should behave. Automation trigger
 
 | Context investment | One-time cost | Recurring benefit |
 |-------------------|---------------|-------------------|
-| Write CLAUDE.md for one project | 2 hours | Every AI interaction in that project is better, for every developer, forever |
+| Write AGENTS.md for one project | 2 hours | Every AI interaction in that project is better, for every developer, forever |
 | Create team-wide steering files | 4 hours | Every new project starts with team standards baked in |
 | Build MCP integration for internal API | 2–3 days | AI can query your systems directly — no more copy-pasting from dashboards |
 | Set up hooks for code quality | 2 hours | Automated enforcement without human overhead |
@@ -186,3 +213,4 @@ Some will. Most won't. And new hires won't know your conventions even if they're
 - Extending AI with skills and automation → [Skills and Hooks](./skills-and-hooks.md)
 - Connecting AI to your knowledge → [Knowledge Architecture](./knowledge-architecture.md)
 - Scaling this across your org → [Org-Wide Strategy](./org-wide-strategy.md)
+- Writing specs before agents write code → [Spec-Driven Development](./spec-driven-development.md)

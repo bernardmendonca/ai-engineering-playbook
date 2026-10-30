@@ -2,6 +2,8 @@
 
 > Audit trails, permissions, cost controls, and human-in-the-loop patterns for responsible agent deployment.
 
+> **Last verified:** 2026-10-30 · **Re-check by:** 2027-01-30
+
 ## Why Governance Matters for Agents Specifically
 
 Chat assistants suggest — developers decide. Agents *act*. They modify files, run commands, and can make dozens of changes in minutes. This shift from "advisor" to "actor" means governance isn't optional — it's the difference between a force multiplier and a liability.
@@ -51,10 +53,11 @@ flowchart TD
 
 | Tool | Permission Model | Configurability |
 |------|-----------------|-----------------|
-| Claude Code | Allowed/denied command lists, permission prompts | High — CLI flags and project config |
-| GitHub Copilot | IDE sandbox, workspace-scoped | Medium — workspace trust settings |
-| Cursor | Approval prompts for commands, auto-apply toggle | Medium — per-session settings |
-| Kiro | Hooks system (PreToolUse triggers), supervised mode | High — event-driven access control |
+| Claude Code | Allow/deny rules for tools, commands, and file paths; permission modes; OS-level sandbox; PreToolUse hooks | High — project, user, and org-managed settings that developers can't override |
+| GitHub Copilot | Tool approval prompts in the IDE; cloud agent runs in an isolated sandbox with a firewall and can only push to its own branch; `preToolUse` hooks | Medium-High — org/enterprise policies, hooks in `.github/hooks/` |
+| OpenAI Codex | Approval modes plus sandbox modes (read-only, workspace-write, full access); network off by default in the sandbox | High — config profiles, admin-enforced settings in ChatGPT Enterprise |
+| Cursor | Approval prompts and command allowlists; hooks that can deny actions | Medium-High — project and user hooks; enterprise admin settings |
+| Kiro | Hooks system (PreToolUse triggers), supervised mode, trusted-command lists | High — event-driven access control |
 | Cline | Granular approval (reads, writes, commands separately) | High — configurable per action type |
 | Aider | Git-based (auto-commit to branch), limited command execution | Low — relies on git safety net |
 
@@ -139,35 +142,38 @@ This is a real question with no universal answer yet. Establish a team norm:
 
 ### Why Cost Governance Matters
 
-Agent costs are fundamentally different from seat-based tool costs:
+Agent costs scale with usage, not headcount. By late 2026 almost every vendor bills this way:
 
-| Cost model | Characteristic | Risk |
-|-----------|---------------|------|
-| **Per-seat** (Copilot, Q) | Predictable monthly cost | Paying for unused seats |
-| **Per-token** (Claude API, Aider) | Variable, usage-based | A single developer can burn $200 in a day on a complex task |
-| **Hybrid** (Cursor, Windsurf) | Seat + usage limits | "Fast" request caps can block work mid-task |
+| Cost model | Examples | Characteristic | Risk |
+|-----------|----------|---------------|------|
+| **Seat + included usage + overage** | Copilot (AI Credits), Kiro (credits), Cursor (X Subscription), Claude Team | Predictable floor, variable top | Seat price hides the real bill; overage surprises if no budget is set |
+| **Pure per-token** | Claude Code / Codex / Aider on API keys, Claude Enterprise usage | Fully variable | A single developer can burn $200 in a day on a complex task |
+| **Flat seat** | Inline completion in most tools; some negotiated enterprise deals | Predictable | Paying for unused seats; terms may change at renewal |
 
 ### Cost Control Strategies
 
 ```mermaid
 flowchart TD
     A[Cost Control Strategy] --> B{Pricing model?}
-    B -->|Per-seat| C[Optimize seat count<br/>Remove inactive users quarterly<br/>Right-size tier]
+    B -->|Seat + included usage| C[Pool credits org-wide<br/>Set budgets at org / cost center / user<br/>Decide: cap or allow overage]
     B -->|Per-token| D[Set budgets per developer/team<br/>Alert thresholds<br/>Spending caps]
-    B -->|Hybrid| E[Monitor usage patterns<br/>Right-size tier per user<br/>Identify power users vs. light users]
+    B -->|Flat seat| E[Optimize seat count<br/>Remove inactive users quarterly<br/>Right-size tier]
 ```
 
-### Setting Token Budgets
+### Setting Usage Budgets
 
-For API/token-based tools, establish guardrails:
+Set budgets from your own pilot telemetry. The most useful unit metrics are **cost per active developer per month** and **cost per merged PR**. Until you have data, vendors' individual tier prices are a reasonable reference for how much usage each profile consumes:
 
-| Level | Budget suggestion | Rationale |
-|-------|------------------|-----------|
-| Individual developer | $50–150/month | Covers typical daily agent usage |
-| Heavy user (migrations, large refactors) | $200–500/month | Power users with valid high-usage patterns |
+| Level | Starting budget | Rationale |
+|-------|----------------|-----------|
+| Occasional user (chat, small edits) | ~$20/month | Roughly what entry-level paid tiers include |
+| Daily agent user | ~$100–200/month | The price range of the "power user" tiers (Copilot Max, Claude Max, Cursor Super/Ultra, Kiro Pro Max/Power) |
+| Heavy user (parallel cloud agents, migrations) | $500+/month, approved case by case | Power users with valid high-usage patterns; check the output justifies it |
 | Team monthly cap | Sum of individual + 20% buffer | Handles spikes without blocking work |
 | Alert threshold | 80% of budget | Early warning before cap is hit |
-| Hard cap (optional) | Team budget × 1.5 | Prevents runaway costs from stuck loops |
+| Hard cap | Team budget × 1.5 | Prevents runaway costs from stuck loops |
+
+Revisit these after 4–6 weeks of real data. Agent usage per developer has grown quickly through 2025–2026, so budgets set a year ago are likely too low.
 
 ### 📋 Cost Monitoring Checklist
 
@@ -336,3 +342,5 @@ For agent-specific acceptable use, define these boundaries. For a full org-wide 
 - Want to try agents with zero governance overhead? → [Getting Started Free](./getting-started-free.md)
 - Ready to roll out with these controls in place? → [Production Rollout](./production-rollout.md)
 - Need org-wide governance beyond agents? → [Governance](../governance/)
+- Governing agents that work unsupervised in the cloud → [Delegated and Parallel Agents](./delegated-agents.md)
+- Budget hierarchies and unit economics for usage-based billing → [Spend Management](../ai-strategy/spend-management.md)

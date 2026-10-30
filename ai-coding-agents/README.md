@@ -25,6 +25,7 @@ The question for leaders isn't "if" your teams will use agents — it's how to d
 | [Governing Agent Usage](./governing-agents.md) | Audit, permissions, cost controls, human-in-the-loop |
 | [Getting Started Free](./getting-started-free.md) | Zero-cost exploration guide for hands-on learning |
 | [Production Rollout](./production-rollout.md) | Scaling agents across teams with enterprise considerations |
+| [Delegated and Parallel Agents](./delegated-agents.md) | Cloud agents that take a task and return a PR: when to delegate, identity, sandboxes, intake, ownership |
 
 ## Quick Decision Framework
 
@@ -34,6 +35,7 @@ flowchart TD
     B -->|Learn & explore| C[Start with Getting Started Free]
     B -->|Evaluate for my team| D[Read Agent Landscape + When to Use]
     B -->|Roll out across org| E[Read Governing Agents + Production Rollout]
+    B -->|Hand off whole tasks| G[Read Delegated and Parallel Agents]
     B -->|Understand the concept| F[Start with What Is an Agent]
 ```
 
@@ -56,11 +58,12 @@ flowchart TD
 
 | Level | What it looks like | What to do |
 |:-----:|-------------------|-----------|
-| **0** | No AI tools at all | Start with autocomplete, not agents — see [Foundations](../foundations/) |
+| **0** | No AI tools at all | Start with agents in supervised mode on low-risk tasks — see [Foundations](../foundations/) |
 | **1** | Autocomplete + chat only, no agent usage | Explore agents on free tiers — see [Getting Started Free](./getting-started-free.md) |
 | **2** | One team using agents (supervised, governed) | Pilot with measurement — see [Production Rollout](./production-rollout.md) |
 | **3** | Multiple teams, formal governance, cost controls, task suitability defined | Scale with enterprise controls — see [Governing Agents](./governing-agents.md) |
 | **4** | Agents embedded in team workflows, self-correcting via CI, continuously optimized | Optimize: context engineering, skills, advanced decomposition patterns |
+| **5** | Well-specified tasks delegated to sandboxed cloud agents; review capacity managed as a constraint | See [Delegated and Parallel Agents](./delegated-agents.md) |
 
 ## Status
 

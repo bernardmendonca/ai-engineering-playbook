@@ -2,6 +2,8 @@
 
 > A taxonomy of AI tools for engineering teams — beyond just coding assistants.
 
+> **Last verified:** 2026-10-30 · **Re-check by:** 2027-01-30
+
 ## The Full Landscape
 
 Most conversations about "AI developer tools" focus on code generation. But the landscape is broader. Here's the complete map:
@@ -45,13 +47,13 @@ flowchart TD
 
 | Tool | Cost | Key differentiator |
 |------|------|-------------------|
-| GitHub Copilot | 🆓 Free tier / 💰 $10–39/mo | Broadest language support, GitHub integration |
-| Kiro *(AWS's successor to Amazon Q Developer, which stopped accepting new signups May 2026)* | 🆓 Free tier / 💰 ~$19–20/mo (Pro) | AWS-aware, strong Java/Python, spec-driven workflow option |
-| Cursor | 🆓 Limited / 💰 $20/mo | Deep codebase indexing, fast |
-| Windsurf *(rebranded to Devin Desktop by Cognition, June 2026)* | 🆓 Free tier / 💰 $15–30/mo | Good free tier, enterprise options |
-| Tabnine | 💰 $12/mo / 🏢 Enterprise | On-premise deployment, privacy focus |
+| GitHub Copilot | 🆓 Free tier / 💰 Paid — [current plans](../ai-coding-agents/agent-landscape.md#github-copilot-agent-mode) | Broadest language and IDE support, GitHub integration; completions don't consume usage credits |
+| Kiro *(AWS's successor to Amazon Q Developer, which stopped accepting new signups May 2026)* | 🆓 Free tier / 💰 Paid — [current plans](../ai-coding-agents/agent-landscape.md#kiro-aws--amazon) | AWS-aware, spec-driven workflow option |
+| Cursor *(acquired by SpaceX, Aug 2026; sold via "The X Subscription")* | 🆓 Limited / 💰 Paid — [current plans](../ai-coding-agents/agent-landscape.md#cursor-spacex--xai) | Deep codebase indexing, fast tab completion |
+| Devin Desktop *(formerly Windsurf, rebranded by Cognition June 2026)* | 🆓 Free tier / 💰 Paid — [current plans](../ai-coding-agents/agent-landscape.md#devin-desktop-formerly-windsurf) | Agent-centric IDE, ties into Cognition's Devin agent |
+| Tabnine | 💰 Paid / 🏢 Enterprise | On-premise and air-gapped deployment, privacy focus |
 
-> ✅ **My take:** This category is a commodity. All major options are good enough. Choose based on your ecosystem (GitHub → Copilot, AWS → Kiro), security requirements (on-prem → Tabnine), or IDE preference (Cursor-specific → Cursor).
+> ✅ **My take:** This category is a commodity. All major options are good enough. Choose based on your ecosystem (GitHub → Copilot, AWS → Kiro), security requirements (on-prem → Tabnine), or IDE preference (Cursor-specific → Cursor). Two of these five changed owner or name in 2026, so re-check vendor terms at every renewal.
 
 > **Note:** These same tools also offer agent/chat capabilities at their paid tiers. For a detailed comparison of agent-mode features, enterprise readiness, and cost-at-scale projections, see [Agent Landscape](../ai-coding-agents/agent-landscape.md).
 
@@ -75,11 +77,13 @@ Every major coding tool now includes this. The differentiation is in context awa
 
 | Tool | Cost | What it catches |
 |------|------|----------------|
-| GitHub Copilot (PR review) | 💰 Included in Copilot plans | General issues, summaries |
-| CodeRabbit | 🆓 Free for OSS / 💰 $15/user/mo | Comprehensive review, security, style |
-| Amazon CodeGuru *(in maintenance mode; being discontinued as of Nov 2025 — no longer a viable new option)* | 💰 Pay-per-line-reviewed | Performance issues, AWS best practices |
-| Sourcery | 🆓 Free for OSS / 💰 $14/user/mo | Python-focused, refactoring suggestions |
+| GitHub Copilot (code review) | 💰 Included in Copilot plans, but each review consumes AI credits and GitHub Actions minutes | General issues, summaries |
+| Cursor Bugbot | 💰 Usage-based (~$1–1.50 per review, verify) | Bug-focused PR review |
+| CodeRabbit | 🆓 Free for OSS / 💰 Per-user plans | Comprehensive review, security, style |
+| Sourcery | 🆓 Free for OSS / 💰 Per-user plans | Python-focused, refactoring suggestions |
 | Qodo (formerly CodiumAI) | 🆓 Free tier / 💰 Paid plans | Test-focused review, PR suggestions |
+
+*Retired options: Amazon CodeGuru Reviewer entered maintenance mode in November 2025 and is being discontinued. The Amazon Q Developer for GitHub app stops accepting new installations on November 18, 2026 and reaches end of support on January 30, 2027.*
 
 > ✅ **My take:** AI code review is best as a *complement* to human review, not a replacement. Use it to catch the mechanical issues (unused variables, common bugs, security patterns) so human reviewers can focus on design, intent, and correctness.
 
@@ -94,7 +98,8 @@ Every major coding tool now includes this. The differentiation is in context awa
 | Built-in agent test gen | 🆓/💰 Included in coding tools | General test generation from code |
 | Diffblue Cover | 🏢 Enterprise pricing | Java-specific, AI-generated unit tests at scale |
 | Qodo (formerly CodiumAI) | 🆓 Free tier / 💰 Paid | Test suggestions during development |
-| Ponicode (CircleCI) | 💰 Paid | Unit test generation, coverage expansion |
+
+*Ponicode, listed in earlier versions of this page, was acquired by CircleCI in 2022 and is no longer marketed as a standalone product.*
 
 > ✅ **My take:** Test generation from coding agents (Copilot, Claude Code, etc.) is usually good enough. Specialized testing tools make sense only for large Java codebases (Diffblue) or if you need CI-integrated coverage expansion.
 
@@ -104,7 +109,7 @@ Every major coding tool now includes this. The differentiation is in context awa
 
 | Tool | Cost | Focus |
 |------|------|-------|
-| Kiro / Amazon Q (security scans) | 🆓 Included free | Vulnerabilities in application code |
+| Coding agents with a security-review prompt or skill (Claude Code, Codex, Kiro, Copilot) | 💰 Included in agent plans (consumes usage) | Ad hoc vulnerability review; not a substitute for SAST |
 | GitHub Advanced Security + Copilot | 🏢 Enterprise | Autofix for security alerts |
 | Snyk + AI | 💰 Per-project pricing | Dependencies + code, AI-assisted fix suggestions |
 | Semgrep + AI rules | 🆓 OSS / 💰 Teams | Custom rules, AI-generated fixes |
@@ -121,7 +126,7 @@ Every major coding tool now includes this. The differentiation is in context awa
 
 | Tool | Cost | Platform |
 |------|------|---------|
-| Kiro / Amazon Q (IaC) | 🆓 Free tier | CloudFormation, CDK |
+| Kiro (with AWS MCP servers) | 🆓 Free tier / 💰 Paid tiers | CloudFormation, CDK, Terraform on AWS |
 | Pulumi AI | 🆓 Free | Pulumi (multi-cloud) |
 | Coding agents (general) | 💰 Various | Any IaC language |
 
@@ -135,7 +140,7 @@ Every major coding tool now includes this. The differentiation is in context awa
 
 | Tool | Cost | Approach |
 |------|------|---------|
-| Kiro / Amazon Q (AWS Console) | 🆓 Free | AWS-specific troubleshooting |
+| Amazon Q in the AWS Console | 🆓 Included (verify status — Amazon Q Developer IDE plugins reach end of support April 30, 2027) | AWS-specific troubleshooting |
 | Datadog AI | 💰 Included in plans | Log analysis, anomaly explanation |
 | PagerDuty AI | 💰 Included in plans | Incident summarization, runbook suggestions |
 
@@ -195,9 +200,12 @@ Most teams don't need a tool in every category. Prioritize based on pain:
 
 The trend is toward **platform consolidation**. Rather than a different AI tool for each category, major platforms are expanding:
 
-- **GitHub Copilot** → Autocomplete + Chat + Agent + Code Review + Security
-- **AWS (Kiro, successor to Amazon Q)** → Autocomplete + Chat + Agent + Security + IaC + AWS Operations
-- **Cursor** → Autocomplete + Chat + Agent (IDE-focused) — and this consolidation trend played out even at the vendor level: Windsurf itself was acquired by Cognition and rebranded Devin Desktop (June 2026), folding into Cognition's own agent platform
+- **GitHub Copilot** → Autocomplete + Chat + Agent + Cloud agents + Code Review + Security
+- **AWS (Kiro, successor to Amazon Q)** → Autocomplete + Chat + Agent + Specs + IaC
+- **OpenAI (Codex inside ChatGPT plans)** → CLI + IDE + Cloud agents, bundled with general-purpose ChatGPT
+- **Cursor** → Autocomplete + Chat + Agent + Cloud agents + Code Review
+
+Consolidation is also happening at the vendor level. Cognition acquired Windsurf and rebranded it Devin Desktop (June 2026). SpaceX acquired Cursor (August 2026) and now sells it bundled with Grok and X Premium. Google folded Gemini CLI and Jules into Antigravity.
 
 **Implication:** You may not need 6 different AI tools. One or two platform choices might cover most needs. Evaluate whether a platform approach (fewer vendors, simpler governance) beats best-of-breed (better tool per category, more governance overhead).
 

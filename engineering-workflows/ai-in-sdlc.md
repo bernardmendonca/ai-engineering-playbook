@@ -66,7 +66,7 @@
 - Human designs, agent implements, human reviews
 - Greatest ROI: boilerplate, tests, migrations, documentation
 
-**Cost:** 💰 Coding tool licenses ($10–40/user/month) + potential API costs for agents.
+**Cost:** 💰 Coding tool seats ($10–40/user/month) + metered agent usage beyond included credits.
 
 ---
 
@@ -86,7 +86,7 @@
 
 **Practical approach:** See [Code Review with AI](./code-review.md) for detailed patterns.
 
-**Cost:** 🆓 to 💰 Built into Copilot/Q, or dedicated tools ($15–30/user/month).
+**Cost:** 💰 Built into Copilot and Cursor (usage-metered per review), or dedicated tools (per-user plans).
 
 ---
 
@@ -124,7 +124,7 @@
 
 **Practical approach:** See [CI/CD Integration](./cicd-integration.md) for detailed patterns.
 
-**Cost:** 🆓 Built into cloud provider tools (Q in AWS Console).
+**Cost:** 🆓 to 💰 Cloud-console assistants are often included; coding agents writing IaC consume normal agent usage.
 
 ---
 
@@ -188,6 +188,6 @@ quadrantChart
 
 ## Next
 
-- Deep dive on code review → [Code Review with AI](./code-review.md)
+- Deep dive on code review → [Code Review with AI](./code-review.md) (including [reviewing at agent scale](./code-review.md#reviewing-at-agent-scale))
 - Testing patterns → [Testing Workflows](./testing.md)
 - Pipeline integration → [CI/CD Integration](./cicd-integration.md)

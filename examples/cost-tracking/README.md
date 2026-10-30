@@ -30,24 +30,27 @@ Prerequisites:
   pip install anthropic openai pandas
 
 Usage:
-  python ai-cost-tracker.py --month 2025-06 --output report.csv
+  python ai-cost-tracker.py --month 2026-10 --output report.csv
 """
 
 import os
 from datetime import datetime, timedelta
 
-# Pricing (update as vendors change prices)
+# Pricing per 1M tokens, keyed by the exact model IDs that appear in your
+# usage logs. Fill these in from each vendor's current pricing page:
+# model versions and prices change every few months, so keep this table in
+# config (or pull it from the vendor's API) rather than hardcoding it.
 PRICING = {
-    "claude-3-5-sonnet": {"input": 3.00, "output": 15.00},  # per 1M tokens
-    "claude-3-5-haiku": {"input": 0.25, "output": 1.25},
-    "gpt-4o": {"input": 2.50, "output": 10.00},
-    "gpt-4o-mini": {"input": 0.15, "output": 0.60},
+    "<small-tier-model-id>": {"input": 0.0, "output": 0.0},
+    "<mid-tier-model-id>":   {"input": 0.0, "output": 0.0},
+    "<top-tier-model-id>":   {"input": 0.0, "output": 0.0},
 }
 
 def calculate_cost(model: str, input_tokens: int, output_tokens: int) -> float:
     """Calculate cost for a single API call."""
     if model not in PRICING:
-        return 0.0
+        # Fail loudly: silently costing unknown models at $0 hides spend.
+        raise KeyError(f"No pricing configured for model '{model}'")
     pricing = PRICING[model]
     input_cost = (input_tokens / 1_000_000) * pricing["input"]
     output_cost = (output_tokens / 1_000_000) * pricing["output"]

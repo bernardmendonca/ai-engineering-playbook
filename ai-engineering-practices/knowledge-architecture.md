@@ -2,6 +2,8 @@
 
 > Making team knowledge accessible to AI — MCP servers, RAG, codebase indexing, and live data integration.
 
+> **Last verified:** 2026-10-30 · **Re-check by:** 2027-01-30
+
 ## The Knowledge Gap
 
 AI tools have a fundamental limitation: they only know what's in their context window. Your team has vast amounts of knowledge locked in:
@@ -48,10 +50,10 @@ Most AI coding tools index your codebase and use it as context. This is the base
 | Tool | Indexing approach | Quality |
 |------|------------------|---------|
 | Cursor | Full repo indexing, embeddings | High — strong codebase awareness |
-| GitHub Copilot | Workspace context, open files | Medium — limited to visible files |
+| GitHub Copilot | Repository indexing (remote for GitHub-hosted repos, local workspace index) plus agentic search | High — verify indexing is enabled for your repos |
 | Kiro | Dynamic context selection | High — intelligent scoping |
-| Claude Code | Reads files on demand | High — but you guide what to read |
-| Windsurf | Full repo indexing | High — similar to Cursor |
+| Claude Code / Codex | Agentic search: reads files on demand with grep/glob tools | High — but you guide what to read |
+| Devin Desktop *(formerly Windsurf)* | Full repo indexing | High — similar to Cursor |
 
 ### Optimization
 

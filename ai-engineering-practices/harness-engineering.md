@@ -1,14 +1,16 @@
 # Harness Engineering
 
-> The orchestration layer that makes AI reliable in production — routing, evaluation, guardrails, and observability.
+> The environment and infrastructure that make AI reliable: the agent harness your developers' agents work inside, and the automation harness (routing, evaluation, guardrails, observability) around AI that runs unattended.
 
 ## What Harness Engineering Is
 
 Prompt engineering tells AI what to do. Context engineering gives AI knowledge. **Harness engineering** makes the whole thing work reliably at scale — like the difference between writing code and running it in production with monitoring, fallbacks, and SLAs.
 
+The automation harness has four pillars:
+
 ```mermaid
 flowchart TD
-    A[Harness Engineering] --> B[Orchestration]
+    A[Automation Harness] --> B[Orchestration]
     A --> C[Evaluation]
     A --> D[Guardrails]
     A --> E[Observability]
@@ -19,12 +21,39 @@ flowchart TD
     E -.- E1[Tracing, cost tracking<br/>Latency monitoring, debugging]
 ```
 
+### Two meanings of "harness engineering"
+
+You'll see this term used two ways. This page covers both, because they share the same goal: making AI output reliable without a human checking every step.
+
+| | **Agent harness** (the common industry meaning since early 2026) | **Automation harness** (this playbook's original meaning) |
+|---|---|---|
+| **What it is** | The runtime and environment around a coding agent: the tool loop, context management, sandbox, and everything in the repo the agent uses to check its own work | The infrastructure around AI calls that run unattended: routing, evaluation, guardrails, observability |
+| **Popularized by** | OpenAI's February 2026 post *Harness engineering: leveraging Codex in an agent-first world* | LLM-ops practice for CI bots and internal tools |
+| **Who works on it** | Every team whose developers use agents | Teams running AI in CI/CD, bots, or internal tools |
+| **Covered in** | [The agent harness](#the-agent-harness-making-your-repo-agent-ready) below | Pillars 1–4 below |
+
+### The agent harness: making your repo agent-ready
+
+In the industry sense, an agent is *a model plus a harness*. You don't build the core harness (Claude Code, Codex, Copilot, Kiro, and Cursor ship one), but you control the parts of it that live in your repository. OpenAI's write-up of building a product almost entirely with Codex attributes most of the gains to this environment, not to prompting. The levers:
+
+| Lever | What to do | Why it matters for agents |
+|-------|-----------|---------------------------|
+| **Fast, deterministic feedback** | Make build, test, and lint runnable with one documented command each, and fast | Agents iterate against these signals; slow or flaky tests mean the agent can't tell if it's done |
+| **Mechanical enforcement** | Encode architecture rules as linters, type checks, and structural tests rather than prose | An agent reliably obeys a failing check; it unreliably obeys a paragraph in AGENTS.md |
+| **Docs as a map** | Keep `AGENTS.md` short and point it to deeper docs (`docs/ARCHITECTURE.md`, ADRs) the agent reads on demand | Long instruction files crowd out context; a map plus on-demand detail scales better |
+| **Observable runtime** | Let agents run the app locally and read logs, metrics, or screenshots | Agents can verify behavior, not just compilation |
+| **Sandbox and permissions** | Run agents in isolated environments with scoped credentials and limited network access | Lets you raise autonomy safely (see [Threat Model](../security/threat-model.md#prompt-injection-direct-and-indirect)) |
+| **Skills and hooks** | Package recurring workflows as skills; enforce quality gates with hooks | Consistent procedures and automatic checks ([Skills and Hooks](./skills-and-hooks.md)) |
+| **Garbage collection** | Periodically have agents (and humans) clean up drift, dead code, and stale docs | Agents copy whatever patterns exist, including bad ones |
+
+> ✅ **My take:** If your developers use agents interactively, the agent harness is where your investment goes first — it's the natural next step after [project instructions](./project-instructions.md). The automation harness below matters once AI runs unattended.
+
 ---
 
-## When You Need Harness Engineering
+## When You Need the Automation Harness
 
 **You DON'T need this for:**
-- Individual developers using AI tools interactively (that's prompt + context engineering)
+- Individual developers using AI tools interactively (that's prompt + context engineering, plus the [agent harness](#the-agent-harness-making-your-repo-agent-ready))
 - One-off code generation in the IDE
 
 **You DO need this for:**
@@ -33,7 +62,7 @@ flowchart TD
 - Any AI workflow that runs without a human in the loop
 - AI interactions where quality must be consistent and measurable
 
-> ✅ **My take:** Most engineering teams don't need harness engineering until they have AI running in automation (CI/CD) or internal tools. If AI is only used interactively by developers, prompt + context engineering is sufficient. The moment AI runs unattended — even just a PR summary bot — you need at minimum evaluation and observability.
+> ✅ **My take:** Most engineering teams don't need the automation harness until they have AI running in automation (CI/CD) or internal tools. If AI is only used interactively by developers, prompt and context engineering plus the agent harness are sufficient. The moment AI runs unattended — even just a PR summary bot — you need at minimum evaluation and observability.
 
 ---
 
@@ -49,10 +78,12 @@ Not every task needs the same model. Route by task complexity:
 
 | Task type | Model tier | Why |
 |-----------|-----------|-----|
-| PR summaries, commit messages | Cheap/fast (Haiku, GPT-4o-mini) | Formulaic, low stakes |
-| Code review comments | Mid-tier (Sonnet, GPT-4o) | Needs reasoning but not deep |
-| Complex refactoring, bug investigation | Top-tier (Opus, GPT-4) | Needs deep reasoning |
+| PR summaries, commit messages | Small/fast (e.g., Anthropic's Haiku tier, OpenAI's mini/nano tiers) | Formulaic, low stakes |
+| Code review comments | Mid-tier (e.g., Anthropic's Sonnet tier, OpenAI's standard tier) | Needs reasoning but not deep |
+| Complex refactoring, bug investigation | Top-tier (e.g., Anthropic's Opus tier, OpenAI's flagship reasoning models) | Needs deep reasoning |
 | Security analysis | Top-tier | Stakes too high for cheap models |
+
+*Tier names are deliberately version-free. Vendors ship and retire model versions every few months, so pin exact model IDs in configuration, not in code or docs. Several tools now route between models automatically (Copilot, Cursor, Kiro); for unattended automation, prefer an explicit pinned model so a vendor routing change can't silently alter output quality.*
 
 ### Retry and Fallback Patterns
 
@@ -183,8 +214,8 @@ Seeing what AI is doing — performance, cost, quality, failures.
 For any AI in automation, add tracing:
 
 ```
-[2025-06-15T14:23:01] PR #482 summary
-  Model: claude-3-5-haiku
+[2026-10-15T14:23:01] PR #482 summary
+  Model: <small-tier model ID, from config>
   Input tokens: 1,247
   Output tokens: 312
   Latency: 1.2s
@@ -208,7 +239,7 @@ Quality (spot-check): 4.2/5 (sampled 20 outputs)
 
 ---
 
-## Harness Maturity
+## Automation Harness Maturity
 
 | Level | What it looks like |
 |:-----:|-------------------|
@@ -226,13 +257,13 @@ Quality (spot-check): 4.2/5 (sampled 20 outputs)
 flowchart TD
     A[Do you have AI running in automation?] --> B{Yes}
     A --> C{No - interactive only}
-    C --> D[You don't need harness engineering yet<br/>Focus on prompt + context engineering]
+    C --> D[You don't need the automation harness yet<br/>Focus on context engineering + the agent harness]
     B --> E{Is quality critical?}
     E -->|Yes - customer-facing or security| F[Start at Level 2: eval + observability]
     E -->|No - internal/advisory only| G[Start at Level 1: guardrails + error alerting]
 ```
 
-> ✅ **My take:** Don't over-invest in harness engineering before you need it. If AI is only interactive (developers in IDE), context engineering is your priority. The moment you have a single AI step in CI or an internal bot calling an API, add basic guardrails (Level 1). Only build full observability when you have 3+ AI automation workflows — before that, logs are sufficient.
+> ✅ **My take:** Don't over-invest in the automation harness before you need it. If AI is only interactive (developers in IDE), context engineering and the agent harness are your priority. The moment you have a single AI step in CI or an internal bot calling an API, add basic guardrails (Level 1). Only build full observability when you have 3+ AI automation workflows — before that, logs are sufficient.
 
 ---
 

@@ -31,12 +31,13 @@ Together, they form a complete practice: the right information (context), delive
 | [Prompt Engineering](./prompt-engineering.md) | Design patterns, testing, versioning — prompts as an engineering discipline |
 | **Context Engineering** | |
 | [What Is Context Engineering?](./what-is-context-engineering.md) | The concept, why it matters, how it differs from prompt engineering |
-| [Project Instructions](./project-instructions.md) | CLAUDE.md, .cursorrules, steering files — tool-level configuration |
+| [Project Instructions](./project-instructions.md) | AGENTS.md, CLAUDE.md, Cursor rules, steering files — tool-level configuration |
 | [Skills and Hooks](./skills-and-hooks.md) | Reusable capabilities, event-driven automation |
 | [Knowledge Architecture](./knowledge-architecture.md) | MCP servers, RAG, codebase indexing |
 | [Org-Wide Strategy](./org-wide-strategy.md) | Scaling context across teams |
+| [Spec-Driven Development](./spec-driven-development.md) | Reviewed requirements, design, and tasks before agents write code — across tools |
 | **Harness Engineering** | |
-| [Harness Engineering](./harness-engineering.md) | Orchestration, evaluation, guardrails, observability for AI in production |
+| [Harness Engineering](./harness-engineering.md) | The agent harness (making your repo agent-ready) and the automation harness (orchestration, evaluation, guardrails, observability for AI in production) |
 
 ## The Three Disciplines
 
@@ -60,13 +61,13 @@ Together, they form a complete practice: the right information (context), delive
 
 ---
 
-### Harness Engineering — The Production Infrastructure
+### Harness Engineering — The Environment and Infrastructure
 
-**Who:** Platform teams, senior engineers building AI-powered workflows.
+**Who:** Tech leads and platform teams (agent harness); senior engineers building AI-powered workflows (automation harness).
 
-**What:** The orchestration layer that makes AI reliable at scale — routing, fallbacks, evaluation, guardrails, observability.
+**What:** Two related things. The *agent harness* is the environment coding agents work in — fast tests, linters that enforce architecture, sandboxes, docs written for agents — so agents can check their own work. The *automation harness* is the orchestration layer that makes unattended AI reliable — routing, fallbacks, evaluation, guardrails, observability.
 
-**Maturity signal:** AI workflows are monitored, tested, and recoverable — just like any production system.
+**Maturity signal:** Agents verify their own changes against mechanical checks, and AI workflows are monitored, tested, and recoverable — just like any production system.
 
 ---
 

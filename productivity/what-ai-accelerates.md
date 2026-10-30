@@ -31,6 +31,8 @@ quadrantChart
 
 ---
 
+> ⚠️ **Read this with the research in mind.** The percentages below are practitioner estimates, and self-reported speedups have proven unreliable: in METR's 2025 randomized trial, experienced developers believed AI made them ~20% faster when it made them 19% slower. Controlled and telemetry studies since then show real gains on greenfield and well-specified work (roughly 35–40% on simple greenfield tasks in Stanford research cited by DORA) and much smaller gains on complex legacy code (often 10% or less). Use the ranges here to decide *where to look*, then measure. See [What the Research Says](./what-the-research-says.md).
+
 ## High Acceleration Tasks
 
 ### Boilerplate and Repetitive Code (70–90% faster, per practitioner reports — validate against your own baseline)

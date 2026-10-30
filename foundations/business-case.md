@@ -48,6 +48,16 @@ They're not an R&D experiment. They're a productivity tool with measurable ROI.
 
 > **On the "Source" column:** Where this table says "industry average" or "studies show," treat that as a starting assumption to validate, not a citation — no specific study is named here, and published estimates for time-saved-per-day vary widely by task type and methodology. Use this model for your *initial* pitch only. Once you have pilot data, replace every row with your own measured numbers (see "The Honest Model" in [Investment Strategy](../ai-strategy/investment-strategy.md)) — that's the version worth defending to a skeptical executive.
 
+### What the Evidence Says About These Inputs
+
+The weakest row in this model is "time saved per developer per day." Three findings should shape how you use it (details in [What the Research Says](../productivity/what-the-research-says.md)):
+
+- **Self-reported time savings overstate reality.** In METR's 2025 randomized trial, developers believed they were ~20% faster with AI when they were 19% slower. Don't fill this row from a survey.
+- **Individual output gains don't automatically become delivery gains.** Faros' 2025 telemetry across 10,000+ developers found 98% more merged PRs, 91% longer review times, and flat organization-level delivery. Saved minutes only count if review, testing, and release can absorb the extra work.
+- **There's a cost line most models miss.** DORA's 2026 ROI report calls it the "verification tax": reviewer time, test automation, and CI capacity to handle more code. It also models AI-driven instability as a cost (its sample calculator shows a negative downtime impact when change failure rate rises from 5% to 6%).
+
+**A better approach:** Use [DORA's ROI calculator](https://dora.dev/ai/roi/report/) with your own pilot data, and run three scenarios (conservative, realistic, optimistic). DORA's illustrative 500-engineer organization returns about 39% in year one with an ~8-month payback, and the authors call it a high-uncertainty estimate. That's a more defensible anchor than the 65–240% range above.
+
 ### At Scale (100 developers, 💰 team/enterprise tier)
 
 | | Conservative | Moderate | Optimistic |
@@ -67,7 +77,9 @@ They're not an R&D experiment. They're a productivity tool with measurable ROI.
 
 ### "Will this replace developers?"
 
-**Answer:** No. It makes developers more productive — they produce more output per hour, handle broader scope, and spend less time on repetitive work. Headcount needs are driven by your roadmap ambition, not your tool efficiency. Teams that adopt AI typically ship more, not hire less.
+**Answer:** No. It makes developers more productive — they produce more output per hour, handle broader scope, and spend less time on repetitive work. Headcount needs are driven by your roadmap ambition, not your tool efficiency. DORA's 2026 ROI report explicitly argues against headcount reduction as the goal: retaining and retraining staff preserves institutional knowledge and costs less than rehiring it later.
+
+**Be ready for the follow-up about juniors.** Stanford's payroll research (August 2026) finds employment of 22–25-year-olds in AI-exposed occupations, software development included, running about 19% below trend. Cutting junior hiring saves money now and leaves you without mid-level engineers in three to five years. See [Upskilling](../team-adoption/upskilling.md#the-junior-pipeline).
 
 ### "What's the security risk?"
 
@@ -79,7 +91,7 @@ They're not an R&D experiment. They're a productivity tool with measurable ROI.
 
 ### "How quickly will we see results?"
 
-**Answer:** Individual productivity gains are immediate (first week). Team-level metrics improve in 4–6 weeks. Org-wide ROI is demonstrable in 3–6 months. This isn't a multi-year R&D bet — it's a tool with fast feedback loops.
+**Answer:** Expect a J-curve. Developers feel faster within weeks, but team and delivery metrics often dip first while workflows adapt: people learn the tools, reviewers absorb more code, and testing and release processes catch up. DORA's 2026 ROI research describes this dip as normal and warns against pulling funding during it. Plan to show leading indicators (adoption, sentiment, review latency) in the first quarter and delivery and quality results by the second. DORA's illustrative model pays back in about eight months.
 
 ### "What's the total cost?"
 
@@ -139,7 +151,7 @@ THE ASK: $[X] for Phase [N] — [tool name] for [N developers] for [N months]
 
 THE PROBLEM:
 - Our developers spend ~40% of time on repetitive, low-value coding tasks
-- Industry peers are adopting AI tools and reporting 15-30% productivity gains
+- Industry peers are adopting AI tools; independent research (DORA, METR) shows real gains where review, testing, and release processes are strong, and a temporary dip before them
 - We have no policy — developers are using unapproved tools with unknown security posture
 
 THE SOLUTION:

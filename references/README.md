@@ -2,6 +2,8 @@
 
 > Curated links, papers, talks, and further reading on AI in engineering organizations.
 
+> **Last verified:** 2026-10-30 · **Re-check by:** 2027-01-30
+
 For a full list of terms and acronyms used throughout this playbook, see the [Glossary](./glossary.md).
 
 ## Research and Reports
@@ -16,6 +18,20 @@ For a full list of terms and acronyms used throughout this playbook, see the [Gl
   - Paper: "The SPACE of Developer Productivity" (2021)
 - **Stack Overflow Developer Survey** — Annual survey with AI tool adoption and sentiment data
   - https://survey.stackoverflow.co
+- **METR developer productivity studies** (2025 randomized trial; 2026 update) — The clearest evidence that self-reported AI speedups are unreliable
+  - https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/
+  - https://metr.org/blog/2026-02-24-uplift-update/
+- **DORA State of AI-assisted Software Development (2025)** and **ROI of AI-assisted Software Development (2026.01)** — AI as an amplifier, the AI Capabilities Model, the J-curve, and an ROI calculator
+  - https://dora.dev/ai/roi/report/
+- **Faros AI, The AI Productivity Paradox (2025)** — Telemetry from 10,000+ developers on PR volume, review time, and delivery
+- **How AI Impacts Skill Formation** (Shen et al., Anthropic, 2026) — Randomized trial on learning with and without AI
+  - https://arxiv.org/abs/2601.20245
+- **Canaries in the Coal Mine** (Stanford Digital Economy Lab, updated Aug 2026) — Early-career employment in AI-exposed occupations
+  - https://digitaleconomy.stanford.edu/news/canariesaug26/
+- **Context Rot** (Chroma Research, 2025) — How model performance degrades as input length grows
+  - https://research.trychroma.com/context-rot
+
+See [What the Research Says](../productivity/what-the-research-says.md) for a summary of these findings.
 
 ### AI Code Quality and Security
 
@@ -23,6 +39,20 @@ For a full list of terms and acronyms used throughout this playbook, see the [Gl
 - **OWASP AI Security** — Guidance on AI-specific security threats
   - https://owasp.org/www-project-ai-security-and-privacy-guide/
 - **Asleep at the Keyboard?** (NYU Tandon, 2021) — Pearce, Dolan-Gavitt, Karri et al. research on security of Copilot-generated code
+
+- **OWASP Top 10 for Agentic Applications** (December 2025) — Ten risk categories specific to autonomous agents, from agent goal hijack (ASI01) to rogue agents (ASI10). Applied to coding agents in [Agentic Security](../security/agentic-security.md)
+  - https://genai.owasp.org/
+- **OWASP Agentic Skills Top 10** — Risks in agent skill ecosystems, starting with malicious skills (AST01)
+  - https://owasp.org/www-project-agentic-skills-top-10/ast01
+- **GitHub Spec Kit** — Open-source toolkit for spec-driven development with many coding agents
+  - https://github.com/github/spec-kit
+
+### Open Standards for Agents
+
+- **AGENTS.md** — Cross-tool project instructions file for coding agents
+  - https://agents.md
+- **Agentic AI Foundation (Linux Foundation)** — Neutral home for MCP, AGENTS.md, Agent Skills, A2A, and related projects
+  - https://www.linuxfoundation.org/press/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation
 
 ### Responsible AI
 
@@ -41,9 +71,11 @@ For a full list of terms and acronyms used throughout this playbook, see the [Gl
 |------|------|--------------|---------|
 | GitHub Copilot | 🆓💰🏢 | https://docs.github.com/copilot | https://github.com/features/copilot#pricing |
 | Kiro *(AWS's successor to Amazon Q Developer, which reaches end-of-support April 2027)* | 🆓💰 | https://kiro.dev/docs | https://kiro.dev/pricing |
-| Cursor | 🆓💰🏢 | https://docs.cursor.com | https://cursor.com/pricing |
+| Cursor *(acquired by SpaceX Aug 2026; sold as part of "The X Subscription" since Oct 2026)* | 🆓💰🏢 | https://cursor.com/docs | https://cursor.com/pricing |
+| OpenAI Codex | 🆓💰🏢 | https://developers.openai.com/codex | https://chatgpt.com/codex/pricing |
+| Google Antigravity *(replaced Gemini CLI for consumer tiers, June 2026)* | 🆓💰🏢 | https://antigravity.google | Via Google AI plans / Gemini Enterprise |
 | Claude Code | 🆓💰🏢 | https://docs.anthropic.com/en/docs/claude-code | https://www.anthropic.com/pricing |
-| Devin Desktop *(formerly Windsurf, rebranded by Cognition June 2026)* | 🆓💰🏢 | https://devin.ai/desktop | https://devin.ai/desktop/pricing |
+| Devin Desktop *(formerly Windsurf, rebranded by Cognition June 2026)* | 🆓💰🏢 | https://docs.devin.ai | https://devin.ai/pricing |
 | Aider | 🆓 | https://aider.chat/docs | Open source (free) |
 | Cline | 🆓 | https://github.com/cline/cline | Open source (free) |
 

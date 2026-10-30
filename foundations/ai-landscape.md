@@ -2,6 +2,8 @@
 
 > A taxonomy of AI capabilities relevant to software engineering — what exists, what's hype, and what matters for your decisions.
 
+> **Last verified:** 2026-10-30 · **Re-check by:** 2027-01-30
+
 ## Why You Need This Mental Map
 
 The AI space is noisy. Vendors blur categories, marketing conflates capabilities, and the technology moves quarterly. As a leader, you don't need to understand transformer architectures — you need to understand the capability categories, their maturity levels, and where they fit in your organization.
@@ -17,7 +19,7 @@ flowchart TD
     C --> D[Workflow Integration]
     D --> E[Organizational Capability]
 
-    A -.- A1[GPT-4, Claude, Gemini, Llama, Mistral<br/>The raw intelligence layer]
+    A -.- A1[GPT, Claude, Gemini, Grok, plus open-weight Llama, Mistral, DeepSeek, Qwen<br/>The raw intelligence layer]
     B -.- B1[OpenAI API, Anthropic API, AWS Bedrock<br/>Access + infrastructure]
     C -.- C1[Copilot, Cursor, Claude Code, Kiro<br/>Tools developers use daily]
     D -.- D1[CI/CD integration, code review bots, doc generation<br/>AI embedded in process]
@@ -64,7 +66,7 @@ flowchart TD
 
 **Maturity:** Medium. Rapidly improving but still requires human oversight. Quality varies by task type.
 
-**Examples:** Claude Code, Copilot Agent Mode, Cursor Agent, Kiro
+**Examples:** Claude Code, GitHub Copilot (agent mode and cloud agent), OpenAI Codex, Cursor, Kiro, Google Antigravity
 
 **Impact:** Step-change for suitable tasks (refactoring, migrations, test generation). Not appropriate for all work.
 
@@ -120,7 +122,7 @@ flowchart TD
 
 **Maturity:** Medium-Low. Good for scaffolding, less reliable for complex infrastructure decisions.
 
-**Examples:** Kiro / Amazon Q (CloudFormation/CDK), Pulumi AI, AI-assisted Terraform
+**Examples:** Kiro (CloudFormation/CDK, with AWS MCP servers), Pulumi AI, general coding agents writing Terraform
 
 **Impact:** Accelerates infrastructure work but requires experienced review (misconfigured infra has high blast radius).
 
@@ -156,7 +158,7 @@ quadrantChart
 - **Invest carefully (lower maturity, high impact):** Coding agents have the highest ceiling but require governance and selective application.
 - **Evaluate (lower maturity, lower impact):** Testing and documentation tools are worth piloting but aren't transformative yet.
 
-> ✅ **My take:** If your org has zero AI tools today, start with **code completion** (autocomplete). It's the lowest-risk, lowest-effort, highest-certainty investment. Don't start with agents — start with autocomplete, add chat, then graduate to agents once you have context engineering and governance in place. The progression matters.
+> ✅ **My take:** If your org has zero AI tools today, don't stage the rollout as "autocomplete first, agents later." That advice made sense in 2024. By mid-2026, JetBrains' developer survey found 90% of professional developers using coding agents at least weekly, and every major tool ships agent mode as the default. Autocomplete and chat come bundled with the agent anyway. Instead, start with **agents in supervised mode on low-risk tasks** (tests, docs, refactors in well-tested code), with three things in place on day one: a project instructions file (`AGENTS.md`), branch protection with required CI, and a written list of what agents may not touch. Increase autonomy as review data comes in. The progression that matters now is in *autonomy and governance*, not in tool category.
 
 ---
 

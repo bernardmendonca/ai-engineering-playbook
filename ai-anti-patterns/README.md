@@ -110,7 +110,7 @@ Reading this takes 10 minutes. It can save you 6 months of learning the hard way
 
 **Why it fails:** Inconsistent output across the team. Developer A gets great results (good prompts); Developer B gets garbage (vague prompts). Team concludes "AI is unreliable" when really the context is unreliable.
 
-**The fix:** Write a project instructions file (CLAUDE.md, .cursorrules, etc.). Two hours of work. Immediately improves consistency for every developer on that project.
+**The fix:** Write a project instructions file (`AGENTS.md`, which most agents read, plus a tool overlay such as CLAUDE.md where needed). Two hours of work. Immediately improves consistency for every developer on that project.
 
 → [Context Engineering: Project Instructions](../ai-engineering-practices/project-instructions.md)
 
@@ -238,6 +238,82 @@ Reading this takes 10 minutes. It can save you 6 months of learning the hard way
 
 ---
 
+## 🤖 Agent-Era Anti-Patterns
+
+These became common once agents started writing most of the code on some teams.
+
+### 19. "X% of our code is now written by AI"
+
+**What it looks like:** Leadership tracks and celebrates the share of code or commits produced by AI. Teams are asked to raise it.
+
+**Why it fails:** It measures volume, not value. Faros' 2025 telemetry across 10,000+ developers found merged PRs nearly doubling while organization-level delivery stayed flat. A rising AI share can mean more churn, bigger PRs, and more rework. Teams asked to raise it will raise it.
+
+**The fix:** Report delivery and quality outcomes: lead time, change fail rate, rework rate, review latency. Treat AI share as a descriptive statistic, never a target.
+
+→ [Productivity: What the Research Says](../productivity/what-the-research-says.md)
+
+---
+
+### 20. "The agent said the tests pass"
+
+**What it looks like:** Reviewers accept an agent's summary ("implemented the feature, all tests pass, no security impact") as evidence and approve.
+
+**Why it fails:** Agents sometimes skip failing tests, weaken assertions, test the wrong thing, or describe work they didn't do. A confident summary is a claim, and trusting it is a recognized attack surface (OWASP ASI09, Human-Agent Trust Exploitation).
+
+**The fix:** Require evidence in the PR: CI results, a failing-then-passing test for bug fixes, screenshots for UI changes. Review the diff, not the description.
+
+→ [Engineering Workflows: Code Review at Agent Scale](../engineering-workflows/code-review.md#reviewing-at-agent-scale)
+
+---
+
+### 21. "Agents can open as many PRs as they like"
+
+**What it looks like:** Developers run several cloud agents in parallel. PRs pile up faster than anyone can review them.
+
+**Why it fails:** Review becomes the bottleneck. Either PRs wait for days (and go stale against main), or reviewers start rubber-stamping. Faros saw review time rise 91% on high-adoption teams.
+
+**The fix:** Manage review capacity as a constraint: cap concurrent agent tasks per developer, limit PR size, tier review depth by risk, and watch time-to-first-review.
+
+→ [AI Coding Agents: Delegated and Parallel Agents](../ai-coding-agents/delegated-agents.md)
+
+---
+
+### 22. "The prototype works — ship it"
+
+**What it looks like:** Something built quickly by prompting ("vibe coding") demos well and goes to production as-is.
+
+**Why it fails:** Prototypes built this way usually skip error handling, security, tests, and operability, and nobody fully understands the code. The demo hides all of it.
+
+**The fix:** Treat AI-built prototypes like any prototype: a source of learning and maybe a starting point, not a release. Before production it goes through the same spec, review, test, and security gates as any other code.
+
+→ [AI Engineering Practices: Spec-Driven Development](../ai-engineering-practices/spec-driven-development.md)
+
+---
+
+### 23. "Give the agent everything it might need"
+
+**What it looks like:** Agents run with developers' full credentials, open internet access, and every MCP server installed, and they read issues from anyone.
+
+**Why it fails:** That combination — private data, untrusted input, and a way to send data out — is what makes prompt injection exploitable. Real attacks have used developers' own AI CLIs to hunt for credentials. Tool-heavy setups also flood context and degrade output.
+
+**The fix:** Least agency. Sandbox agents, give them scoped short-lived credentials, allowlist network egress, install only the MCP servers a project needs, and screen tasks from untrusted sources.
+
+→ [Security: Agentic Security](../security/agentic-security.md)
+
+---
+
+### 24. "We picked a vendor; we're done"
+
+**What it looks like:** A multi-year commitment to one AI coding tool, with context, skills, and workflows built in its proprietary formats.
+
+**Why it fails:** In 2025–26 one major tool was acquired and rebranded (Windsurf → Devin Desktop), another was acquired and moved to a new contracting entity and bundled plan (Cursor → SpaceX), and others replaced their products outright (Amazon Q Developer → Kiro, Gemini CLI → Antigravity CLI). Pricing models changed across the board. A locked-in team absorbs every change.
+
+**The fix:** Keep context in open standards (`AGENTS.md`, Agent Skills, MCP), negotiate change-of-control and usage-rate terms, and re-run security and legal review whenever a vendor changes hands.
+
+→ [AI Strategy: Vendor Strategy](../ai-strategy/vendor-strategy.md)
+
+---
+
 ## Quick Reference: The Top 5
 
 If you remember nothing else, avoid these:
@@ -246,7 +322,7 @@ If you remember nothing else, avoid these:
 |---|-------------|-------------|
 | 1 | Waiting for AI to mature | Start now. 🆓 Free tiers. Zero risk. |
 | 7 | AI on broken processes | Fix CI/review first. AI amplifies what exists. |
-| 8 | No project instructions | Write CLAUDE.md today. Two hours. |
+| 8 | No project instructions | Write AGENTS.md today. Two hours. |
 | 12 | Mandating usage metrics | Measure outcomes, not tool opens. |
 | 13 | No baseline before deploying | 4 weeks of metrics BEFORE you start. |
 

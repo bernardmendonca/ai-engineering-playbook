@@ -12,7 +12,7 @@ For the full explanation of *why* these work, tool-specific loading behavior, ma
 
 ## Example 1: Node.js/TypeScript API (Express + Prisma)
 
-**File:** `CLAUDE.md` (or adapt for `.cursorrules` / `.github/copilot-instructions.md`)
+**File:** `AGENTS.md` (read by most agents; for Claude Code, add a CLAUDE.md containing `@AGENTS.md`)
 
 ```markdown
 # Project Instructions
@@ -63,9 +63,15 @@ Node.js/TypeScript REST API using Express, Prisma ORM, and PostgreSQL.
 
 ## Example 2: React/TypeScript Frontend
 
-**File:** `.cursorrules` (or adapt for `CLAUDE.md`)
+**File:** `.cursor/rules/frontend.mdc` (or adapt for `AGENTS.md`)
 
 ```markdown
+---
+description: React/TypeScript frontend conventions
+globs: src/**/*.ts,src/**/*.tsx
+alwaysApply: false
+---
+
 You are working on a TypeScript/React frontend application.
 
 ## Stack

@@ -11,11 +11,13 @@ flowchart LR
     A[Level 1<br/>Autocomplete] --> B[Level 2<br/>Chat Assistant]
     B --> C[Level 3<br/>Inline Edit]
     C --> D[Level 4<br/>Agent]
+    D --> E[Level 5<br/>Delegated agent]
 
     A -.- A1[Predicts next tokens<br/>Single line or block<br/>Tab to accept]
     B -.- B1[Conversational Q&A<br/>Generates code on request<br/>You copy-paste into codebase]
     C -.- C1[Edits code in place<br/>Understands file context<br/>You review and accept]
     D -.- D1[Plans multi-step tasks<br/>Executes commands<br/>Modifies multiple files<br/>Iterates on errors]
+    E -.- E1[Runs in a cloud sandbox<br/>Works unsupervised<br/>Returns a pull request<br/>Several run in parallel]
 ```
 
 ## What Each Level Looks Like in Practice
@@ -65,6 +67,18 @@ flowchart LR
 **Example:** "Add pagination to the /users API endpoint, update the tests, and make sure the build passes" → the agent reads your codebase, modifies the route handler, updates the data layer, writes tests, runs them, fixes failures, and presents the final diff.
 
 **Limitations:** Can make mistakes at scale. Needs guardrails for security-sensitive work. Token costs add up. Context windows have limits.
+
+---
+
+### Level 5: Delegated Agent
+
+**What it does:** The same agent loop, but nobody watches it run. You assign a task (often by assigning a GitHub issue), the agent works in a cloud sandbox, and the result arrives as a pull request. Developers commonly run several at once.
+
+**Developer experience:** You write the task, then review the PR. Your job shifts from supervising steps to writing clear specifications and reviewing output.
+
+**Example:** Assign three issues to cloud agents before a meeting — a flaky test, a dependency upgrade, and a small endpoint change. Review three PRs afterward.
+
+**Limitations:** Output volume can outrun review capacity. Task text from outside your team is untrusted input. Needs sandboxing, scoped agent identities, and branch protection. See [Delegated and Parallel Agents](./delegated-agents.md).
 
 ---
 

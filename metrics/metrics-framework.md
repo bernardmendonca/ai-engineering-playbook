@@ -38,6 +38,7 @@ These are not goals — they're boundaries. If these get worse, AI adoption is n
 |--------|-----------------|-------------------|
 | Bug introduction rate | ≤ baseline | Pause expansion, investigate |
 | Change failure rate | ≤ baseline | Review AI-generated code quality |
+| Deployment rework rate (DORA) | ≤ baseline | Investigate whether AI-generated changes need follow-up fixes |
 | Security vulnerabilities | ≤ baseline | Add security checks to AI workflow |
 | Test coverage | ≥ baseline | Ensure AI-generated code has tests |
 | Code review rejection rate | ≤ baseline + 10% | Improve AI configuration/prompting |

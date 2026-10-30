@@ -97,7 +97,7 @@ Typical turnaround: [X weeks].
 
 ### Security
 - Never include secrets, credentials, or PII in AI tool context
-- Use .copilotignore / content exclusion for sensitive paths
+- Use your tool's content exclusion for sensitive paths (Copilot repository/org settings, `.cursorignore`, Claude Code deny rules), and don't run agents in workspaces that contain restricted code or credentials
 - Report any suspected data exposure immediately to security team
 
 ### Accountability

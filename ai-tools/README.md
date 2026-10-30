@@ -40,7 +40,7 @@ flowchart LR
 ```
 
 - **For POC/exploration:** Use free tiers. Don't request budget yet. Build evidence.
-- **For team pilots:** Budget $10–50/user/month. This unlocks controls you need to evaluate properly.
+- **For team pilots:** Budget $10–50/user/month in seats, plus a capped usage budget (most tools now meter agent usage beyond included credits). This unlocks controls you need to evaluate properly.
 - **For production rollout:** Expect enterprise agreements with volume pricing.
 
 ## Quick Navigation

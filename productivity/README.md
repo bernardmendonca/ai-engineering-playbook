@@ -20,6 +20,7 @@ This section covers how to define, measure, and demonstrate productivity impact 
 | [Defining Productivity](./defining-productivity.md) | What productivity means in the AI era — frameworks and pitfalls |
 | [What AI Accelerates](./what-ai-accelerates.md) | Where AI genuinely saves time, and where it doesn't |
 | [Measurement Approaches](./measurement-approaches.md) | Methods for proving (or disproving) productivity gains |
+| [What the Research Says](./what-the-research-says.md) | METR, DORA, Faros, and Anthropic studies — what they found and how it changes measurement |
 
 ## 💡 Key Insight
 
@@ -41,7 +42,7 @@ flowchart TD
 
 | Measurement approach | Cost | Accuracy |
 |---------------------|------|----------|
-| Developer surveys | 🆓 No tool cost, just time | Low-Medium (subjective) |
+| Developer surveys | 🆓 No tool cost, just time | Low for time saved (self-reports overstate it — see [research](./what-the-research-says.md)); useful for sentiment |
 | Git/PR analytics | 🆓 Built into platforms | Medium (proxy metrics) |
 | DORA metrics tracking | 💰 Dedicated tools ($5–15/dev/month) | Medium-High |
 | Controlled experiment (A/B) | 💰 Lost productivity during control period | High |

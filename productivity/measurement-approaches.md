@@ -90,7 +90,7 @@ Despite these challenges, you need measurement. Without it, you're guessing.
 
 **Advantages:** Captures subjective experience, identifies issues quantitative metrics miss.
 
-**Disadvantages:** Subjective, influenced by sentiment/hype. Not defensible alone for ROI claims.
+**Disadvantages:** Subjective, influenced by sentiment/hype. Not defensible alone for ROI claims. **Do not use survey answers as evidence of time saved:** in METR's 2025 randomized trial, developers estimated AI had made them ~20% faster when measured task time was 19% *longer*. Ask about friction, trust, and toil; measure speed from systems data. See [What the Research Says](./what-the-research-says.md).
 
 **When to use:** Always. Run quarterly alongside quantitative metrics.
 
@@ -98,14 +98,17 @@ Despite these challenges, you need measurement. Without it, you're guessing.
 
 ## Method 5: DORA Metrics Comparison
 
-**What:** Track the four DORA metrics before and during AI adoption.
+**What:** Track the five DORA software delivery metrics before and during AI adoption. DORA groups them into throughput and instability.
 
-| DORA metric | Expected AI impact | Why |
-|-------------|-------------------|-----|
-| Deployment frequency | ↑ Increase | Faster implementation → more features ready to ship |
-| Lead time for changes | ↓ Decrease | Less time from commit to production |
-| Change failure rate | → Stable or slight ↓ | Should not increase if quality is maintained |
-| Mean time to recovery | → Stable or slight ↓ | AI-assisted debugging may help slightly |
+| DORA metric | Type | Expected AI impact | Why |
+|-------------|------|-------------------|-----|
+| Deployment frequency | Throughput | ↑ Increase | Faster implementation → more features ready to ship |
+| Change lead time | Throughput | ↓ Decrease | Less time from commit to production |
+| Failed deployment recovery time *(formerly MTTR)* | Throughput | → Stable or slight ↓ | AI-assisted debugging may help slightly |
+| Change fail rate | Instability | → Should not increase | Rises if review discipline drops as volume grows |
+| Deployment rework rate *(added 2024)* | Instability | → Should not increase | Share of deployments that are unplanned fixes for earlier ones — the most direct signal of AI-generated churn |
+
+> **Watch instability, not just throughput.** DORA's 2024 report associated higher AI adoption with *lower* delivery stability, and the 2025 report found AI amplifies a team's existing strengths and weaknesses. If throughput rises while change fail rate or rework rate also rises, AI is producing work faster than your system can absorb it.
 
 **Advantages:** Industry-standard metrics. Already tracked at many organizations. Meaningful to executives.
 
@@ -131,7 +134,8 @@ Despite these challenges, you need measurement. Without it, you're guessing.
 
 | Mistake | Why it fails | Instead |
 |---------|-------------|---------|
-| Only measuring activity (PRs, commits) | Activity ≠ value. Gaming easy. | Measure outcomes (features, quality, cycle time) |
+| Only measuring activity (PRs, commits) | Activity ≠ value. Gaming easy. Faros' 2025 telemetry saw merged PRs nearly double while org-level delivery stayed flat | Measure outcomes (features, quality, cycle time) |
+| Ignoring review time and PR size | AI's extra output piles up in review first (Faros: review time +91%, PR size +154%) | Track review latency and PR size alongside throughput |
 | No baseline before AI adoption | Can't prove improvement | Measure 4–6 weeks before introducing tools |
 | Attributing all improvement to AI | Other factors change too | Acknowledge confounders, present as "correlated" not "caused" |
 | Expecting immediate results | Learning curve takes 2–4 weeks | Measure after ramp-up period, not from day one |

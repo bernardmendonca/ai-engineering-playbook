@@ -28,7 +28,7 @@ flowchart TD
 **Why:** System prompts set conventions once. Task prompts focus on the specific goal. This mirrors context engineering (durable) vs. individual prompting (ephemeral).
 
 ```
-SYSTEM (in CLAUDE.md / .cursorrules):
+SYSTEM (in AGENTS.md / CLAUDE.md / Cursor rules):
   "You are working on a TypeScript API. Use async/await.
    Follow repository pattern. Tests use Jest."
 

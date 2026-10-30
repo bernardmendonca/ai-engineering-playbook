@@ -71,7 +71,7 @@ Submit via [process/form/channel]. Security review required. Typical turnaround:
 
 ### Security
 - Never include secrets in AI tool context
-- Use content exclusion (`.copilotignore`) for sensitive paths
+- Use content exclusion for sensitive paths ([tool-specific mechanism, e.g. Copilot repository/org settings, `.cursorignore`]), and don't run agents in workspaces containing restricted code or credentials
 - Report suspected data exposure to [security channel] within 1 hour
 - Enable privacy/enterprise mode on all approved tools
 

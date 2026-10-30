@@ -23,6 +23,7 @@ This section is for **Directors, VPs, and CTOs** who need to answer: "What's our
 | [Vendor Strategy](./vendor-strategy.md) | Multi-vendor vs. single-vendor, lock-in mitigation, exit planning |
 | [Executive Alignment](./executive-alignment.md) | Ongoing stakeholder management — not just initial buy-in |
 | [Operating Model](./operating-model.md) | How AI runs at steady state — roles, cadence, decision rights, feedback loops |
+| [Spend Management](./spend-management.md) | Budget hierarchies, caps vs. overage, unit economics, and a monthly review under usage-based billing |
 
 ## 💡 Key Insight
 
@@ -39,6 +40,7 @@ flowchart TD
     B -->|Who owns this?| D[Organizational Models]
     B -->|One vendor or many?| E[Vendor Strategy]
     B -->|How to keep execs on board?| F[Executive Alignment]
+    B -->|How to control usage costs?| G[Spend Management]
 ```
 
 ## AI Engineering Maturity: Strategy

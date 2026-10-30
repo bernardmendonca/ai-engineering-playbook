@@ -13,6 +13,8 @@ Theory is useful but incomplete. Engineering leaders need to see how organizatio
 
 These case studies provide that calibration — composite examples based on real adoption patterns, organized so you can find the scenario closest to yours.
 
+> **About tools and prices in these case studies:** They describe what each organization chose and paid at the time, under pricing models that have since changed (most vendors moved to seats plus metered usage in 2026, and some products named here were renamed or retired). Use them for timelines, patterns, and lessons, not for current prices. Current prices are in [Agent Landscape](../ai-coding-agents/agent-landscape.md).
+
 ## How to Use This Section
 
 These case studies are composite examples based on common adoption patterns observed across the industry. They're not attributed to specific companies but reflect real scenarios engineering leaders encounter.

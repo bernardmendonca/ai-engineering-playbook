@@ -2,6 +2,8 @@
 
 > Extending AI agent behavior with reusable capabilities and event-driven automation.
 
+> **Last verified:** 2026-10-30 · **Re-check by:** 2027-01-30
+
 ## Beyond Static Instructions
 
 Project instructions tell AI *what to know*. Skills and hooks tell AI *what to do* — and *when*.
@@ -33,19 +35,26 @@ A skill is a packaged bundle of instructions, context, and optionally tooling th
 ```
 skills/
 ├── new-endpoint/
-│   ├── instructions.md    # How to create an endpoint (steps, conventions)
+│   ├── SKILL.md           # Front-matter (name, description) + steps and conventions
 │   ├── template/          # Boilerplate files to start from
 │   └── checklist.md       # What must be included (validation, tests, docs)
 ├── add-migration/
-│   ├── instructions.md    # How to create a DB migration safely
+│   ├── SKILL.md           # How to create a DB migration safely
 │   └── checklist.md       # Verification steps
 └── security-review/
-    └── instructions.md    # How to conduct a security-focused review
+    └── SKILL.md           # How to conduct a security-focused review
 ```
+
+The `name` and `description` front-matter is what the agent sees before it decides to load the skill, so write the description as a trigger: what the skill does and when to use it.
 
 ### Example: "New API Endpoint" Skill
 
 ```markdown
+---
+name: new-endpoint
+description: Create a new REST API endpoint with validation, service, repository, tests, and docs. Use when adding or scaffolding an API route.
+---
+
 # Skill: Create New API Endpoint
 
 ## When to use
@@ -84,6 +93,12 @@ Use AppError class:
 See `src/routes/users.ts` and `tests/routes/users.test.ts`
 ```
 
+### Agent Skills: an open standard
+
+The folder-plus-`SKILL.md` format is now a vendor-neutral standard. Anthropic introduced Agent Skills, and on October 22, 2026 donated the specification to the Linux Foundation's Agentic AI Foundation (the same body that stewards MCP and `AGENTS.md`). A skill is a directory containing a `SKILL.md` file with `name` and `description` front-matter, plus optional scripts, templates, and reference files. The agent reads only the name and description up front and loads the full instructions when a task matches, so many skills can be installed without filling the context window.
+
+Because the format is shared, one skill folder works across most major agents. Only the install location differs.
+
 ### Skills in Kiro
 
 Kiro has first-class skill support, following the open Agent Skills standard:
@@ -99,14 +114,17 @@ Skills activate in one of two ways: **automatically**, when Kiro matches the ski
 
 ### Skills in Other Tools
 
-| Tool | How to implement skills |
-|------|----------------------|
-| Claude Code | Files in a `/skills` or `/docs` directory referenced from CLAUDE.md |
-| Cursor | Separate rules files referenced via @-notation or stored in project docs |
-| Copilot | Content in copilot-instructions.md or linked via file references |
-| Aider | Conventions file + additional context files |
+| Tool | Native Agent Skills support | Where skills live |
+|------|:---------------------------:|-------------------|
+| Claude Code | ✅ | `.claude/skills/<name>/SKILL.md` (project) or `~/.claude/skills/` (user); also distributable via plugins |
+| GitHub Copilot | ✅ | `.github/skills/`, `.claude/skills/`, or `.agents/skills/` in the repo; used by agent mode, CLI, and cloud agent |
+| OpenAI Codex | ✅ | `.agents/skills/` from the current directory up to the repo root, plus `~/.agents/skills/` (user) |
+| Cursor | ✅ | `.cursor/skills/<name>/SKILL.md` |
+| Cline | ✅ | `.cline/skills/` (also reads `.claude/skills/`), or `~/.cline/skills/` (user) |
+| Devin Desktop | ✅ | See Cognition's docs; Devin recommends skills over always-on rules |
+| Aider | ❌ | No native support — approximate with a conventions file plus additional read-only context files |
 
-The concept is universal even if the mechanism differs.
+**Portability tip:** `.agents/skills/` and `.claude/skills/` are each read by several tools. Pick one as your canonical location and symlink if a tool needs another path. Keep skills in your repository so they're versioned and reviewed like code.
 
 ---
 
@@ -114,7 +132,18 @@ The concept is universal even if the mechanism differs.
 
 ### What Hooks Are
 
-Hooks connect AI behavior to events in your development workflow. When something happens (file saved, PR opened, task started), the hook triggers an action (run a command, inject a prompt, enforce a standard).
+Hooks connect AI behavior to events in your development workflow. When something happens (file saved, tool about to run, task completed), the hook triggers an action (run a command, inject a prompt, block the action).
+
+Hooks are not unique to one tool. Claude Code, GitHub Copilot, Cursor, and Kiro all ship hook systems with similar lifecycle events (before/after a tool call, prompt submitted, session start/stop). Event names and configuration formats differ, so check each tool's docs:
+
+| Tool | Hook configuration | Can block an action? |
+|------|-------------------|:--------------------:|
+| Kiro | `.kiro/hooks/*.json` | ✅ (PreToolUse, UserPromptSubmit, PreTaskExec via exit code 2) |
+| Claude Code | `hooks` section in `.claude/settings.json` (project, user, or org-managed settings) | ✅ (PreToolUse and others via exit code or JSON decision) |
+| GitHub Copilot | `.github/hooks/*.json` (must be on the default branch for the cloud agent; also used by Copilot CLI) | ✅ (`preToolUse` can approve or deny) |
+| Cursor | `.cursor/hooks.json` (project) or user-level hooks | ✅ (`deny` is enforced; `ask` is ignored in some auto-run modes, so use `deny` for hard rules) |
+
+The examples below use Kiro's format. The patterns carry over to other tools.
 
 ```mermaid
 flowchart LR
@@ -150,10 +179,12 @@ flowchart LR
     "name": "Lint TypeScript on Save",
     "trigger": "PostFileSave",
     "matcher": "\\.(ts|tsx)$",
-    "action": { "type": "command", "command": "npx eslint --fix ${file}" }
+    "action": { "type": "command", "command": "npx eslint --fix --cache ." }
   }]
 }
 ```
+
+*`--cache` makes ESLint skip unchanged files, so linting the whole project on each save stays fast. Kiro's docs don't document a variable for the saved file's path in IDE command hooks, so don't rely on one; check the [Kiro hooks docs](https://kiro.dev/docs/hooks/) for the event data your version passes.*
 
 #### Run Tests After Task Completion
 

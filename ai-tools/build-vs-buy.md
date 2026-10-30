@@ -31,10 +31,10 @@ flowchart TD
 
 **Examples:**
 - GitHub Copilot for a GitHub-native org
-- Amazon Q for an AWS-heavy shop
+- Kiro for an AWS-heavy shop
 - CodeRabbit for automated code review
 
-**Cost profile:** 💰 Predictable per-seat monthly cost. Scales linearly with headcount.
+**Cost profile:** 💰 Per-seat base cost plus metered usage once included credits run out. The seat portion scales with headcount; the usage portion scales with how heavily developers use agents. Set budgets and caps.
 
 **Risk:** Vendor dependency, limited customization, terms may change.
 

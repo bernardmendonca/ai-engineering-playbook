@@ -108,6 +108,77 @@ flowchart LR
 
 ---
 
+## Reviewing at Agent Scale
+
+The patterns above are about AI helping humans review. The bigger problem in 2026 runs the other way: humans reviewing far more AI-written code than before.
+
+- Faros AI's 2025 telemetry across 10,000+ developers found high-AI-adoption teams merging 98% more PRs, with **review time up 91%** and **PR size up 154%**, while organization-level delivery stayed flat
+- GitHub reported in October 2026 that agents now start roughly 40% of the PRs on its platform
+
+When generation gets cheap, **review becomes the constraint**. If you don't manage it, one of two things happens: PRs queue for days, or reviewers start rubber-stamping. Both erase the gains. These controls help:
+
+### 1. Limit PR size
+
+Large PRs get skimmed. DORA's research links small batches to better outcomes with AI.
+
+| Control | Suggested starting point |
+|---------|-------------------------|
+| Soft limit on agent PRs | ~400 changed lines excluding generated files and lockfiles; larger changes split or justified in the description |
+| One concern per PR | Refactors, behavior changes, and dependency bumps go in separate PRs |
+| Stacked PRs | For large agent work, a sequence of reviewable PRs instead of one drop |
+
+### 2. Require evidence, not claims
+
+An agent saying "all tests pass" is a claim. Require the evidence in the PR:
+
+```markdown
+<!-- .github/pull_request_template.md (agent section) -->
+## AI involvement
+- [ ] Agent-authored  - [ ] AI-assisted  - [ ] Human-authored
+Assigned by: @owner   Agent/tool: ____
+
+## Evidence
+- Tests added or changed: (list)
+- Test run output or CI link:
+- For bug fixes: failing test or reproduction before the fix
+- For UI changes: screenshots
+- Files changed outside the stated scope: (none / list with reason)
+```
+
+### 3. Tier review depth by risk
+
+Not every PR deserves the same scrutiny. Spend review time where mistakes are expensive:
+
+| Risk tier | Examples | Review |
+|-----------|---------|--------|
+| **Low** | Docs, test-only changes, lint fixes, dependency patch bumps with green CI | One reviewer, light pass; AI pre-review |
+| **Medium** | Features and bug fixes in non-critical paths | One reviewer, full review against acceptance criteria |
+| **High** | Auth, payments, data deletion, migrations, infrastructure, CI config | Code owner review required; checkpoint review before the agent gets far |
+
+Use `CODEOWNERS` and path-based rules so high-risk paths get the right reviewer automatically.
+
+### 4. Treat review capacity as a metric
+
+Track it like any other bottleneck:
+
+| Metric | Warning sign |
+|--------|-------------|
+| Time from PR opened to first review | Rising week over week |
+| Open PRs per reviewer | Growing faster than team size |
+| Median PR size | Growing |
+| PRs merged with no review comments | Rising sharply (possible rubber-stamping) |
+| Change fail rate and rework rate | Rising after PR volume rose |
+
+If review latency climbs, slow generation down: cap concurrent agent tasks per developer (see [Delegated Agents](../ai-coding-agents/delegated-agents.md#6-concurrency-and-cost)) before adding reviewers.
+
+### 5. One human owns every merge
+
+The person who assigned or authored an AI-generated PR owns it: they respond to review comments and answer for it in production. A second person approves. Never let an agent PR merge on the strength of AI review alone.
+
+> ✅ **My take:** If your team adopts agents and review latency doesn't get worse, check that people are actually reviewing. If it does get worse, the fix is smaller PRs and evidence requirements, not more AI reviewers. AI pre-review helps the human go faster; it doesn't replace the human's judgment about whether the change is right.
+
+---
+
 ## ⚠️ Anti-Patterns
 
 | Anti-pattern | Why it's bad | Instead |

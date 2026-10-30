@@ -2,6 +2,8 @@
 
 > Zero-cost paths to hands-on experience with AI coding agents — for individual exploration, team evaluation, and building intuition before committing budget.
 
+> **Last verified:** 2026-10-30 · **Re-check by:** 2027-01-30
+
 ## Why Start Free?
 
 Before requesting budget, before writing a policy doc, before running an evaluation — you need hands-on experience. You can't make informed decisions about AI agents without using them yourself. The good news: you can get meaningful experience without spending anything.
@@ -20,8 +22,8 @@ flowchart TD
     B -->|A full day| E[Path 3: Deep evaluation]
 
     C --> C1[GitHub Copilot Free<br/>or Kiro Free tier]
-    D --> D1[Cursor free trial<br/>or Kiro]
-    E --> E1[Aider + API credits<br/>or Claude Code trial]
+    D --> D1[Cursor Free<br/>or Kiro]
+    E --> E1[Aider + local model or API key<br/>or Claude Code on Pro]
 ```
 
 ---
@@ -32,7 +34,7 @@ flowchart TD
 
 ### Option A: GitHub Copilot Free
 
-🆓 **Cost:** $0 (limited to 50 chat messages/month and 2000 completions)
+🆓 **Cost:** $0 (2,000 completions/month plus a small monthly allowance of GitHub AI Credits for chat and agent mode; auto model selection only)
 
 **Setup:**
 1. Install VS Code (if you don't have it)
@@ -45,7 +47,7 @@ flowchart TD
 
 **What you'll observe:** The agent reads files, proposes multi-file changes, and can run tests. This is fundamentally different from autocomplete.
 
-**Limitations on free tier:** 50 chat messages/month total. Use them wisely — this is for taste, not daily work.
+**Limitations on free tier:** The credit allowance runs out after a handful of agent tasks, and you can't pick the model. Use it for a taste, not daily work. The cloud agent (assign an issue, get a PR) requires a paid plan.
 
 ---
 
@@ -53,7 +55,7 @@ flowchart TD
 
 > **Note:** Amazon Q Developer — the tool previously recommended here — stopped accepting new signups in May 2026 and reaches full end-of-support in April 2027. AWS's successor product is Kiro, which has since gone GA. If you're already on Amazon Q, start planning your migration; new explorers should start with Kiro directly.
 
-🆓 **Cost:** $0 (Free tier — generous limits on agent-driven coding, chat, and spec workflows)
+🆓 **Cost:** $0 (Free tier — 50 credits/month across agent chat and spec workflows; simple requests use fractions of a credit)
 
 **Setup:**
 1. Download Kiro from kiro.dev
@@ -66,7 +68,7 @@ flowchart TD
 
 **What you'll observe:** A capable free tier with real agent capabilities and, distinctively, an optional structured spec workflow (requirements → design → tasks) alongside conversational mode.
 
-**Why this is worth trying first:** Kiro's free tier includes meaningful agent capabilities without needing a credit card, and it's the actively developed, currently-supported option in AWS's coding-agent lineup.
+**Why this is worth trying first:** Kiro's free tier includes real agent capabilities without needing a credit card, and it's the actively developed, currently-supported option in AWS's coding-agent lineup. 50 credits is enough for one or two small features, so plan your tasks before you start.
 
 ---
 
@@ -74,16 +76,16 @@ flowchart TD
 
 **Goal:** Use an agent on a real task in your own codebase. Build enough experience to have an opinion.
 
-### Option A: Cursor Free Trial
+### Option A: Cursor Free Tier
 
-🆓 **Cost:** $0 for 2 weeks (full Pro experience), then limited free tier
+🆓 **Cost:** $0 on the Free tier (limited agent requests). Since October 2026 Cursor is sold as part of SpaceX/xAI's "X Subscription", and trial terms have changed several times this year — check cursor.com/pricing for any current paid-tier trial. Note that the cheapest paid tier only includes Grok and Cursor's own models (see [current Cursor plans](./agent-landscape.md#cursor-spacex--xai)).
 
 **Setup:**
 1. Download Cursor from cursor.com
 2. Sign up (email, free)
 3. Open your project
 4. Let it index your codebase (takes a few minutes)
-5. Open Composer (`Cmd+I`) → Agent mode
+5. Open the Agent panel (`Cmd+I` / `Ctrl+I`)
 
 **Try these tasks (in order):**
 
@@ -96,15 +98,15 @@ flowchart TD
 **Task 3 — The real test:**
 > "We need to add [feature X]. Here's what it should do: [describe]. Implement it following the patterns established in [similar feature]."
 
-**What you'll observe:** The agent reads your codebase, follows existing patterns, and generates coherent multi-file changes. The 2-week trial gives you enough time to form a real opinion.
+**What you'll observe:** The agent reads your codebase, follows existing patterns, and generates coherent multi-file changes.
 
-**After the trial:** Free tier gives limited completions. Enough to stay familiar, not enough for daily agent use.
+**Limits:** The Free tier is enough to complete the three tasks above and stay familiar, not enough for daily agent use.
 
 ---
 
 ### Option B: Kiro
 
-🆓 **Cost:** $0 (Free tier — see [Path 1](#option-b-kiro-free-tier) above for setup if you haven't already; paid Pro/Pro+/Pro Max tiers exist for higher usage)
+🆓 **Cost:** $0 (Free tier — see [Path 1](#option-b-kiro-free-tier) above for setup if you haven't already; paid Pro/Pro+/Pro Max/Power tiers exist for higher usage)
 
 **Setup:**
 1. Download Kiro from kiro.dev
@@ -135,15 +137,15 @@ flowchart TD
 🆓 **Cost:** $0 for the tool. API costs optional (can use free credits or local models).
 
 **Setup (zero-cost with local model):**
-1. Install: `pip install aider-chat`
+1. Install: `python -m pip install aider-install && aider-install` (or `pip install aider-chat`)
 2. Install Ollama: `brew install ollama` (macOS) or from ollama.com
-3. Pull a capable model: `ollama pull deepseek-coder-v2` or `ollama pull codellama:34b`
-4. Run: `aider --model ollama/deepseek-coder-v2`
+3. Pull a current open-weight coding model from the [Ollama library](https://ollama.com/library) (for example, the latest Qwen Coder or DeepSeek release that fits your machine's memory): `ollama pull <model>`
+4. Run: `aider --model ollama_chat/<model>`
 
-**Setup (with free API credits):**
-1. Install: `pip install aider-chat`
-2. Get free API credits from Anthropic ($5 starting credit) or OpenAI ($5 starting credit)
-3. Run: `aider --model claude-3-5-sonnet-20241022` or `aider --model gpt-4o`
+**Setup (with API credits):**
+1. Install Aider as above
+2. Create an API key with Anthropic or OpenAI and add a small prepaid balance (check each provider's current free-credit offers; they change often)
+3. Run: `aider --model <provider>/<current-model-id>`. Aider's docs list current model aliases (for example, `--model sonnet`), and `aider --list-models <keyword>` shows what's available
 
 **Try these tasks:**
 
@@ -164,22 +166,21 @@ flowchart TD
 
 **What you'll observe:**
 - With local models: Free but noticeably less capable than top-tier cloud models. Good for learning the workflow, not for evaluating agent quality.
-- With API credits: Real quality, limited budget. $5 of credits goes further than you think for focused tasks.
+- With API credits: Real quality, limited budget. A small prepaid balance goes further than you think for focused tasks.
 - You'll see the raw agent loop — plan, code, test, iterate. No IDE polish. Just the mechanics.
 
 **Why this path is valuable for leaders:** You'll experience the full spectrum — from "this is incredible" to "this is completely wrong." Both experiences are necessary for setting realistic expectations.
 
 ---
 
-### Option B: Claude Code (with API Credits)
+### Option B: Claude Code (Pro plan or API key)
 
-💰 **Cost:** ~$5 starting credits from Anthropic (sign-up bonus, check availability)
+💰 **Cost:** The entry-level Claude Pro plan includes Claude Code, or pay per token with an API key. There is no free tier. See [current Claude Code plans](./agent-landscape.md#claude-code-anthropic).
 
 **Setup:**
-1. Sign up at anthropic.com, get API key
-2. Install: `npm install -g @anthropic-ai/claude-code`
-3. Run: `claude` in your project directory
-4. Start with: `/init` to let it understand your project
+1. Install with the native installer: `curl -fsSL https://claude.ai/install.sh | bash` (macOS/Linux), or `brew install --cask claude-code`. The npm package is deprecated.
+2. Run: `claude` in your project directory and sign in with your Claude account (or an API key)
+3. Start with: `/init` to let it understand your project and generate a CLAUDE.md
 
 **Try these tasks:**
 
@@ -194,7 +195,7 @@ flowchart TD
 
 **What you'll observe:** Deep reasoning, multi-step execution, self-correction. This is the "premium agent experience" — useful for understanding what's possible at the top end.
 
-**Cost awareness:** Watch your token usage. A complex task can burn through $5 quickly. Start small.
+**Cost awareness:** On Pro you'll hit usage limits on long sessions; on an API key, a complex task can cost several dollars. Start small and check `/cost` or your usage page.
 
 ---
 
@@ -256,7 +257,7 @@ If you want a structured exploration experience, try this:
 |-----|------|------|------|
 | **Monday** | Generate tests for an untested module | Any free option | Understand basic agent interaction |
 | **Tuesday** | Refactor a real file in your codebase | Same tool | See how it handles your code |
-| **Wednesday** | Try a multi-file feature implementation | Cursor or Kiro | Experience agent mode at full power |
+| **Wednesday** | Try a multi-file feature implementation | Cursor, Kiro, or Copilot | Experience agent mode at full power |
 | **Thursday** | Give it a task that's too hard | Same tool | Understand failure modes |
 | **Friday** | Write up your findings | — | Document insights for your team |
 

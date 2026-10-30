@@ -13,6 +13,8 @@ AI tools don't just require knowing which buttons to press. They require a new s
 | Searching documentation | Asking AI and validating answers |
 | Planning implementation | Decomposing tasks for AI suitability |
 | Reviewing human code | Reviewing AI code (different failure patterns) |
+| Writing tickets for humans | Writing task specs an agent can complete unsupervised |
+| Learning by doing | Learning *with* AI without letting it do the learning for you |
 
 ---
 
@@ -75,7 +77,7 @@ AI tools don't just require knowing which buttons to press. They require a new s
    - Cost management and budget awareness
    - Recognizing when to stop an agent
 3. Custom workflows (1 hour)
-   - Project instructions (CLAUDE.md, .cursorrules, steering files)
+   - Project instructions (AGENTS.md, plus tool overlays such as CLAUDE.md, Cursor rules, Kiro steering)
    - Building reusable prompts for team patterns
    - CI/CD integration patterns
 4. Review skills (1 hour)
@@ -137,6 +139,54 @@ Then: "Add input validation for page and limit parameters"
 Then: "Handle the edge case where page exceeds total pages"
 Then: "Add tests for the boundary conditions"
 ```
+
+---
+
+## Learning With AI, Not Instead of It
+
+Using AI to get work done and using AI to learn are different activities, and the same habits don't serve both.
+
+Anthropic researchers ran a randomized trial (January 2026) with developers learning a new asynchronous Python library. The group with AI assistance scored **17% lower** on a comprehension quiz covering concepts, code reading, and debugging (about 50% vs. 67%), and wasn't significantly faster on average. Developers who fully delegated the coding learned the least. But three of the six interaction patterns the researchers identified preserved learning even with AI help, and they all involved staying cognitively engaged.
+
+**Habits that preserve learning** (teach these explicitly):
+
+| Instead of… | Do this |
+|-------------|---------|
+| "Write the function that does X" | "Explain how this library handles X, then I'll write it" |
+| Accepting a fix you don't understand | Ask why the bug happened and why the fix works before accepting |
+| Letting the agent pick the approach | Sketch your approach first, then ask the AI to critique it |
+| Reading only the final diff | Ask the agent to explain the change, then predict what a test would show before running it |
+| Delegating the first task in a new area | Do the first one or two by hand (with AI as a tutor), then delegate the repetitive ones |
+
+These habits cost some speed. That's the right trade when someone is learning a codebase, a language, or a domain they'll need to debug and review later.
+
+> ✅ **My take:** Separate "learning mode" from "delivery mode" in your team norms. When someone is new to an area, the goal is understanding, and AI should be a tutor. Once they know the area, the goal is throughput, and AI can do the typing. The failure is staying in delivery mode forever and never building the judgment needed to review what the agent produces.
+
+---
+
+## The Junior Pipeline
+
+Agents do much of the work that used to train junior engineers: boilerplate, small bug fixes, tests. Hiring data is moving with it. Stanford's Digital Economy Lab (August 2026 update) finds employment of 22–25-year-olds in AI-exposed occupations, software development included, about 19% below where it would be if it had tracked less-exposed occupations. Experienced workers show no comparable gap.
+
+Fewer juniors now means fewer mid-level and senior engineers in a few years, and seniors are exactly the people who can judge agent output. Plan for this deliberately.
+
+### For juniors already on the team
+
+- **"Code solo first" on unfamiliar ground.** For their first weeks in a new area, juniors write code with AI as a tutor, not an author
+- **Explain-back in review.** Juniors explain their AI-assisted PRs in their own words; reviewers ask "why" questions, not just "what"
+- **Debugging rotations.** Give juniors real bug investigations, where understanding the system is the point
+- **Pair with seniors on agent review.** Reviewing agent PRs alongside a senior is one of the fastest ways to learn what good looks like
+
+### For hiring and leveling
+
+| Area | What changes |
+|------|-------------|
+| **Interviews** | Test judgment as well as production: reviewing a flawed AI-generated PR, decomposing a vague task, explaining tradeoffs. Decide and state your policy on AI use during interviews |
+| **Leveling expectations** | Move weight toward specification, decomposition, verification, and review quality. Lines of code and PR count were never good signals and are worse now |
+| **Junior hiring** | Keep a junior pipeline sized for the senior engineers you'll need in three to five years, not just this year's output |
+| **Onboarding** | Teach the codebase before teaching the agent; a new hire who learns both at once learns neither well |
+
+> ✅ **My take:** Cutting junior hiring because agents do junior work is a short-term saving with a long-term cost. The teams that do well with agents are the ones with enough experienced reviewers, and you only get experienced reviewers by training juniors.
 
 ---
 

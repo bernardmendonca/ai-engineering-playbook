@@ -52,7 +52,7 @@ flowchart TD
 
 1. **SAST in CI (non-negotiable)** — Catches known vulnerability patterns regardless of author
 2. **Security-aware prompting** — Include security requirements in agent instructions
-3. **Custom instructions** — Configure tools to always consider security (e.g., CLAUDE.md, .cursorrules)
+3. **Custom instructions** — Configure tools to always consider security (e.g., in AGENTS.md or tool-specific files such as CLAUDE.md)
 4. **Focused review** — Extra security scrutiny for AI-generated code touching auth, data, or crypto
 5. **Security champions** — Designated reviewer for AI-generated PRs touching sensitive areas
 
@@ -91,9 +91,9 @@ AI models trained on copyleft-licensed code (GPL, AGPL) might generate output th
 
 ### Reality Check
 
-- No court has ruled on this definitively (as of 2025)
+- No court had ruled on this definitively as of 2025; check with counsel for newer rulings
 - The legal risk is theoretical but non-zero
-- Many enterprise AI tools offer IP indemnification (they assume the legal risk) — GitHub Copilot Enterprise is well-documented here; verify current terms directly with any other vendor rather than assuming coverage
+- Many enterprise AI tools offer IP indemnification (they assume the legal risk): GitHub Copilot Business/Enterprise, Claude Code under Anthropic's Commercial Terms, Codex under OpenAI's Copyright Shield, and Kiro's paid tiers. Check scope and exclusions in each contract — see [Agent Landscape](../ai-coding-agents/agent-landscape.md#enterprise-readiness)
 - Practically: AI-generated code tends to be generic enough that substantial similarity is rare
 
 ### Mitigations

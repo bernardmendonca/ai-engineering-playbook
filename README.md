@@ -26,7 +26,7 @@ The playbook is organized into three tracks. Start with the one that matches you
 | Section | What you'll learn |
 |---------|-------------------|
 | [Foundations](./foundations/) | Mental models, landscape overview, organizational readiness |
-| [AI Strategy](./ai-strategy/) | Investment, org models, vendor strategy, executive alignment, [operating model](./ai-strategy/operating-model.md) |
+| [AI Strategy](./ai-strategy/) | Investment, org models, vendor strategy, executive alignment, [operating model](./ai-strategy/operating-model.md), [spend management](./ai-strategy/spend-management.md) |
 
 ### 🔧 Implement — Tools and Integration
 
@@ -35,8 +35,8 @@ The playbook is organized into three tracks. Start with the one that matches you
 | Section | What you'll learn |
 |---------|-------------------|
 | [AI Tools](./ai-tools/) | Tool landscape, evaluation framework, build vs. buy |
-| [AI Coding Agents](./ai-coding-agents/) | Agent comparison, when to use, governance, getting started free |
-| [AI Engineering Practices](./ai-engineering-practices/) | Prompt engineering, context engineering, harness engineering |
+| [AI Coding Agents](./ai-coding-agents/) | Agent comparison, when to use, governance, getting started free, delegated cloud agents |
+| [AI Engineering Practices](./ai-engineering-practices/) | Prompt engineering, context engineering, spec-driven development, harness engineering |
 | [Engineering Workflows](./engineering-workflows/) | AI across the SDLC — review, testing, CI/CD, documentation |
 
 ### 🔁 Sustain — Governance, Measurement, and Scale
@@ -45,8 +45,8 @@ The playbook is organized into three tracks. Start with the one that matches you
 
 | Section | What you'll learn |
 |---------|-------------------|
-| [Security](./security/) | Threat models, data classification, enterprise controls |
-| [Productivity](./productivity/) | Defining and measuring developer productivity with AI |
+| [Security](./security/) | Threat models, data classification, enterprise controls, agentic security |
+| [Productivity](./productivity/) | Defining and measuring developer productivity with AI, and what the research says |
 | [Governance](./governance/) | Policies, compliance, accountability, responsible AI |
 | [Metrics](./metrics/) | What to measure, dashboards, reporting to leadership |
 | [Team Adoption](./team-adoption/) | Change management, resistance, upskilling, champions |
@@ -58,7 +58,7 @@ The playbook is organized into three tracks. Start with the one that matches you
 
 | Section | What you'll learn |
 |---------|-------------------|
-| [AI Anti-Patterns](./ai-anti-patterns/) | The 18 mistakes orgs keep making — and how to avoid each one |
+| [AI Anti-Patterns](./ai-anti-patterns/) | The 24 mistakes orgs keep making — and how to avoid each one |
 ## Repository Structure
 
 ```
@@ -84,7 +84,7 @@ ai-engineering-playbook/
 ├── case-studies/          # Real-world examples
 │
 │   ⚠️ AVOID
-├── ai-anti-patterns/      # The 18 mistakes orgs keep making
+├── ai-anti-patterns/      # The 24 mistakes orgs keep making
 │
 │   RESOURCES
 ├── prompts/               # Reusable prompt library
@@ -129,7 +129,7 @@ flowchart LR
 |---------|---------|---------|---------|---------|
 | **Strategy** | Awareness, no coordinated approach | Strategy documented, budget allocated, owner assigned | Multi-team with governance, vendor agreements | AI embedded in engineering strategy, reviewed quarterly |
 | **Tools** | Free tiers explored | Paid tool for pilot team | Approved shortlist, enterprise eval | Enterprise agreement, regular re-evaluation |
-| **Agents** | Chat/autocomplete only | Agents on one team (supervised) | Agents across teams (governed) | Agents embedded in SDLC workflows |
+| **Agents** | Chat/autocomplete only | Agents on one team (supervised) | Agents across teams (governed) | Agents embedded in SDLC workflows, including delegated cloud agents with sandboxes and scoped identities |
 | **Practices** | — | Prompt patterns + project instructions | Team context + steering + eval | Org-wide context + harness + observability |
 | **Workflows** | AI in IDE only (autocomplete) | AI in review + testing | AI in CI/CD + documentation | AI across full SDLC, continuously optimized |
 | **Security** | No policy (shadow IT) | Data classified, DPA signed | Enterprise controls, audit logging | DLP, proxy/gateway, anomaly detection |
@@ -138,7 +138,7 @@ flowchart LR
 | **Metrics** | None | 3 core metrics tracked manually | Dashboards per audience | Automated, tied to business outcomes |
 | **Adoption** | Individuals exploring | One team pilot | Multi-team expansion with champions | Org-wide, embedded in culture and hiring |
 
-> **How to use this:** Find your current level across most sections. Your weakest dimension is your bottleneck. Don't try to advance all dimensions simultaneously — focus on the bottleneck first. Most organizations in 2025 are at Level 1–2.
+> **How to use this:** Find your current level across most sections. Your weakest dimension is your bottleneck. Don't try to advance all dimensions simultaneously — focus on the bottleneck first. By 2026, individual usage is near-universal (JetBrains' mid-2026 survey found 90% of professional developers using AI coding agents at least weekly), but organizational maturity lags well behind: many organizations have Level 3 usage with Level 1–2 governance, measurement, and security. That gap is the most common bottleneck.
 
 > **Engineering Manager Note**
 >

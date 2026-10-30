@@ -9,14 +9,21 @@
 | Term | Definition |
 |------|-----------|
 | **AI** | Artificial Intelligence — in this playbook, refers specifically to generative AI used for software development (code generation, review, testing, documentation) |
-| **LLM** | Large Language Model — the foundation model behind AI coding tools (GPT-4, Claude, Gemini, etc.) |
+| **LLM** | Large Language Model — the foundation model behind AI coding tools (GPT, Claude, Gemini, Grok, open-weight models, etc.) |
 | **Agent** | An AI tool that can plan, execute multi-step tasks, run commands, and iterate on its own output autonomously |
-| **MCP** | Model Context Protocol — an open standard for connecting AI tools to external data sources (databases, APIs, ticket systems) |
+| **MCP** | Model Context Protocol — an open standard for connecting AI tools to external data sources (databases, APIs, ticket systems). Stewarded by the Linux Foundation's Agentic AI Foundation |
+| **Agent Skills** | An open standard for packaging reusable agent capabilities as a folder with a `SKILL.md` file (name, description, instructions) plus optional scripts and references. Donated by Anthropic to the Agentic AI Foundation in October 2026 |
+| **Delegated (cloud) agent** | A coding agent that takes an assigned task (often a GitHub issue), works unsupervised in a cloud sandbox, and returns a pull request. Several can run in parallel |
+| **Spec-driven development** | Writing requirements, design, and a task plan as a reviewed artifact before an agent implements them |
+| **Context rot** | The decline in model output quality as input length grows, even well within the context window |
+| **Least agency** | The OWASP principle of giving an agent only the autonomy, tools, and access a bounded task needs |
+| **Verification tax** | DORA's term for the extra effort of reviewing and testing AI-generated work; part of the real cost of AI adoption |
+| **Prompt injection** | An attack where instructions hidden in content an AI reads (issues, web pages, code, tool outputs) cause it to act against the user's intent. "Indirect" injection means the user never sees the planted text |
 | **RAG** | Retrieval-Augmented Generation — a technique where AI retrieves relevant documents/data before generating a response, improving accuracy for domain-specific questions |
 | **Context Engineering** | The discipline of structuring and delivering the right information to AI tools so they produce consistently useful output across an organization |
-| **Harness Engineering** | The discipline of building the orchestration layer that makes AI reliable when it runs in automation or production (CI/CD steps, bots, unattended workflows) — covers routing, evaluation, guardrails, and observability. Distinct from prompt engineering (individual skill) and context engineering (team/org information delivery); harness engineering is about infrastructure for AI running without a human in the loop |
-| **Guardrails** | One of the two core pillars of harness engineering — constraints placed on AI automation (cost caps, timeouts, permission boundaries, content filters) that limit the blast radius when something goes wrong |
-| **Observability** | One of the two core pillars of harness engineering — logging, monitoring, and tracing for AI automation (cost per call, error rate, output quality over time) so degradation or drift is caught rather than discovered by users |
+| **Harness Engineering** | Used two ways. (1) **Agent harness** — the common industry meaning since OpenAI's February 2026 post: designing the runtime and repository environment a coding agent works in (tool loop, context management, sandbox, fast tests, linters that enforce architecture, docs written as a map for agents). (2) **Automation harness** — this playbook's original meaning: the orchestration layer that makes AI reliable when it runs unattended (CI/CD steps, bots), covering routing, evaluation, guardrails, and observability. Both are distinct from prompt engineering (individual skill) and context engineering (team/org information delivery) |
+| **Guardrails** | One of the four pillars of the automation harness (with orchestration, evaluation, and observability) — constraints placed on AI automation (cost caps, timeouts, permission boundaries, content filters) that limit the blast radius when something goes wrong |
+| **Observability** | One of the four pillars of the automation harness (with orchestration, evaluation, and guardrails) — logging, monitoring, and tracing for AI automation (cost per call, error rate, output quality over time) so degradation or drift is caught rather than discovered by users |
 | **Steering** | Configuration files that provide persistent instructions to AI tools about project conventions, patterns, and rules |
 | **Prompt Engineering** | The skill of writing effective instructions for AI tools in individual interactions |
 
@@ -29,7 +36,7 @@
 | **PR** | Pull Request — a code change submitted for review before merging into the main branch |
 | **CI/CD** | Continuous Integration / Continuous Deployment — automated pipelines that build, test, and deploy code |
 | **SDLC** | Software Development Lifecycle — the full process from planning through deployment and monitoring |
-| **DORA** | DevOps Research and Assessment — a framework defining four key metrics for engineering performance (deployment frequency, lead time, change failure rate, mean time to recovery) |
+| **DORA** | DevOps Research and Assessment — Google Cloud's research program and its software delivery metrics. Originally four metrics; now five: change lead time, deployment frequency, and failed deployment recovery time (throughput), plus change fail rate and deployment rework rate (instability). "Mean time to recovery" was renamed failed deployment recovery time in 2023, and rework rate was added in 2024 |
 | **SPACE** | A developer productivity framework (Satisfaction, Performance, Activity, Communication, Efficiency) developed by Microsoft Research |
 | **ADR** | Architecture Decision Record — a document recording a significant architectural decision, its context, and consequences |
 | **IaC** | Infrastructure as Code — managing infrastructure through code and version control (Terraform, CloudFormation, CDK) |
@@ -85,11 +92,12 @@
 
 | Term | Definition |
 |------|-----------|
-| **CLAUDE.md** | A project instructions file for Claude Code — tells the AI about your project conventions, commands, and rules |
-| **.cursorrules** | A project instructions file for Cursor IDE — configures AI behavior for a specific codebase |
+| **AGENTS.md** | A cross-tool project instructions file in the repo root, read natively by most coding agents (Codex, Copilot, Cursor, Kiro, and others). Stewarded by the Linux Foundation's Agentic AI Foundation |
+| **CLAUDE.md** | A project instructions file for Claude Code — tells the AI about your project conventions, commands, and rules. Can import `AGENTS.md` with an `@AGENTS.md` line |
+| **Cursor rules** | Project instructions for Cursor in `.cursor/rules/*.mdc` (replaces the deprecated single `.cursorrules` file) |
 | **Copilot-instructions.md** | GitHub Copilot's project-level instruction file (`.github/copilot-instructions.md`) |
 | **Hooks** | Event-driven automation — scripts that run automatically when specific events occur (file saved, task completed, tool invoked) |
-| **Skills** | Packaged bundles of instructions that teach AI tools how to perform specific tasks consistently |
+| **Skills** | Packaged bundles of instructions that teach AI tools how to perform specific tasks consistently. See Agent Skills above for the cross-tool format |
 
 ---
 

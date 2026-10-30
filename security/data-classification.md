@@ -2,6 +2,8 @@
 
 > What code can go where — a practical framework for deciding what's safe to send to AI services.
 
+> **Last verified:** 2026-10-30 · **Re-check by:** 2027-01-30
+
 ## Why Classification Matters
 
 Without data classification, every AI tool decision becomes a binary: "Is ALL our code safe to send to a cloud service?" The answer is always "no" for some code, which leads to blanket bans. Classification lets you say "yes" for most code and "no" (or "with extra controls") for the rest.
@@ -65,7 +67,7 @@ Code is 🔴 Restricted if ANY of these apply:
 | Mechanism | Implementation |
 |-----------|---------------|
 | Repository metadata | Tag repos with classification in your platform (GitHub topics, labels) |
-| `.copilotignore` / content exclusion | Vendor-specific file to exclude paths from AI context |
+| Content exclusion | Vendor-specific settings or files that exclude paths from AI context (Copilot settings, `.cursorignore`, Claude Code deny rules) — weak against agents with shell access |
 | Policy documentation | Written policy mapping classifications to allowed tools |
 | Technical enforcement | Proxy/DLP rules blocking restricted code from reaching AI APIs |
 
@@ -126,24 +128,31 @@ Organization: Acme Corp (100 developers, SaaS product)
 
 ## AI-Specific File Exclusions
 
-Most AI tools support excluding files from AI context:
+Most AI tools offer some way to keep files out of AI context, but the mechanisms differ a lot in strength, and **most of them do not bind autonomous agents**:
 
-**GitHub Copilot:** `.copilotignore` (same syntax as `.gitignore`)
+> ⚠️ **Exclusion is not a security boundary for agents.** An agent that can run shell commands can usually `cat` a file that its read tool is told to skip. For restricted code, rely on keeping it out of the agent's workspace (separate repos, sandboxes without the files or credentials), not on ignore rules.
+
+**GitHub Copilot:** Content exclusion is configured in **repository, organization, or enterprise settings** on GitHub (Settings → Copilot → Content exclusion), as a list of paths. There is no `.copilotignore` file. GitHub's docs state that content exclusion is **not supported in agent mode, Copilot CLI, or the Copilot cloud agent** — it applies to completions and chat only.
+
+```yaml
+# Example "Paths to exclude in this repository" entry
+- "/auth/**"
+- "/payments/**"
+- "/secrets/**"
+- "*.key"
+- "*.pem"
+- ".env*"
 ```
-# Exclude sensitive paths from Copilot context
-auth/
-payments/
-secrets/
-*.key
-*.pem
-.env*
-```
 
-**Cursor:** Settings → Privacy → excluded paths
+**Claude Code:** `permissions.deny` rules in `.claude/settings.json` (for example `"Read(./.env*)"`, `"Read(./secrets/**)"`). Put them in org-managed settings so developers can't override them. Pair with the sandbox so shell commands can't read the same paths.
 
-**Kiro:** Steering files can control what enters context
+**Cursor:** `.cursorignore` in the repo root (gitignore syntax) excludes files from indexing and AI features. Cursor documents it as best-effort, not a guarantee.
 
-**General (for any tool):** `.aiignore` convention (not standardized yet but some tools support it)
+**OpenAI Codex:** Use sandbox mode and workspace scope to control what the agent can read; check Codex docs for current exclusion options.
+
+**Kiro:** Steering files give instructions; they don't exclude content. Use PreToolUse hooks to block reads of sensitive paths, and keep restricted code out of the workspace. Enterprise admins can also restrict which models are allowed, and prompt logging writes to an S3 bucket in your own account.
+
+**General:** There is no cross-tool ignore-file standard. The `.aiignore` name is used by a few tools but isn't standardized.
 
 ---
 

@@ -79,8 +79,8 @@ team-repo/
 # ai-context-starter-kit (template repo)
 
 README.md                     # "How to use this template"
-CLAUDE.md.template            # Starting point for CLAUDE.md
-.cursorrules.template         # Starting point for .cursorrules
+AGENTS.md.template            # Shared, tool-neutral starting point
+CLAUDE.md.template            # One-line overlay: @AGENTS.md + Claude-specific notes
 .kiro/
 ├── steering/
 │   ├── org-standards.md      # Required (don't change)
@@ -239,7 +239,7 @@ Cost:
 4. Announce: "If you're using AI tools, include these in your project instructions"
 
 ### Month 2: Templates
-1. Create a starter template (CLAUDE.md + .cursorrules + .kiro/steering)
+1. Create a starter template (AGENTS.md + thin tool overlays such as CLAUDE.md and .kiro/steering)
 2. Include org standards + placeholder sections for team/project customization
 3. Offer to help 2–3 teams set up their project-level context
 4. Collect feedback on what's missing
